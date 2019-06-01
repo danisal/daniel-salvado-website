@@ -108,7 +108,7 @@ function BottonNavigation(props) {
 export default BottonNavigation;
 
 const pageQuery = graphql`
-    query pageQuery {
+    query PageQuery {
         sitePage {
             path
         }
