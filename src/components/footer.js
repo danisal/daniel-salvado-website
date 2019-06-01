@@ -59,7 +59,9 @@ const FooterText = styled.p`
     margin: 0;
 `;
 
-export default function Footer() {
+const year = new Date().getFullYear();
+
+function Footer() {
     return (
         <StyledFooter>
             <FooterText
@@ -70,7 +72,7 @@ export default function Footer() {
                     }
                 `}
             >
-                © 2018 Daniel Salvado
+                {`© ${year} Daniel Salvado`}
             </FooterText>
             <IconsWrapper
                 css={css`
@@ -84,32 +86,16 @@ export default function Footer() {
                 >
                     <LinkedIn css={iconSize} aria-label="linkedin" />
                 </SocialButton>
-                <SocialButton
-                    href="https://github.com/danisal"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
+                <SocialButton href="https://github.com/danisal" rel="noopener noreferrer" target="_blank">
                     <GitHub css={iconSize} aria-label="github" />
                 </SocialButton>
-                <SocialButton
-                    href="https://codepen.io/danisal/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
+                <SocialButton href="https://codepen.io/danisal/" rel="noopener noreferrer" target="_blank">
                     <Codepen css={iconSize} aria-label="codepen" />
                 </SocialButton>
-                <SocialButton
-                    href="https://medium.com/@daniel.salvado"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
+                <SocialButton href="https://medium.com/@daniel.salvado" rel="noopener noreferrer" target="_blank">
                     <Medium css={iconSize} aria-label="medium" />
                 </SocialButton>
-                <SocialButton
-                    href="https://twitter.com/danielsalvado1"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
+                <SocialButton href="https://twitter.com/danielsalvado1" rel="noopener noreferrer" target="_blank">
                     <Twitter css={iconSize} aria-label="twitter" />
                 </SocialButton>
                 {/* <SocialButton
@@ -134,10 +120,12 @@ export default function Footer() {
                         justify-self: flex-end;
                     }
                 `}
-                to={`/legal-notice`}
+                to="/legal-notice"
             >
                 Legal Notice
             </Link>
         </StyledFooter>
     );
 }
+
+export default Footer;

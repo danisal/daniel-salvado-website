@@ -56,6 +56,9 @@ function Tooltip({ children, title }) {
     );
 }
 
-Tooltip.propTypes = {};
+Tooltip.propTypes = {
+    children: PropTypes.element,
+    title: PropTypes.string,
+};
 
 export default Tooltip;

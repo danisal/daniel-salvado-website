@@ -26,7 +26,7 @@ const Links = styled.div`
     }
 `;
 
-export default function HeaderComponent() {
+function HeaderComponent() {
     return (
         <Header>
             <Link
@@ -39,7 +39,7 @@ export default function HeaderComponent() {
                         transition: ease-in-out 150ms;
                     }
                 `}
-                to={`/`}
+                to="/"
             >
                 Daniel Salvado
             </Link>
@@ -55,28 +55,28 @@ export default function HeaderComponent() {
                 </Link> */}
                 <Link
                     style={{
-                        textDecoration: 'none',
-                        backgroundImage: 'none',
+                        textDecoration: `none`,
+                        backgroundImage: `none`,
                     }}
-                    to={`/work`}
+                    to="/work"
                 >
                     Work
                 </Link>
                 <Link
                     style={{
-                        textDecoration: 'none',
-                        backgroundImage: 'none',
+                        textDecoration: `none`,
+                        backgroundImage: `none`,
                     }}
-                    to={`/writing`}
+                    to="/writing"
                 >
                     Writing
                 </Link>
                 <Link
                     style={{
-                        textDecoration: 'none',
-                        backgroundImage: 'none',
+                        textDecoration: `none`,
+                        backgroundImage: `none`,
                     }}
-                    to={`/say-hello`}
+                    to="/say-hello"
                 >
                     Say Hello
                 </Link>
@@ -84,3 +84,5 @@ export default function HeaderComponent() {
         </Header>
     );
 }
+
+export default HeaderComponent;

@@ -30,18 +30,11 @@ function Bio() {
                                 }}
                             />
                             <div>
-                                <h4 style={{ margin: `0 0 10px` }}>
-                                    Daniel Salvado
-                                </h4>
+                                <h4 style={{ margin: `0 0 10px` }}>Daniel Salvado</h4>
                                 <p>
-                                    Lives and works in Faro building useful
-                                    things.
+                                    Lives and works in Faro building useful things.
                                     {` `}
-                                    <a
-                                        href={`https://twitter.com/${
-                                            social.twitter
-                                        }`}
-                                    >
+                                    <a href={`https://twitter.com/${social.twitter}`}>
                                         You should follow him on Twitter
                                     </a>
                                 </p>

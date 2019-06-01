@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import Bio from '../components/bio';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
 const Form = styled.form`
     display: flex;
@@ -24,7 +24,6 @@ const SubmitButton = styled.button`
         cursor: pointer;
         color: #fff;
         background-color: #134896;
-        /* box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); */
     }
 
     &:focus {
@@ -79,43 +78,42 @@ const TextFieldLabel = styled.label`
     z-index: 1;
 `;
 
-class SayHello extends Component {
-    submitForm = event => {
+function SayHello({ location }) {
+    const submitForm = event => {
         event.preventDefault();
     };
 
-    render() {
-        const { location } = this.props;
+    return (
+        <Layout location={location}>
+            <h2>Com&apos;on and say Hello</h2>
+            <p>
+                Do you have any thoughts or simply just want to get in touch? This is the place. Drop me a line and I
+                will get back to you in a couple of days.
+            </p>
+            <Form onSubmit={submitForm}>
+                <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
+                <TextField type="text" name="name" id="" />
+                <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
+                <TextField type="email" name="email" />
+                <TextFieldLabel htmlFor="subject">Subject</TextFieldLabel>
+                <TextField type="text" name="subject" />
+                <TextFieldLabel htmlFor="message">Message</TextFieldLabel>
+                <TextArea name="message" id="" cols="30" rows="10" />
 
-        return (
-            <Layout location={location}>
-                <h2>Com'on and say Hello</h2>
-                <p>
-                    Do you have any thoughts or simply just want to get in
-                    touch? This is the place. Drop me a line and I will get back
-                    to you in a couple of days.
-                </p>
-                <Form onSubmit={this.submitForm}>
-                    <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
-                    <TextField type="text" name="name" id="" />
-                    <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
-                    <TextField type="email" name="email" />
-                    <TextFieldLabel htmlFor="subject">Subject</TextFieldLabel>
-                    <TextField type="text" name="subject" />
-                    <TextFieldLabel htmlFor="message">Message</TextFieldLabel>
-                    <TextArea name="message" id="" cols="30" rows="10" />
-
-                    <CheckboxWrapper>
-                        <input type="checkbox" name="privacy-policy" id="" />
-                        <span>I agree with the terms and conditions</span>
-                    </CheckboxWrapper>
-                    <br />
-                    <SubmitButton type="submit">Submit</SubmitButton>
-                </Form>
-                <Bio />
-            </Layout>
-        );
-    }
+                <CheckboxWrapper>
+                    <input type="checkbox" name="privacy-policy" id="" />
+                    <span>I agree with the terms and conditions</span>
+                </CheckboxWrapper>
+                <br />
+                <SubmitButton type="submit">Submit</SubmitButton>
+            </Form>
+            <Bio />
+        </Layout>
+    );
 }
+
+SayHello.propTypes = {
+    location: PropTypes.object,
+};
 
 export default SayHello;

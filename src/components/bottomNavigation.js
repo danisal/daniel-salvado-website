@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { StaticQuery, graphql } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
+
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -60,41 +60,26 @@ const linkCSS = css`
     }
 `;
 
-function BottonNavigation(props) {
-    console.log(props);
-
+function BottomNavigation() {
     return (
         <StaticQuery
             query={pageQuery}
-            render={data => {
-                console.log(data);
+            render={() => {
                 return (
                     <Wrapper>
-                        <Link activeClassName={`active`} to={`/`} css={linkCSS}>
+                        <Link activeClassName="active" to="/" css={linkCSS}>
                             <Home />
                             <SmallText>Home</SmallText>
                         </Link>
-                        <Link
-                            activeClassName={`active`}
-                            to={`/work`}
-                            css={linkCSS}
-                        >
+                        <Link activeClassName="active" to="/work" css={linkCSS}>
                             <Terminal />
                             <SmallText>Work</SmallText>
                         </Link>
-                        <Link
-                            activeClassName={`active`}
-                            to={`/writing`}
-                            css={linkCSS}
-                        >
+                        <Link activeClassName="active" to="/writing" css={linkCSS}>
                             <Quill />
                             <SmallText>Writing</SmallText>
                         </Link>
-                        <Link
-                            activeClassName={`active`}
-                            to={'/say-hello'}
-                            css={linkCSS}
-                        >
+                        <Link activeClassName="active" to="/say-hello" css={linkCSS}>
                             <Envelop />
                             <SmallText>Say Hello</SmallText>
                         </Link>
@@ -105,7 +90,7 @@ function BottonNavigation(props) {
     );
 }
 
-export default BottonNavigation;
+export default BottomNavigation;
 
 const pageQuery = graphql`
     query PageQuery {

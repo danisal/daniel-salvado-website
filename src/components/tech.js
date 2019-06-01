@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import CSS3 from '../../content/assets/css3.svg';
@@ -23,12 +22,10 @@ const TechWrapper = styled.div`
     justify-items: center;
 `;
 
-function Tech(props) {
+function Tech() {
     return (
         <Fragment>
-            <h3>
-                And here are some of the technologies que I love to work with
-            </h3>
+            <h3>And here are some of the technologies que I love to work with</h3>
             <TechWrapper>
                 <Tooltip title="CSS3">
                     <CSS3 />

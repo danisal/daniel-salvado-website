@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import cuid from 'cuid';
@@ -12,10 +13,10 @@ import Tech from '../components/tech';
 import { rhythm } from '../utils/typography';
 
 const shadow = css({
-    boxShadow: '7px 8px 30px 1px rgba(0,0,0,0.4)',
-    transition: 'box-shadow 0.3s',
+    boxShadow: `7px 8px 30px 1px rgba(0,0,0,0.4)`,
+    transition: `box-shadow 0.3s`,
     ':hover': {
-        boxShadow: '27px 28px 55px 1px rgba(0,0,0,0.4)',
+        boxShadow: `27px 28px 55px 1px rgba(0,0,0,0.4)`,
     },
 });
 
@@ -45,16 +46,9 @@ function MyWork(props) {
                         <h3>Here you can see some of my work</h3>
                         {data.allSitesYaml.edges.map(({ node }) => (
                             <ImageWrapper key={cuid()}>
-                                <a
-                                    href={node.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <a href={node.url} target="_blank" rel="noopener noreferrer">
                                     <Image
-                                        fluid={
-                                            node.childScreenshot.screenshotFile
-                                                .childImageSharp.fluid
-                                        }
+                                        fluid={node.childScreenshot.screenshotFile.childImageSharp.fluid}
                                         fadeIn
                                         alt={node.name}
                                         css={shadow}
@@ -66,24 +60,29 @@ function MyWork(props) {
                         <WorkExperience>
                             <WorkedAt>
                                 <h4>
-                                    <a
-                                        href="https://www.evodeck.com"
-                                        target="__blank"
-                                    >
-                                        Evodeck
+                                    <a href="https://www.snowball.digital" target="__blank">
+                                        Snowball Digital
                                     </a>
                                 </h4>
-                                <h5>January 2018 - Current</h5>
+                                <h5>May 2019 - Current</h5>
                             </WorkedAt>
                             <p>Software Engineer</p>
                         </WorkExperience>
                         <WorkExperience>
                             <WorkedAt>
                                 <h4>
-                                    <a
-                                        href="https://www.truphone.com/"
-                                        target="__blank"
-                                    >
+                                    <a href="https://www.evodeck.com" target="__blank">
+                                        Evodeck
+                                    </a>
+                                </h4>
+                                <h5>January 2018 - April 2019</h5>
+                            </WorkedAt>
+                            <p>Software Engineer</p>
+                        </WorkExperience>
+                        <WorkExperience>
+                            <WorkedAt>
+                                <h4>
+                                    <a href="https://www.truphone.com/" target="__blank">
                                         Truphone
                                     </a>
                                 </h4>
@@ -94,10 +93,7 @@ function MyWork(props) {
                         <WorkExperience>
                             <WorkedAt>
                                 <h4>
-                                    <a
-                                        href="https://www.tradingeconomics.com"
-                                        target="__blank"
-                                    >
+                                    <a href="https://www.tradingeconomics.com" target="__blank">
                                         Trading Economics
                                     </a>
                                 </h4>
@@ -113,6 +109,10 @@ function MyWork(props) {
         />
     );
 }
+
+MyWork.propTypes = {
+    location: PropTypes.object,
+};
 
 export default MyWork;
 
