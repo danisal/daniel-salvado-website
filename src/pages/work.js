@@ -8,7 +8,7 @@ import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import Bio from '../components/bio';
 import SEO from '../components/seo';
-import Tech from '../components/Tech';
+import Tech from '../components/tech';
 import { rhythm } from '../utils/typography';
 
 const shadow = css({
