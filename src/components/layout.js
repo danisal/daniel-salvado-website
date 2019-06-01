@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './footer';
+import Header from './header';
 import styled from '@emotion/styled';
-import BottonNavigation from './BottomNavigation';
+import BottonNavigation from './bottomNavigation';
 
 const Wrapper = styled.div`
     min-height: 100vh;
