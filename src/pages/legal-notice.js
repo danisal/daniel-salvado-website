@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 
-function LegalNotice({ location }) {
+function LegalNotice() {
     return (
-        <Layout location={location}>
+        <Layout>
             <h1>Privacy Policy</h1>
 
             <p>Effective date: January 21, 2019</p>
@@ -228,8 +227,6 @@ function LegalNotice({ location }) {
     );
 }
 
-LegalNotice.propTypes = {
-    location: PropTypes.object,
-};
+LegalNotice.propTypes = {};
 
 export default LegalNotice;

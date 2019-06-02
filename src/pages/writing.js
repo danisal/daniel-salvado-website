@@ -7,12 +7,11 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
-function Writing({ data, location }) {
-    const siteTitle = data.site.siteMetadata.title;
+function Writing({ data }) {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-        <Layout location={location} title={siteTitle}>
+        <Layout>
             <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
@@ -57,13 +56,7 @@ Writing.propTypes = {
                 }),
             ),
         }),
-        site: PropTypes.shape({
-            siteMetadata: PropTypes.shape({
-                title: PropTypes.string,
-            }),
-        }),
     }),
-    location: PropTypes.object,
 };
 
 export default Writing;

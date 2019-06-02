@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import cuid from 'cuid';
@@ -35,13 +34,13 @@ const ImageWrapper = styled.div`
     margin: ${rhythm(0.6)};
 `;
 
-function MyWork(props) {
+function MyWork() {
     return (
         <StaticQuery
             query={workQuery}
             render={data => {
                 return (
-                    <Layout location={props.location}>
+                    <Layout>
                         <SEO title="My Work" />
                         <h3>Here you can see some of my work</h3>
                         {data.allSitesYaml.edges.map(({ node }) => (
@@ -110,9 +109,7 @@ function MyWork(props) {
     );
 }
 
-MyWork.propTypes = {
-    location: PropTypes.object,
-};
+MyWork.propTypes = {};
 
 export default MyWork;
 

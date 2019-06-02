@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import Bio from '../components/bio';
@@ -78,13 +77,13 @@ const TextFieldLabel = styled.label`
     z-index: 1;
 `;
 
-function SayHello({ location }) {
+function SayHello() {
     const submitForm = event => {
         event.preventDefault();
     };
 
     return (
-        <Layout location={location}>
+        <Layout>
             <h2>Com&apos;on and say Hello</h2>
             <p>
                 Do you have any thoughts or simply just want to get in touch? This is the place. Drop me a line and I
@@ -112,8 +111,6 @@ function SayHello({ location }) {
     );
 }
 
-SayHello.propTypes = {
-    location: PropTypes.object,
-};
+SayHello.propTypes = {};
 
 export default SayHello;

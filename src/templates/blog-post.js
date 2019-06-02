@@ -7,13 +7,12 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 
-function BlogPostTemplate({ data, location, pageContext }) {
+function BlogPostTemplate({ data, pageContext }) {
     const post = data.markdownRemark;
-    const siteTitle = data.site.siteMetadata.title;
     const { previous, next } = pageContext;
 
     return (
-        <Layout location={location} title={siteTitle}>
+        <Layout>
             <SEO title={post.frontmatter.title} description={post.excerpt} />
             <h1>{post.frontmatter.title}</h1>
             <p
@@ -70,13 +69,7 @@ BlogPostTemplate.propTypes = {
                 title: PropTypes.string,
             }),
         }),
-        site: PropTypes.shape({
-            siteMetadata: PropTypes.shape({
-                title: PropTypes.string,
-            }),
-        }),
     }),
-    location: PropTypes.object,
     pageContext: PropTypes.shape({
         next: PropTypes.shape({
             fields: PropTypes.shape({

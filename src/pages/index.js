@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 
-function SiteIndex({ location, data }) {
+function SiteIndex() {
     return (
-        <Layout location={location} title={data.site.siteMetadata.title}>
+        <Layout>
             <SEO title="Home" keywords={[`Daniel`, `Salvado`, `site`]} />
             <h2>Welcome to my personal virtual space!</h2>
             <p>
@@ -48,10 +47,7 @@ function SiteIndex({ location, data }) {
     );
 }
 
-SiteIndex.propTypes = {
-    location: PropTypes.object,
-    data: PropTypes.object,
-};
+SiteIndex.propTypes = {};
 
 export default SiteIndex;
 
