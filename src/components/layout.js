@@ -35,9 +35,7 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element]),
-    location: PropTypes.object,
-    title: PropTypes.string,
+    children: PropTypes.node,
 };
 
 export default Layout;
