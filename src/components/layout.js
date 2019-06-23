@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
-import { rhythm, scale } from '../utils/typography';
+import { rhythm } from '../utils/typography';
 import Footer from './footer';
 import Header from './header';
 import BottomNavigation from './bottomNavigation';

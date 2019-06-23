@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import '../../content/fonts/font-face.css';
-
 function SEO({ description, lang, meta, keywords, title }) {
     return (
         <StaticQuery
@@ -61,7 +59,16 @@ function SEO({ description, lang, meta, keywords, title }) {
                                     : [],
                             )
                             .concat(meta)}
-                    />
+                    >
+                        {/* DNS Prefetching */}
+                        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+                        {/* Preconnect */}
+                        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
+                        <link
+                            href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap"
+                            rel="stylesheet"
+                        />
+                    </Helmet>
                 );
             }}
         />
