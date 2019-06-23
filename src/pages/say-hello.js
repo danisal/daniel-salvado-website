@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import Bio from '../components/bio';
+import SEO from '../components/seo';
 
 const Form = styled.form`
     display: flex;
@@ -84,6 +85,7 @@ function SayHello() {
 
     return (
         <Layout>
+            <SEO title="Say Hello" keywords={[`contact`, `form`]} />
             <h2>Com&apos;on and say Hello</h2>
             <p>
                 Do you have any thoughts or simply just want to get in touch? This is the place. Drop me a line and I

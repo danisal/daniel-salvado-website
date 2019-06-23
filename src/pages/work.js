@@ -41,7 +41,7 @@ function MyWork() {
             render={data => {
                 return (
                     <Layout>
-                        <SEO title="My Work" />
+                        <SEO title="My Work" keywords={[`technologies`, `experience`, `work`, `portfolio`]} />
                         <h3>Here you can see some of my work</h3>
                         {data.allSitesYaml.edges.map(({ node }) => (
                             <ImageWrapper key={cuid()}>

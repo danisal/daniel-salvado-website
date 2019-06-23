@@ -9,7 +9,7 @@ import HTML5 from '../../content/assets/html5.svg';
 import JS from '../../content/assets/javascript.svg';
 import MongoDB from '../../content/assets/mongodb.svg';
 import Node from '../../content/assets/node-dot-js.svg';
-import ReactSVG from '../../content/assets/react.svg';
+import ReactSVG from '../../content/assets/react-icon.svg';
 import Redux from '../../content/assets/redux.svg';
 import Sass from '../../content/assets/sass.svg';
 import Tooltip from './tooltip';
@@ -51,9 +51,9 @@ function Tech() {
                 <Tooltip title="NodeJS">
                     <Node />
                 </Tooltip>
-                {/* <Tooltip title="React">
+                <Tooltip title="React">
                     <ReactSVG />
-    </Tooltip> */}
+                </Tooltip>
                 <Tooltip title="Redux">
                     <Redux />
                 </Tooltip>

@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 function LegalNotice() {
     return (
         <Layout>
+            <SEO title="Home" keywords={[`legal`, `notice`, `privacy`, `policy`]} />
             <h1>Privacy Policy</h1>
 
             <p>Effective date: January 21, 2019</p>

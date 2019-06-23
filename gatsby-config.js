@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Daniel Salvado`,
+        title: `Daniel Salvado website`,
         author: `Daniel Salvado`,
-        description: `A starter blog demonstrating what Gatsby can do.`,
+        description: `Daniel Salvado personal virtual space`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
         social: {
             twitter: `danielsalvado1`,
@@ -50,14 +50,14 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                //trackingId: `ADD YOUR TRACKING ID HERE`,
+                // trackingId: `ADD YOUR TRACKING ID HERE`,
             },
         },
         `gatsby-plugin-feed`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Daniel Salvado site`,
+                name: `Daniel Salvado website`,
                 short_name: `Daniel Salvado`,
                 start_url: `/`,
                 background_color: `#ffffff`,

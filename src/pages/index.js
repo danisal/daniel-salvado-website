@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 function SiteIndex() {
     return (
         <Layout>
-            <SEO title="Home" keywords={[`Daniel`, `Salvado`, `site`]} />
+            <SEO title="Home" keywords={[`Daniel`, `Salvado`, `website`]} />
             <h2>Welcome to my personal virtual space!</h2>
             <p>
                 Hi, I&apos;m Daniel Salvado, a father, husband and an enthusiast developer currently living in Skien,
