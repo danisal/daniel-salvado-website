@@ -13,20 +13,18 @@ const Wrapper = styled.div`
     grid-template-rows: auto 1fr auto;
 `;
 
+const Main = styled.main`
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ${rhythm(25)};
+    padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+`;
+
 function Layout({ children }) {
     return (
         <Wrapper>
             <Header />
-            <main
-                style={{
-                    marginLeft: `auto`,
-                    marginRight: `auto`,
-                    maxWidth: rhythm(25),
-                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-                }}
-            >
-                {children}
-            </main>
+            <Main>{children}</Main>
             <Footer />
             <BottomNavigation />
         </Wrapper>
