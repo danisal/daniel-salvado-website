@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { rhythm } from '../utils/typography';
-import { debounce } from '../utils/helpers';
 
 const Header = styled.header`
     display: flex;
@@ -43,9 +42,9 @@ function HeaderComponent() {
         };
     });
 
-    const handleWindowScroll = debounce(() => {
+    const handleWindowScroll = () => {
         return setShadow(window.pageYOffset > 0);
-    }, 50);
+    };
 
     return (
         <Header shadow={shadow}>
@@ -64,33 +63,9 @@ function HeaderComponent() {
                 Daniel Salvado
             </Link>
             <Links>
-                {/* <Link
-                    style={{
-                        textDecoration: 'none',
-                        backgroundImage: 'none',
-                    }}
-                    to={`/`}
-                >
-                    Home
-                </Link> */}
-                <Link
-                    style={{
-                        textDecoration: `none`,
-                        backgroundImage: `none`,
-                    }}
-                    to="/work"
-                >
-                    Work
-                </Link>
-                <Link
-                    style={{
-                        textDecoration: `none`,
-                        backgroundImage: `none`,
-                    }}
-                    to="/writing"
-                >
-                    Writing
-                </Link>
+                <Link to="/">Home</Link>
+                <Link to="/work">Work</Link>
+                <Link to="/writing">Writing</Link>
                 <Link
                     style={{
                         textDecoration: `none`,
