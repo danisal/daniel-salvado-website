@@ -3,11 +3,11 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Codepen from '../../content/assets/codepen-brands.svg';
+// import Codepen from '../../content/assets/codepen-brands.svg';
 import GitHub from '../../content/assets/github-brands.svg';
 // import Instagram from '../../content/assets/instagram-brands.svg';
 import LinkedIn from '../../content/assets/linkedin-in-brands.svg';
-import Medium from '../../content/assets/medium-brands.svg';
+// import Medium from '../../content/assets/medium-brands.svg';
 import Twitter from '../../content/assets/twitter-brands.svg';
 
 import { rhythm } from '../utils/typography';
@@ -24,10 +24,9 @@ const StyledFooter = styled.footer`
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            'name'
             'social'
-            'legal';
-        grid-row-gap: 16px;
+            'legal'
+            'name';
     }
     padding: 0 ${rhythm(1.5)};
 `;
@@ -89,12 +88,12 @@ function Footer() {
                 <SocialButton href="https://github.com/danisal" rel="noopener noreferrer" target="_blank">
                     <GitHub css={iconSize} aria-label="github" />
                 </SocialButton>
-                <SocialButton href="https://codepen.io/danisal/" rel="noopener noreferrer" target="_blank">
+                {/* <SocialButton href="https://codepen.io/danisal/" rel="noopener noreferrer" target="_blank">
                     <Codepen css={iconSize} aria-label="codepen" />
-                </SocialButton>
-                <SocialButton href="https://medium.com/@daniel.salvado" rel="noopener noreferrer" target="_blank">
+                </SocialButton> */}
+                {/* <SocialButton href="https://medium.com/@daniel.salvado" rel="noopener noreferrer" target="_blank">
                     <Medium css={iconSize} aria-label="medium" />
-                </SocialButton>
+                </SocialButton> */}
                 <SocialButton href="https://twitter.com/danielsalvado1" rel="noopener noreferrer" target="_blank">
                     <Twitter css={iconSize} aria-label="twitter" />
                 </SocialButton>
