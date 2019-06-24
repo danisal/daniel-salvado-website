@@ -3,10 +3,9 @@
  */
 code[class*='language-'],
 pre[class*='language-'] {
-    color: white;
+    color: #d4d4d4;
     background: none;
-    font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New,
-        monospace;
+    font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
     font-feature-settings: normal;
     text-align: left;
     white-space: pre;
@@ -65,17 +64,17 @@ pre[class*='language-'] ::selection {
 }
 
 .token.attr-name {
-    color: rgb(173, 219, 103);
+    color: #9cdcfe;
     font-style: italic;
 }
 
 .token.comment {
-    color: rgb(99, 119, 119);
+    color: #608b4e;
 }
 
 .token.string,
 .token.url {
-    color: rgb(173, 219, 103);
+    color: #ce9178;
 }
 
 .token.variable {
@@ -83,42 +82,42 @@ pre[class*='language-'] ::selection {
 }
 
 .token.number {
-    color: rgb(247, 140, 108);
+    color: #b5cea8;
 }
 
 .token.builtin,
 .token.char,
 .token.constant,
 .token.function {
-    color: rgb(130, 170, 255);
+    color: #dcdcaa;
 }
 
 .token.punctuation {
-    color: rgb(199, 146, 234);
+    color: #d7ba7d;
 }
 
 .token.selector,
 .token.doctype {
-    color: rgb(199, 146, 234);
+    color: #d7ba7d;
     font-style: 'italic';
 }
 
 .token.class-name {
-    color: rgb(255, 203, 139);
+    color: #4ec9b0;
 }
 
 .token.tag,
 .token.operator,
 .token.keyword {
-    color: #ffa7c4;
+    color: #569cd6;
 }
 
 .token.boolean {
-    color: rgb(255, 88, 116);
+    color: #569cd6;
 }
 
 .token.property {
-    color: rgb(128, 203, 196);
+    color: #9cdcfe;
 }
 
 .token.namespace {
@@ -131,21 +130,30 @@ pre[data-line] {
 }
 
 .gatsby-highlight-code-line {
-    background-color: hsla(207, 95%, 15%, 1);
+    background-color: hsla(207, 95%, 20%, 1);
     display: block;
     margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
-    border-left: 0.25em solid #ffa7c4;
+    border-left: 0.25em solid #ecd018;
 }
 
 .gatsby-highlight {
     margin-bottom: 1.75rem;
-    /* border-radius: 10px; */
-    background: #011627;
+    border-radius: 10px;
+    background: rgb(30, 30, 30);
     -webkit-overflow-scrolling: touch;
     overflow: auto;
+}
+
+@media (max-width: 672px) {
+    .gatsby-highlight {
+        border-radius: 0;
+        max-width: 100vw;
+        margin-left: -1.21875rem;
+        margin-right: -1.21875rem;
+    }
 }
 
 .gatsby-highlight pre[class*='language-'] {
