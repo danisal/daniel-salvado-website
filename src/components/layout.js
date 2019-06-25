@@ -17,7 +17,7 @@ const Main = styled.main`
     margin-left: auto;
     margin-right: auto;
     max-width: ${rhythm(25)};
-    padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+    padding: ${rhythm(1.5)} ${rhythm(1)};
 `;
 
 function Layout({ children }) {

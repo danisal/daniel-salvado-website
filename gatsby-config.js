@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `Daniel Salvado website`,
         author: `Daniel Salvado`,
-        description: `Daniel Salvado personal virtual space`,
+        description: `Daniel Salvado's personal virtual space`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
         social: {
             twitter: `danielsalvado1`,

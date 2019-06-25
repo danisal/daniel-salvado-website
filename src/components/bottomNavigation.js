@@ -4,16 +4,15 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Terminal from '../../content/assets/terminal.svg';
-import Quill from '../../content/assets/quill.svg';
-import Envelop from '../../content/assets/envelop.svg';
-import Home from '../../content/assets/home.svg';
+import Home from '../../content/assets/home-outline.svg';
+import Writing from '../../content/assets/quill-drawing-a-line.svg';
+import Work from '../../content/assets/data.svg';
+import SayHello from '../../content/assets/hello-speech-bubble-handmade-chatting-symbol.svg';
 import { rhythm } from '../utils/typography';
 
-const YELLOW = `#ffeb3b`;
 const BLUE = `#0d47a1`;
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
     display: none;
 
     @media only screen and (max-width: 760px) {
@@ -22,17 +21,11 @@ const Wrapper = styled.div`
         left: 0;
         right: 0;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 16px;
         background-color: #fff;
         border-top: 1px solid #ede7f3;
-        min-height: 3.5rem;
+        min-height: 3.75rem;
+        z-index: 1;
     }
-`;
-
-const SmallText = styled.small`
-    display: block;
 `;
 
 const linkCSS = css`
@@ -44,6 +37,8 @@ const linkCSS = css`
 
     > svg {
         width: 24px;
+        height: auto;
+        pointer-events: none;
     }
 
     &:hover,
@@ -54,8 +49,34 @@ const linkCSS = css`
     &.active {
         color: ${BLUE};
 
-        > svg {
+        svg {
             fill: ${BLUE};
+
+            path {
+                fill: ${BLUE} !important;
+            }
+        }
+    }
+`;
+
+const UL = styled.ul`
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    font-size: 0.75rem;
+    line-height: 1;
+    text-align: center;
+
+    li {
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        a {
+            padding: 0.25rem;
         }
     }
 `;
@@ -67,22 +88,32 @@ function BottomNavigation() {
             render={() => {
                 return (
                     <Wrapper>
-                        <Link activeClassName="active" to="/" css={linkCSS}>
-                            <Home />
-                            <SmallText>Home</SmallText>
-                        </Link>
-                        <Link activeClassName="active" to="/work" css={linkCSS}>
-                            <Terminal />
-                            <SmallText>Work</SmallText>
-                        </Link>
-                        <Link activeClassName="active" to="/writing" css={linkCSS}>
-                            <Quill />
-                            <SmallText>Writing</SmallText>
-                        </Link>
-                        <Link activeClassName="active" to="/say-hello" css={linkCSS}>
-                            <Envelop />
-                            <SmallText>Say Hello</SmallText>
-                        </Link>
+                        <UL>
+                            <li>
+                                <Link activeClassName="active" to="/" css={linkCSS}>
+                                    <Home />
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link activeClassName="active" to="/work" css={linkCSS}>
+                                    <Work />
+                                    Work
+                                </Link>
+                            </li>
+                            <li>
+                                <Link activeClassName="active" to="/writing" css={linkCSS}>
+                                    <Writing />
+                                    Writing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link activeClassName="active" to="/say-hello" css={linkCSS}>
+                                    <SayHello />
+                                    Hello
+                                </Link>
+                            </li>
+                        </UL>
                     </Wrapper>
                 );
             }}
