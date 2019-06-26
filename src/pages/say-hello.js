@@ -155,7 +155,7 @@ function SayHello() {
                 Do you have any thoughts or simply just want to get in touch? This is the place. Drop me a line and I
                 will get back to you in a couple of days.
             </p>
-            <Form onSubmit={submitForm}>
+            <Form onSubmit={submitForm} data-netlify="true" data-netlify-honeypot="bot-field">
                 <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
                 <TextField value={form.name} onChange={handleChange} required type="text" name="name" id="name" />
                 <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
