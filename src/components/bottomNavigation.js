@@ -48,6 +48,7 @@ const linkCSS = css`
 
     &.active {
         color: ${BLUE};
+        transform: scale(1.1);
 
         svg {
             fill: ${BLUE};

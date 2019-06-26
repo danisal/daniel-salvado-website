@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/layout';
 import Bio from '../components/bio';
@@ -33,6 +33,14 @@ const SubmitButton = styled.button`
     &:active {
         border-style: solid;
     }
+
+    &:disabled,
+    [disabled] {
+        border-color: grey;
+        color: grey;
+        cursor: not-allowed;
+        background-color: white;
+    }
 `;
 
 const CheckboxWrapper = styled.div`
@@ -51,6 +59,7 @@ const TextField = styled.input`
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.23);
     padding: 8px 16px;
+    width: 100%;
 
     &:focus {
         border-color: #134896;
@@ -79,8 +88,63 @@ const TextFieldLabel = styled.label`
 `;
 
 function SayHello() {
+    const [form, setForm] = useState({
+        name: ``,
+        email: ``,
+        subject: ``,
+        message: ``,
+        terms: false,
+    });
+
+    useEffect(() => {
+        return () => {
+            isValidateForm();
+        };
+    }, [form]);
+
+    const handleChange = event => {
+        const { name, value } = event.target;
+
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
+
+    const handleCheckbox = event => {
+        const { name, checked } = event.target;
+
+        setForm({
+            ...form,
+            [name]: checked,
+        });
+    };
+
+    const isValidateForm = () => {
+        const { name, email, subject, message, terms } = form;
+
+        // prettier-ignore
+        return (!terms || (name === `` || email === `` || subject === `` || message === ``));
+    };
+
+    const encode = data => {
+        return Object.keys(data)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+            .join(`&`);
+    };
+
     const submitForm = event => {
         event.preventDefault();
+
+        const { terms, ...rest } = form;
+
+        fetch(`/`, {
+            method: `POST`,
+            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+            body: encode({ 'form-name': `contact`, ...rest }),
+        })
+            .then(() => alert(`Success!`))
+            .catch(error => alert(error));
     };
 
     return (
@@ -93,20 +157,44 @@ function SayHello() {
             </p>
             <Form onSubmit={submitForm}>
                 <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
-                <TextField type="text" name="name" id="" />
+                <TextField value={form.name} onChange={handleChange} required type="text" name="name" id="name" />
                 <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
-                <TextField type="email" name="email" />
+                <TextField value={form.email} onChange={handleChange} required type="email" name="email" id="email" />
                 <TextFieldLabel htmlFor="subject">Subject</TextFieldLabel>
-                <TextField type="text" name="subject" />
+                <TextField
+                    value={form.subject}
+                    onChange={handleChange}
+                    required
+                    type="text"
+                    name="subject"
+                    id="subject"
+                />
                 <TextFieldLabel htmlFor="message">Message</TextFieldLabel>
-                <TextArea name="message" id="" cols="30" rows="10" />
+                <TextArea
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                    name="message"
+                    id="message"
+                    cols="20"
+                    rows="10"
+                />
 
                 <CheckboxWrapper>
-                    <input type="checkbox" name="privacy-policy" id="" />
-                    <span>I agree with the terms and conditions</span>
+                    <input
+                        value={form.terms}
+                        onChange={handleCheckbox}
+                        required
+                        type="checkbox"
+                        name="terms"
+                        id="terms"
+                    />
+                    <label htmlFor="terms">I agree with the terms and conditions</label>
                 </CheckboxWrapper>
                 <br />
-                <SubmitButton type="submit">Submit</SubmitButton>
+                <SubmitButton type="submit" disabled={isValidateForm()}>
+                    Submit
+                </SubmitButton>
             </Form>
             <Bio />
         </Layout>
