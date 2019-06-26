@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Home from '../../content/assets/home-outline.svg';
-import Writing from '../../content/assets/quill-drawing-a-line.svg';
+import Writing from '../../content/assets/feather-pen.svg';
 import Work from '../../content/assets/data.svg';
 import SayHello from '../../content/assets/hello-speech-bubble-handmade-chatting-symbol.svg';
 import { rhythm } from '../utils/typography';
