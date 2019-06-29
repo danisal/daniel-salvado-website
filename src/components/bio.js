@@ -12,6 +12,7 @@ function Bio() {
                 const { author, social } = data.site.siteMetadata;
                 return (
                     <Fragment>
+                        <br />
                         <h3>About the Author</h3>
                         <div
                             style={{
@@ -32,11 +33,10 @@ function Bio() {
                             <div>
                                 <h4 style={{ margin: `0 0 10px` }}>Daniel Salvado</h4>
                                 <p>
-                                    Lives and works in Faro building useful things.
+                                    Software Engineer | Developer | JavaScript Enthusiast. Strive to improve on code and
+                                    the people around me! Follow
                                     {` `}
-                                    <a href={`https://twitter.com/${social.twitter}`}>
-                                        You should follow him on Twitter
-                                    </a>
+                                    <a href={`https://twitter.com/${social.twitter}`}>{`@${social.twitter}`}</a>
                                 </p>
                             </div>
                         </div>

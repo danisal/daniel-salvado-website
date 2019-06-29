@@ -50,12 +50,10 @@ function HeaderComponent() {
         <Header shadow={shadow}>
             <Link
                 css={css`
-                    font-size: 32px;
+                    font-size: 40px;
                     font-family: 'Reenie Beanie';
                     &:hover {
                         box-shadow: none;
-                        transform: scale(1.2);
-                        transition: ease-in-out 150ms;
                     }
                 `}
                 to="/"

@@ -42,7 +42,7 @@ function MyWork() {
                 return (
                     <Layout>
                         <SEO title="My Work" keywords={[`technologies`, `experience`, `work`, `portfolio`]} />
-                        <h3>Here you can see some of my work</h3>
+                        <h2>Here you can see some of my work</h2>
                         {data.allSitesYaml.edges.map(({ node }) => (
                             <ImageWrapper key={cuid()}>
                                 <a href={node.url} target="_blank" rel="noopener noreferrer">

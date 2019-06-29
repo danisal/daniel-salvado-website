@@ -1,11 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm, scale } from '../utils/typography';
+import { rhythm } from '../utils/typography';
+import { InfoWrapper } from '../style-components';
+
+const UL = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+`;
 
 function BlogPostTemplate({ data, pageContext }) {
     const post = data.markdownRemark;
@@ -15,31 +27,26 @@ function BlogPostTemplate({ data, pageContext }) {
         <Layout>
             <SEO title={post.frontmatter.title} description={post.excerpt} />
             <h1>{post.frontmatter.title}</h1>
-            <p
-                style={{
-                    ...scale(-1 / 5),
-                    display: `block`,
-                    marginBottom: rhythm(1),
-                    marginTop: rhythm(-1),
-                }}
+            <InfoWrapper
+                css={css`
+                    margin-bottom: ${rhythm(1)};
+                `}
             >
-                {post.frontmatter.date}
-            </p>
+                <small>{post.frontmatter.date}</small>
+                <small>
+                    <span role="img" aria-label="clock emoji">
+                        ⏱
+                    </span>
+                    {` ${post.timeToRead} minute${post.timeToRead > 1 ? `s` : ``} reading`}
+                </small>
+            </InfoWrapper>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr
                 style={{
                     marginBottom: rhythm(1),
                 }}
             />
-            <ul
-                style={{
-                    display: `flex`,
-                    flexWrap: `wrap`,
-                    justifyContent: `space-between`,
-                    listStyle: `none`,
-                    padding: 0,
-                }}
-            >
+            <UL>
                 <li>
                     {previous && (
                         <Link to={previous.fields.slug} rel="prev">
@@ -54,7 +61,7 @@ function BlogPostTemplate({ data, pageContext }) {
                         </Link>
                     )}
                 </li>
-            </ul>
+            </UL>
             <Bio />
         </Layout>
     );
@@ -78,6 +85,7 @@ BlogPostTemplate.propTypes = {
             frontmatter: PropTypes.shape({
                 title: PropTypes.string,
             }),
+            timeToRead: PropTypes.number,
         }),
         previous: PropTypes.shape({
             fields: PropTypes.shape({
@@ -108,6 +116,7 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
             }
+            timeToRead
         }
     }
 `;

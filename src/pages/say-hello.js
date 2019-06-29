@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import { navigate } from 'gatsby';
+
 import Layout from '../components/layout';
 import Bio from '../components/bio';
 import SEO from '../components/seo';
+
+import { encode } from '../utils/helpers';
 
 const Form = styled.form`
     display: flex;
@@ -87,6 +91,15 @@ const TextFieldLabel = styled.label`
     z-index: 1;
 `;
 
+const Label = styled.label`
+    display: flex;
+    align-items: center;
+`;
+
+const Checkbox = styled.input`
+    margin-right: 1rem;
+`;
+
 function SayHello() {
     const [form, setForm] = useState({
         name: ``,
@@ -127,12 +140,6 @@ function SayHello() {
         return (!terms || (name === `` || email === `` || subject === `` || message === ``));
     };
 
-    const encode = data => {
-        return Object.keys(data)
-            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-            .join(`&`);
-    };
-
     const submitForm = event => {
         event.preventDefault();
 
@@ -143,53 +150,57 @@ function SayHello() {
             headers: { 'Content-Type': `application/x-www-form-urlencoded` },
             body: encode({ 'form-name': `contact`, ...rest }),
         })
-            .then(() => alert(`Success!`))
-            .catch(error => alert(error));
+            .then(() => navigate(`/thank-you`))
+            .catch(error => console.log(error));
     };
 
     return (
         <Layout>
-            <SEO title="Say Hello" keywords={[`contact`, `form`]} />
-            <h2>Com&apos;on and say Hello</h2>
+            <SEO title="Say Hello" keywords={[`contact`, `form`, `email`]} />
+            <h2>Come say hello</h2>
             <p>
-                Do you have any thoughts or simply just want to get in touch? This is the place. Drop me a line and I
-                will get back to you in a couple of days.
+                Do you have any thoughts, suggestions or simply just want to get in touch regarding something else? This
+                is the place.
             </p>
+            <p>Drop me a line and I will get back to you in a couple of days.</p>
             <Form onSubmit={submitForm} data-netlify="true" data-netlify-honeypot="bot-field">
                 <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
-                <TextField value={form.name} onChange={handleChange} required type="text" name="name" id="name" />
+                <TextField id="name" name="name" onChange={handleChange} required type="text" value={form.name} />
                 <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
-                <TextField value={form.email} onChange={handleChange} required type="email" name="email" id="email" />
+                <TextField id="email" name="email" onChange={handleChange} required type="email" value={form.email} />
                 <TextFieldLabel htmlFor="subject">Subject</TextFieldLabel>
                 <TextField
-                    value={form.subject}
+                    id="subject"
+                    name="subject"
                     onChange={handleChange}
                     required
                     type="text"
-                    name="subject"
-                    id="subject"
+                    value={form.subject}
                 />
                 <TextFieldLabel htmlFor="message">Message</TextFieldLabel>
                 <TextArea
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    name="message"
-                    id="message"
                     cols="20"
+                    id="message"
+                    name="message"
+                    onChange={handleChange}
+                    placeholder="Tell me more..."
+                    required
                     rows="10"
+                    value={form.message}
                 />
 
                 <CheckboxWrapper>
-                    <input
-                        value={form.terms}
-                        onChange={handleCheckbox}
-                        required
-                        type="checkbox"
-                        name="terms"
-                        id="terms"
-                    />
-                    <label htmlFor="terms">I agree with the terms and conditions</label>
+                    <Label htmlFor="terms">
+                        <Checkbox
+                            id="terms"
+                            name="terms"
+                            onChange={handleCheckbox}
+                            required
+                            type="checkbox"
+                            value={form.terms}
+                        />
+                        I agree with the terms and conditions
+                    </Label>
                 </CheckboxWrapper>
                 <br />
                 <SubmitButton type="submit" disabled={isValidateForm()}>

@@ -5,7 +5,8 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
+
+import { InfoWrapper } from '../style-components';
 
 function Writing({ data }) {
     const posts = data.allMarkdownRemark.edges;
@@ -17,14 +18,18 @@ function Writing({ data }) {
                 const title = node.frontmatter.title || node.fields.slug;
                 return (
                     <div key={node.fields.slug}>
-                        <h3
-                            style={{
-                                marginBottom: rhythm(1 / 4),
-                            }}
-                        >
+                        <h3>
                             <Link to={node.fields.slug}>{title}</Link>
                         </h3>
-                        <small>{node.frontmatter.date}</small>
+                        <InfoWrapper>
+                            <small>{node.frontmatter.date}</small>
+                            <small>
+                                <span role="img" aria-label="clock emoji">
+                                    ⏱
+                                </span>
+                                {` ${node.timeToRead} minute${node.timeToRead > 1 ? `s` : ``} reading`}
+                            </small>
+                        </InfoWrapper>
                         <p
                             dangerouslySetInnerHTML={{
                                 __html: node.excerpt,
@@ -52,6 +57,7 @@ Writing.propTypes = {
                             date: PropTypes.string,
                             title: PropTypes.string,
                         }),
+                        timeToRead: PropTypes.number,
                     }),
                 }),
             ),
@@ -79,6 +85,7 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         title
                     }
+                    timeToRead
                 }
             }
         }

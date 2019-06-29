@@ -2,15 +2,23 @@ import Typography from 'typography';
 import githubTheme from 'typography-theme-github';
 
 // Override theme styles
-githubTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
-    a: {
-        color: `#0D47A1`,
-    },
-    'a:hover,a:active': {
-        textDecoration: `none`,
-        boxShadow: `inset 0 0 0 #fff, inset 0 -6px 0 #FFEB3B`,
-    },
-});
+githubTheme.overrideThemeStyles = ({ rhythm }, options, styles) => {
+    return {
+        a: {
+            color: `#0D47A1`,
+        },
+        'a:hover,a:active': {
+            textDecoration: `none`,
+            boxShadow: `inset 0 0 0 #fff, inset 0 -6px 0 #FFEB3B`,
+        },
+        h1: {
+            color: `#0D47A1`,
+        },
+        h2: {
+            marginBottom: `1rem`,
+        },
+    };
+};
 
 const typography = new Typography(githubTheme);
 

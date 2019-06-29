@@ -5,7 +5,7 @@ module.exports = {
         description: `Daniel Salvado's personal virtual space`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
         social: {
-            twitter: `danielsalvado1`,
+            twitter: `danisalTweets`,
         },
     },
     plugins: [
