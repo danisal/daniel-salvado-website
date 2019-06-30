@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                         {/* Preconnect */}
                         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
                         <link
-                            href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap"
+                            href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap&text=DanielSalvado"
                             rel="stylesheet"
                         />
                     </Helmet>
