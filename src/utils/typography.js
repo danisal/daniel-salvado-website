@@ -17,6 +17,14 @@ githubTheme.overrideThemeStyles = ({ rhythm }, options, styles) => {
         h2: {
             marginBottom: `1rem`,
         },
+        p: {
+            textAlign: `justify`,
+            marginBottom: rhythm(1),
+        },
+        'p > a:hover, p > a:active': {
+            textDecoration: `none`,
+            boxShadow: `none`,
+        },
     };
 };
 
