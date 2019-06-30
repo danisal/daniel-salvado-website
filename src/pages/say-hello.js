@@ -164,7 +164,7 @@ function SayHello() {
             </p>
             <p>Drop me a line and I will get back to you in a couple of days.</p>
             <Form onSubmit={submitForm} data-netlify="true" data-netlify-honeypot="bot-field">
-                <TextFieldLabel htmlFor="name">Name</TextFieldLabel>
+                <TextFieldLabel htmlFor="name">Full Name</TextFieldLabel>
                 <TextField id="name" name="name" onChange={handleChange} required type="text" value={form.name} />
                 <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
                 <TextField id="email" name="email" onChange={handleChange} required type="email" value={form.email} />

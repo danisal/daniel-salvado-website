@@ -147,7 +147,7 @@ pre[data-line] {
     overflow: auto;
 }
 
-@media (max-width: 672px) {
+@media only screen and (max-width: 672px) {
     .gatsby-highlight {
         border-radius: 0;
         max-width: 100vw;

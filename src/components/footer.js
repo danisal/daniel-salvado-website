@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
     align-items: center;
     justify-items: center;
 
-    @media (max-width: 500px) {
+    @media only screen and (max-width: 500px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
@@ -57,7 +57,7 @@ const FooterText = styled.p`
 
 const nameCSS = css`
     grid-area: name;
-    @media (min-width: 500px) {
+    @media only screen and (min-width: 500px) {
         justify-self: flex-start;
     }
 `;
@@ -71,7 +71,7 @@ const legalCSS = css`
         color: #134896;
     }
     grid-area: legal;
-    @media (min-width: 500px) {
+    @media only screen and (min-width: 500px) {
         justify-self: flex-end;
     }
 `;
