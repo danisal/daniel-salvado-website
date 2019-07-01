@@ -25,7 +25,7 @@ function BlogPostTemplate({ data, pageContext }) {
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} description={post.excerpt} />
+            <SEO title={post.frontmatter.title} description={post.excerpt} keywords={post.frontmatter.keywords} />
             <h1>{post.frontmatter.title}</h1>
             <InfoWrapper
                 css={css`
@@ -115,6 +115,7 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                keywords
             }
             timeToRead
         }
