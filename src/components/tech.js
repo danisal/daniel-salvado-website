@@ -25,7 +25,7 @@ const TechWrapper = styled.div`
 function Tech() {
     return (
         <Fragment>
-            <h3>And here are some of the technologies que I love to work with</h3>
+            <h3>And technologies that I love to work with</h3>
             <TechWrapper>
                 <Tooltip title="CSS3">
                     <CSS3 />

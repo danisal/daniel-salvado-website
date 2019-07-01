@@ -26,12 +26,18 @@ const WorkedAt = styled.div`
     justify-content: space-between;
 `;
 
-const WorkExperience = styled.div`
-    margin-bottom: ${rhythm(0.4)};
-`;
+const WorkExperience = styled.div``;
 
 const ImageWrapper = styled.div`
     margin: ${rhythm(0.6)};
+`;
+
+const H5 = styled.h5`
+    margin: ${rhythm(0.5)} 0;
+`;
+
+const Text = styled.p`
+    margin-bottom: ${rhythm(0.5)};
 `;
 
 function MyWork() {
@@ -42,7 +48,7 @@ function MyWork() {
                 return (
                     <Layout>
                         <SEO title="My Work" keywords={[`technologies`, `experience`, `work`, `portfolio`]} />
-                        <h2>Here you can see some of my work</h2>
+                        <h2>Some of my work</h2>
                         {data.allSitesYaml.edges.map(({ node }) => (
                             <ImageWrapper key={cuid()}>
                                 <a href={node.url} target="_blank" rel="noopener noreferrer">
@@ -55,7 +61,8 @@ function MyWork() {
                                 </a>
                             </ImageWrapper>
                         ))}
-                        <h3>Experience</h3>
+                        <br />
+                        <h3>Work Experience</h3>
                         <WorkExperience>
                             <WorkedAt>
                                 <h4>
@@ -63,9 +70,9 @@ function MyWork() {
                                         Snowball Digital
                                     </a>
                                 </h4>
-                                <h5>May 2019 - Current</h5>
+                                <H5>May 2019 - Current</H5>
                             </WorkedAt>
-                            <p>Software Engineer</p>
+                            <Text>Software Engineer</Text>
                         </WorkExperience>
                         <WorkExperience>
                             <WorkedAt>
@@ -74,9 +81,9 @@ function MyWork() {
                                         Evodeck
                                     </a>
                                 </h4>
-                                <h5>January 2018 - April 2019</h5>
+                                <H5>January 2018 - April 2019</H5>
                             </WorkedAt>
-                            <p>Software Engineer</p>
+                            <Text>Software Engineer</Text>
                         </WorkExperience>
                         <WorkExperience>
                             <WorkedAt>
@@ -85,9 +92,9 @@ function MyWork() {
                                         Truphone
                                     </a>
                                 </h4>
-                                <h5>June 2017 - December 2017</h5>
+                                <H5>June 2017 - December 2017</H5>
                             </WorkedAt>
-                            <p>Software Engineer</p>
+                            <Text>Software Engineer</Text>
                         </WorkExperience>
                         <WorkExperience>
                             <WorkedAt>
@@ -96,10 +103,11 @@ function MyWork() {
                                         Trading Economics
                                     </a>
                                 </h4>
-                                <h5>October 2016 - May 2017</h5>
+                                <H5>October 2016 - May 2017</H5>
                             </WorkedAt>
-                            <p>Web Developer</p>
+                            <Text>Web Developer</Text>
                         </WorkExperience>
+                        <br />
                         <Tech />
                         <Bio />
                     </Layout>
