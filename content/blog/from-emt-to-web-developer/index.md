@@ -1,6 +1,7 @@
 ---
 title: From EMT to Web Developer
 date: '2017-05-11'
+keywords: ['Free Code Camp', 'Life Change']
 ---
 
 ![code on a computer](./computer.jpeg)
