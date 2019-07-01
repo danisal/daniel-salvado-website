@@ -142,7 +142,6 @@ function SayHello() {
 
     const submitForm = event => {
         event.preventDefault();
-
         const { terms, ...rest } = form;
 
         fetch(`/`, {
@@ -157,13 +156,21 @@ function SayHello() {
     return (
         <Layout>
             <SEO title="Say Hello" keywords={[`contact`, `form`, `email`]} />
+            {/* <!-- A little help for the Netlify post-processing bots --> */}
+            <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <input type="text" name="subject" />
+                <input type="checkbox" name="terms" />
+                <textarea name="message" />
+            </form>
             <h2>Come say hello</h2>
             <p>
                 Do you have any thoughts, suggestions or simply just want to get in touch regarding something else? This
                 is the place.
             </p>
             <p>Drop me a line and I will get back to you in a couple of days.</p>
-            <Form onSubmit={submitForm} data-netlify="true" data-netlify-honeypot="bot-field">
+            <Form onSubmit={submitForm}>
                 <TextFieldLabel htmlFor="name">Full Name</TextFieldLabel>
                 <TextField id="name" name="name" onChange={handleChange} required type="text" value={form.name} />
                 <TextFieldLabel htmlFor="email">Email</TextFieldLabel>
