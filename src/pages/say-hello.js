@@ -161,7 +161,6 @@ function SayHello() {
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <input type="text" name="subject" />
-                <input type="checkbox" name="terms" />
                 <textarea name="message" />
             </form>
             <h2>Come say hello</h2>
