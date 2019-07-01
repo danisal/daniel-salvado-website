@@ -123,7 +123,11 @@ Table with different column widthsAnd we can do much more! If we want to work w
 
 And then, the final result is the one below:
 
+Id column with a minimum width of 50px
+
 ![Id column with a minimum width of 50px](./id-column-with-a-minimum-width-of-50px.png)
+
+Id column with a maximum width of 100px
 
 ![Id column with a maximum width of 100px](./id-column-with-a-maximum-width-of-100px.png)
 
