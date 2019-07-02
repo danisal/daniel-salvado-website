@@ -27,29 +27,17 @@ function Tech() {
         <Fragment>
             <h3>And technologies that I love to work with</h3>
             <TechWrapper>
-                <Tooltip title="CSS3">
-                    <CSS3 />
-                </Tooltip>
-                <Tooltip title="GatsbyJS">
-                    <Gatsby />
-                </Tooltip>
-                <Tooltip title="Git">
-                    <Git />
-                </Tooltip>
-                <Tooltip title="GraphQL">
-                    <Graphql />
-                </Tooltip>
                 <Tooltip title="HTML5">
                     <HTML5 />
                 </Tooltip>
+                <Tooltip title="CSS3">
+                    <CSS3 />
+                </Tooltip>
+                <Tooltip title="Sass">
+                    <Sass />
+                </Tooltip>
                 <Tooltip title="JavaScript">
                     <JS />
-                </Tooltip>
-                <Tooltip title="MongoDB">
-                    <MongoDB />
-                </Tooltip>
-                <Tooltip title="NodeJS">
-                    <Node />
                 </Tooltip>
                 <Tooltip title="React">
                     <ReactSVG />
@@ -57,8 +45,20 @@ function Tech() {
                 <Tooltip title="Redux">
                     <Redux />
                 </Tooltip>
-                <Tooltip title="Sass">
-                    <Sass />
+                <Tooltip title="GraphQL">
+                    <Graphql />
+                </Tooltip>
+                <Tooltip title="NodeJS">
+                    <Node />
+                </Tooltip>
+                <Tooltip title="MongoDB">
+                    <MongoDB />
+                </Tooltip>
+                <Tooltip title="GatsbyJS">
+                    <Gatsby />
+                </Tooltip>
+                <Tooltip title="Git">
+                    <Git />
                 </Tooltip>
             </TechWrapper>
         </Fragment>
