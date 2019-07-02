@@ -5,6 +5,8 @@ module.exports = {
         description: `Daniel Salvado's personal virtual space`,
         siteUrl: `https://www.daniel.salvado.com/`,
         social: {
+            github: `danisal`,
+            linkedIn: `daniel-salvado`,
             twitter: `danisalTweets`,
         },
     },

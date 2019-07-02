@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Link, graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -84,28 +85,71 @@ const year = new Date().getFullYear();
 
 function Footer() {
     return (
-        <StyledFooter>
-            <FooterText css={nameCSS}>{`© ${year} Daniel Salvado`}</FooterText>
-            <IconsWrapper css={socialCSS}>
-                <SocialButton
-                    href="https://www.linkedin.com/in/daniel-salvado/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <LinkedIn css={iconSize} aria-label="linkedin" />
-                </SocialButton>
-                <SocialButton href="https://github.com/danisal" rel="noopener noreferrer" target="_blank">
-                    <GitHub css={iconSize} aria-label="github" />
-                </SocialButton>
-                <SocialButton href="https://twitter.com/danielsalvado1" rel="noopener noreferrer" target="_blank">
-                    <Twitter css={iconSize} aria-label="twitter" />
-                </SocialButton>
-            </IconsWrapper>
-            <Link css={legalCSS} to="/legal-notice">
-                Legal Notice
-            </Link>
-        </StyledFooter>
+        <StaticQuery
+            query={footerQuery}
+            render={({ site }) => {
+                const { github, linkedIn, twitter } = site.siteMetadata.social;
+
+                return (
+                    <StyledFooter>
+                        <FooterText css={nameCSS}>{`© ${year} Daniel Salvado`}</FooterText>
+                        <IconsWrapper css={socialCSS}>
+                            <SocialButton
+                                href={`https://www.linkedin.com/in/${linkedIn}/`}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <LinkedIn css={iconSize} aria-label="linkedIn" />
+                            </SocialButton>
+                            <SocialButton
+                                href={`https://github.com/${github}`}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <GitHub css={iconSize} aria-label="github" />
+                            </SocialButton>
+                            <SocialButton
+                                href={`https://twitter.com/${twitter}`}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <Twitter css={iconSize} aria-label="twitter" />
+                            </SocialButton>
+                        </IconsWrapper>
+                        <Link css={legalCSS} to="/legal-notice">
+                            Legal Notice
+                        </Link>
+                    </StyledFooter>
+                );
+            }}
+        />
     );
 }
+
+const footerQuery = graphql`
+    query footerQuery {
+        site {
+            siteMetadata {
+                social {
+                    github
+                    linkedIn
+                    twitter
+                }
+            }
+        }
+    }
+`;
+
+Footer.propTypes = {
+    site: PropTypes.shape({
+        siteMetadata: PropTypes.shape({
+            social: PropTypes.shape({
+                github: PropTypes.string.isRequired,
+                linkedIn: PropTypes.string.isRequired,
+                twitter: PropTypes.string.isRequired,
+            }),
+        }),
+    }),
+};
 
 export default Footer;
