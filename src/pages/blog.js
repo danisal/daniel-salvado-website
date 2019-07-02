@@ -14,6 +14,7 @@ function Writing({ data }) {
     return (
         <Layout>
             <SEO title="All posts" keywords={[`blog`, `writing`, `technologies`]} />
+            <h2>Reading material</h2>
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 return (
