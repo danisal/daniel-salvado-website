@@ -107,6 +107,17 @@ function MyWork() {
                             </WorkedAt>
                             <Text>Web Developer</Text>
                         </WorkExperience>
+                        <WorkExperience>
+                            <WorkedAt>
+                                <h4>
+                                    <a href="https://www.inem.pt" target="__blank">
+                                        INEM
+                                    </a>
+                                </h4>
+                                <H5>February 2008 - September 2016</H5>
+                            </WorkedAt>
+                            <Text>Emergency Medical Technician</Text>
+                        </WorkExperience>
                         <br />
                         <Tech />
                         <Bio />
