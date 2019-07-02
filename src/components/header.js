@@ -63,13 +63,13 @@ function HeaderComponent() {
             <Links>
                 <Link to="/">Home</Link>
                 <Link to="/work">Work</Link>
-                <Link to="/writing">Writing</Link>
+                <Link to="/blog">Writing</Link>
                 <Link
                     style={{
                         textDecoration: `none`,
                         backgroundImage: `none`,
                     }}
-                    to="/say-hello"
+                    to="/contact"
                 >
                     Say Hello
                 </Link>

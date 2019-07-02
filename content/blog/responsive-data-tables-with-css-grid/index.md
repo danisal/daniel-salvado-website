@@ -153,4 +153,4 @@ I would like to share a couple of resources that I find to be very useful:
 -   [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) by CSS-TRICKS
 -   Reference to [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) in MDN web docs
 
-Thanks for reading the article, if you have any thoughts, suggestions or ideas, please let me know through the [contact form](/say-hello)!
+Thanks for reading the article, if you have any thoughts, suggestions or ideas, please let me know through the [contact form](/contact)!

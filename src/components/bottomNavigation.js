@@ -103,13 +103,13 @@ function BottomNavigation() {
                                 </Link>
                             </li>
                             <li>
-                                <Link activeClassName="active" to="/writing" css={linkCSS}>
+                                <Link activeClassName="active" to="/blog" css={linkCSS} partiallyActive>
                                     <Writing />
                                     Writing
                                 </Link>
                             </li>
                             <li>
-                                <Link activeClassName="active" to="/say-hello" css={linkCSS}>
+                                <Link activeClassName="active" to="/contact" css={linkCSS}>
                                     <SayHello />
                                     Hello
                                 </Link>

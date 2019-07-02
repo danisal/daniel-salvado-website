@@ -223,7 +223,7 @@ function LegalNotice() {
             <h2>Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us:</p>
             <ul>
-                <li>By visiting this page on our website: daniel.salvado.com/say-hello</li>
+                <li>By visiting this page on our website: daniel.salvado.com/contact</li>
             </ul>
         </Layout>
     );
