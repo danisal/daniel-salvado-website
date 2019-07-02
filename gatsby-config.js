@@ -3,7 +3,7 @@ module.exports = {
         title: `Daniel Salvado website`,
         author: `Daniel Salvado`,
         description: `Daniel Salvado's personal virtual space`,
-        siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+        siteUrl: `https://www.daniel.salvado.com/`,
         social: {
             twitter: `danisalTweets`,
         },
@@ -106,5 +106,6 @@ module.exports = {
                 path: `./src/config/`,
             },
         },
+        `gatsby-plugin-sitemap`,
     ],
 };
