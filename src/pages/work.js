@@ -40,6 +40,46 @@ const Text = styled.p`
     margin-bottom: ${rhythm(0.5)};
 `;
 
+const work = [
+    {
+        company: `Snowball Digital`,
+        website: `https://www.snowball.digital`,
+        startDate: `2019-05`,
+        endDate: new Date(),
+        position: `Software Engineer`,
+    },
+    {
+        company: `Evodeck`,
+        website: `https://www.evodeck.com`,
+        startDate: `2018-01`,
+        endDate: `2019-04`,
+        position: `Software Engineer`,
+    },
+    {
+        company: `Truphone`,
+        website: `https://www.truphone.com`,
+        startDate: `2017-06`,
+        endDate: `2017-12`,
+        position: `Software Engineer`,
+    },
+    {
+        company: `Trading Economics`,
+        website: `https://tradingeconomics.com`,
+        startDate: `2016-10`,
+        endDate: `2017-05`,
+        position: `Software Engineer`,
+    },
+    {
+        company: `INEM`,
+        website: `https://www.inem.pt`,
+        startDate: `2008-02`,
+        endDate: `2016-09`,
+        position: `Emergency Medical technician`,
+    },
+];
+
+const now = new Date();
+
 function MyWork() {
     return (
         <StaticQuery
@@ -63,61 +103,38 @@ function MyWork() {
                         ))}
                         <br />
                         <h3>Work Experience</h3>
-                        <WorkExperience>
-                            <WorkedAt>
-                                <h4>
-                                    <a href="https://www.snowball.digital" target="__blank">
-                                        Snowball Digital
-                                    </a>
-                                </h4>
-                                <H5>May 2019 - Current</H5>
-                            </WorkedAt>
-                            <Text>Software Engineer</Text>
-                        </WorkExperience>
-                        <WorkExperience>
-                            <WorkedAt>
-                                <h4>
-                                    <a href="https://www.evodeck.com" target="__blank">
-                                        Evodeck
-                                    </a>
-                                </h4>
-                                <H5>January 2018 - April 2019</H5>
-                            </WorkedAt>
-                            <Text>Software Engineer</Text>
-                        </WorkExperience>
-                        <WorkExperience>
-                            <WorkedAt>
-                                <h4>
-                                    <a href="https://www.truphone.com/" target="__blank">
-                                        Truphone
-                                    </a>
-                                </h4>
-                                <H5>June 2017 - December 2017</H5>
-                            </WorkedAt>
-                            <Text>Software Engineer</Text>
-                        </WorkExperience>
-                        <WorkExperience>
-                            <WorkedAt>
-                                <h4>
-                                    <a href="https://www.tradingeconomics.com" target="__blank">
-                                        Trading Economics
-                                    </a>
-                                </h4>
-                                <H5>October 2016 - May 2017</H5>
-                            </WorkedAt>
-                            <Text>Web Developer</Text>
-                        </WorkExperience>
-                        <WorkExperience>
-                            <WorkedAt>
-                                <h4>
-                                    <a href="https://www.inem.pt" target="__blank">
-                                        INEM
-                                    </a>
-                                </h4>
-                                <H5>February 2008 - September 2016</H5>
-                            </WorkedAt>
-                            <Text>Emergency Medical Technician</Text>
-                        </WorkExperience>
+                        {work.map(w => {
+                            const startDate = new Date(w.startDate).toLocaleDateString(`en-gb`, {
+                                month: `long`,
+                                year: `numeric`,
+                            });
+
+                            const endDate =
+                                w.endDate >= now
+                                    ? `Current`
+                                    : new Date(w.endDate).toLocaleDateString(`en-gb`, {
+                                          month: `long`,
+                                          year: `numeric`,
+                                      });
+
+                            return (
+                                <WorkExperience key={cuid()}>
+                                    <WorkedAt>
+                                        <h4>
+                                            <a href={w.website} target="__blank" noreferer noopener>
+                                                {w.company}
+                                            </a>
+                                        </h4>
+                                        <H5>
+                                            <time dateTime={w.startDate}>{startDate}</time>
+                                            {` `}-{` `}
+                                            <time dateTime={w.endDate}>{endDate}</time>
+                                        </H5>
+                                    </WorkedAt>
+                                    <Text>{w.position}</Text>
+                                </WorkExperience>
+                            );
+                        })}
                         <br />
                         <Tech />
                         <Bio />

@@ -17,13 +17,17 @@ function Writing({ data }) {
             <h2>Reading material</h2>
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
+                const publishedDate = new Date(node.frontmatter.date);
+
                 return (
                     <div key={node.fields.slug}>
                         <h3>
                             <Link to={node.fields.slug}>{title}</Link>
                         </h3>
                         <InfoWrapper>
-                            <small>{node.frontmatter.date}</small>
+                            <time dateTime={publishedDate.toDateString()}>
+                                <small>{node.frontmatter.date}</small>
+                            </time>
                             <small>
                                 <span role="img" aria-label="clock emoji">
                                     ⏱
@@ -32,6 +36,7 @@ function Writing({ data }) {
                             </small>
                         </InfoWrapper>
                         <p
+                            // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
                                 __html: node.excerpt,
                             }}
