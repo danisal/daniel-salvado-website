@@ -19,7 +19,7 @@ const shadow = css({
     },
 });
 
-const WorkedAt = styled.div`
+const WorkedAt = styled.h4`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,10 +30,6 @@ const WorkExperience = styled.div``;
 
 const ImageWrapper = styled.div`
     margin: ${rhythm(0.6)};
-`;
-
-const H5 = styled.h5`
-    margin: ${rhythm(0.5)} 0;
 `;
 
 const Text = styled.p`
@@ -120,16 +116,14 @@ function MyWork() {
                             return (
                                 <WorkExperience key={cuid()}>
                                     <WorkedAt>
-                                        <h4>
-                                            <a href={w.website} target="__blank" noreferer noopener>
-                                                {w.company}
-                                            </a>
-                                        </h4>
-                                        <H5>
-                                            <time dateTime={w.startDate}>{startDate}</time>
-                                            {` `}-{` `}
-                                            <time dateTime={w.endDate}>{endDate}</time>
-                                        </H5>
+                                        <a href={w.website} target="__blank" rel="noopener noreferrer">
+                                            {w.company}
+                                        </a>
+                                        <span>
+                                            {<time dateTime={w.startDate}>{startDate}</time>}
+                                            {` - `}
+                                            {<time dateTime={w.endDate}>{endDate}</time>}
+                                        </span>
                                     </WorkedAt>
                                     <Text>{w.position}</Text>
                                 </WorkExperience>
