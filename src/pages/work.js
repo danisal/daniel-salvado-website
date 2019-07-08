@@ -101,15 +101,15 @@ function MyWork() {
                         <h3>Work Experience</h3>
                         {work.map(w => {
                             const startDate = new Date(w.startDate).toLocaleDateString(`en-gb`, {
-                                month: `long`,
+                                month: `short`,
                                 year: `numeric`,
                             });
 
                             const endDate =
                                 w.endDate >= now
-                                    ? `Current`
+                                    ? `Present`
                                     : new Date(w.endDate).toLocaleDateString(`en-gb`, {
-                                          month: `long`,
+                                          month: `short`,
                                           year: `numeric`,
                                       });
 
