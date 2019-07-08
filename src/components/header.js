@@ -6,11 +6,6 @@ import { css } from '@emotion/core';
 import { rhythm } from '../utils/typography';
 
 const Header = styled.header`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 ${rhythm(1.5)};
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.95);
@@ -31,6 +26,16 @@ const Links = styled.div`
     }
 `;
 
+const Section = styled.section`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 ${rhythm(1.5)};
+    max-width: 1200px;
+    margin: 0 auto;
+`;
+
 function HeaderComponent() {
     const [shadow, setShadow] = useState(false);
 
@@ -48,32 +53,34 @@ function HeaderComponent() {
 
     return (
         <Header shadow={shadow}>
-            <Link
-                css={css`
-                    font-size: 40px;
-                    font-family: 'Reenie Beanie';
-                    &:hover {
-                        box-shadow: none;
-                    }
-                `}
-                to="/"
-            >
-                Daniel Salvado
-            </Link>
-            <Links>
-                <Link to="/">Home</Link>
-                <Link to="/work">Work</Link>
-                <Link to="/blog">Writing</Link>
+            <Section>
                 <Link
-                    style={{
-                        textDecoration: `none`,
-                        backgroundImage: `none`,
-                    }}
-                    to="/contact"
+                    css={css`
+                        font-size: 40px;
+                        font-family: 'Reenie Beanie';
+                        &:hover {
+                            box-shadow: none;
+                        }
+                    `}
+                    to="/"
                 >
-                    Say Hello
+                    Daniel Salvado
                 </Link>
-            </Links>
+                <Links>
+                    <Link to="/">Home</Link>
+                    <Link to="/work">Work</Link>
+                    <Link to="/blog">Writing</Link>
+                    <Link
+                        style={{
+                            textDecoration: `none`,
+                            backgroundImage: `none`,
+                        }}
+                        to="/contact"
+                    >
+                        Say Hello
+                    </Link>
+                </Links>
+            </Section>
         </Header>
     );
 }

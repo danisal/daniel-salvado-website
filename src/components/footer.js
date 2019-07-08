@@ -10,13 +10,18 @@ import Twitter from '../../content/assets/twitter-brands.svg';
 
 import { rhythm } from '../utils/typography';
 
-const StyledFooter = styled.footer`
+const Footer = styled.footer``;
+
+const Section = styled.footer`
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 'name social legal';
     align-items: center;
     justify-items: center;
+    padding: 0 ${rhythm(1.5)};
+    max-width: 1200px;
+    margin: 0 auto;
 
     @media only screen and (max-width: 500px) {
         grid-template-columns: 1fr;
@@ -26,7 +31,6 @@ const StyledFooter = styled.footer`
             'legal'
             'name';
     }
-    padding: 0 ${rhythm(1.5)};
 `;
 
 const IconsWrapper = styled.div`
@@ -41,6 +45,7 @@ const SocialButton = styled.a`
     background-image: none;
     padding: 8px;
     margin: 8px;
+
     &:hover {
         color: #134896;
     }
@@ -58,6 +63,7 @@ const FooterText = styled.p`
 
 const nameCSS = css`
     grid-area: name;
+
     @media only screen and (min-width: 500px) {
         justify-self: flex-start;
     }
@@ -68,10 +74,12 @@ const legalCSS = css`
     text-decoration: none;
     color: inherit;
     background-image: none;
+    grid-area: legal;
+
     &:hover {
         color: #134896;
     }
-    grid-area: legal;
+
     @media only screen and (min-width: 500px) {
         justify-self: flex-end;
     }
@@ -83,7 +91,7 @@ const socialCSS = css`
 
 const year = new Date().getFullYear();
 
-function Footer() {
+function FooterComponent() {
     return (
         <StaticQuery
             query={footerQuery}
@@ -91,35 +99,37 @@ function Footer() {
                 const { github, linkedIn, twitter } = site.siteMetadata.social;
 
                 return (
-                    <StyledFooter>
-                        <FooterText css={nameCSS}>{`© ${year} Daniel Salvado`}</FooterText>
-                        <IconsWrapper css={socialCSS}>
-                            <SocialButton
-                                href={`https://www.linkedin.com/in/${linkedIn}/`}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                <LinkedIn css={iconSize} aria-label="linkedIn" />
-                            </SocialButton>
-                            <SocialButton
-                                href={`https://github.com/${github}`}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                <GitHub css={iconSize} aria-label="github" />
-                            </SocialButton>
-                            <SocialButton
-                                href={`https://twitter.com/${twitter}`}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                <Twitter css={iconSize} aria-label="twitter" />
-                            </SocialButton>
-                        </IconsWrapper>
-                        <Link css={legalCSS} to="/legal-notice">
-                            Legal Notice
-                        </Link>
-                    </StyledFooter>
+                    <Footer>
+                        <Section>
+                            <FooterText css={nameCSS}>{`© ${year} Daniel Salvado`}</FooterText>
+                            <IconsWrapper css={socialCSS}>
+                                <SocialButton
+                                    href={`https://www.linkedin.com/in/${linkedIn}/`}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
+                                    <LinkedIn css={iconSize} aria-label="linkedIn" />
+                                </SocialButton>
+                                <SocialButton
+                                    href={`https://github.com/${github}`}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
+                                    <GitHub css={iconSize} aria-label="github" />
+                                </SocialButton>
+                                <SocialButton
+                                    href={`https://twitter.com/${twitter}`}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
+                                    <Twitter css={iconSize} aria-label="twitter" />
+                                </SocialButton>
+                            </IconsWrapper>
+                            <Link css={legalCSS} to="/legal-notice">
+                                Legal Notice
+                            </Link>
+                        </Section>
+                    </Footer>
                 );
             }}
         />
@@ -140,7 +150,7 @@ const footerQuery = graphql`
     }
 `;
 
-Footer.propTypes = {
+FooterComponent.propTypes = {
     site: PropTypes.shape({
         siteMetadata: PropTypes.shape({
             social: PropTypes.shape({
@@ -152,4 +162,4 @@ Footer.propTypes = {
     }),
 };
 
-export default Footer;
+export default FooterComponent;
