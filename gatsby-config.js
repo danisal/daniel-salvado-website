@@ -1,9 +1,11 @@
+const SITE_URL = `https://www.daniel.salvado.com`;
+
 module.exports = {
     siteMetadata: {
         title: `Daniel Salvado website`,
         author: `Daniel Salvado`,
         description: `Daniel Salvado's personal virtual space`,
-        siteUrl: `https://www.daniel.salvado.com/`,
+        siteUrl: SITE_URL,
         social: {
             github: `danisal`,
             linkedIn: `daniel-salvado`,
@@ -109,5 +111,13 @@ module.exports = {
             },
         },
         `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-robots-txt`,
+            options: {
+                host: SITE_URL,
+                sitemap: `${SITE_URL}/sitemap.xml`,
+                policy: [{ userAgent: `*`, allow: `/` }],
+            },
+        },
     ],
 };
