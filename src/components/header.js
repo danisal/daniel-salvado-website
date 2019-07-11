@@ -13,7 +13,7 @@ const Header = styled.header`
     box-shadow: ${props => (props.shadow ? `0 0px 6px 0px rgba(0, 0, 0, 0.1)` : `none`)};
 `;
 
-const Links = styled.div`
+const Links = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
