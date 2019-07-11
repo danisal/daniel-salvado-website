@@ -1,4 +1,4 @@
-const SITE_URL = `https://www.daniel.salvado.com`;
+const SITE_URL = `https://www.danielsalvado.com`;
 
 module.exports = {
     siteMetadata: {
