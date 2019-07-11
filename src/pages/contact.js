@@ -38,7 +38,7 @@ const Label = styled.label`
 `;
 
 const SubmitButton = styled.button`
-    border-radius: 24px;
+    border-radius: 4px;
     padding: 8px 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -47,6 +47,7 @@ const SubmitButton = styled.button`
     border: 1px solid #134896;
     transition: cubic-bezier(0.46, 0.03, 0.52, 0.96) 300ms;
     background-color: white;
+    width: 100%;
 
     &:hover {
         cursor: pointer;
