@@ -9,6 +9,11 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 import { InfoWrapper } from '../style-components';
+import Linkedin from '../../content/assets/linkedin-in-brands.svg';
+import Facebook from '../../content/assets/facebook-f-brands.svg';
+import Twitter from '../../content/assets/twitter-brands.svg';
+
+import { socialLinks, windowOpen } from './utils';
 
 const UL = styled.ul`
     display: flex;
@@ -19,9 +24,81 @@ const UL = styled.ul`
     margin: 0;
 `;
 
+const Separator = styled.hr`
+    display: none;
+
+    @media only screen and (max-width: 760px) {
+        display: block;
+    }
+`;
+
+const Share = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin: ${rhythm(1)} 0;
+
+    @media only screen and (max-width: 760px) {
+        justify-content: flex-end;
+    }
+
+    .line {
+        flex-grow: 1;
+        border-top: 1px solid rgb(211, 211, 211);
+
+        @media only screen and (max-width: 760px) {
+            display: none;
+        }
+    }
+
+    > * {
+        margin-right: 10px;
+    }
+`;
+
+const ShareButton = styled.button`
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px 16px;
+    color: #134896;
+    border: 1px solid #134896;
+    transition: cubic-bezier(0.46, 0.03, 0.52, 0.96) 300ms;
+    background-color: white;
+
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: #134896;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        border-style: solid;
+    }
+`;
+
+const iconSize = css`
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+`;
+
 function BlogPostTemplate({ data, pageContext }) {
     const post = data.markdownRemark;
     const { previous, next } = pageContext;
+    const { site, markdownRemark } = data;
+
+    const { siteUrl } = site.siteMetadata;
+    const {
+        excerpt,
+        fields: { slug },
+    } = markdownRemark;
+
+    const link = `${siteUrl}${slug}`;
 
     return (
         <Layout>
@@ -41,11 +118,27 @@ function BlogPostTemplate({ data, pageContext }) {
                 </small>
             </InfoWrapper>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr
-                style={{
-                    marginBottom: rhythm(1),
-                }}
-            />
+            <Separator />
+            <Share>
+                <div className="line" />
+                <span>Share this article</span>
+                <ShareButton
+                    onClick={windowOpen(socialLinks.linkedin({ title: post.frontmatter.title, link, excerpt }, {}))}
+                >
+                    <Linkedin css={iconSize} />
+                </ShareButton>
+                <ShareButton
+                    onClick={windowOpen(socialLinks.facebook({ title: post.frontmatter.title, link, excerpt }, {}))}
+                >
+                    <Facebook css={iconSize} />
+                </ShareButton>
+                <ShareButton
+                    onClick={windowOpen(socialLinks.twitter({ title: post.frontmatter.title, link, excerpt }, {}))}
+                >
+                    <Twitter css={iconSize} />
+                </ShareButton>
+            </Share>
+            <Separator />
             <UL>
                 <li>
                     {previous && (
@@ -106,6 +199,7 @@ export const pageQuery = graphql`
             siteMetadata {
                 title
                 author
+                siteUrl
             }
         }
         markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -118,6 +212,9 @@ export const pageQuery = graphql`
                 keywords
             }
             timeToRead
+            fields {
+                slug
+            }
         }
     }
 `;
