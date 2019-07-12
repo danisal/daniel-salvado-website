@@ -102,7 +102,12 @@ function BlogPostTemplate({ data, pageContext }) {
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} description={post.excerpt} keywords={post.frontmatter.keywords} />
+            <SEO
+                description={post.excerpt}
+                keywords={post.frontmatter.keywords}
+                title={post.frontmatter.title}
+                url={link}
+            />
             <h1>{post.frontmatter.title}</h1>
             <InfoWrapper
                 css={css`

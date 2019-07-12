@@ -73,8 +73,9 @@ export const socialLinks = {
         })}`,
     twitter: ({ link, excerpt, title }) =>
         `https://twitter.com/intent/tweet/${fromObjectToParams({
-            text: `${title} - ${excerpt}`,
+            text: `${title}`,
             url: link,
+            via: `danisalTweets`,
         })}`,
     linkedin: ({ link, excerpt, title }) =>
         `https://www.linkedin.com/shareArticle${fromObjectToParams({
