@@ -2,9 +2,10 @@
 title: From EMT to Web Developer
 date: '2017-05-11'
 keywords: ['Free Code Camp', 'Life Change']
+image: './computer.jpeg'
 ---
 
-![code on a computer](./computer.jpeg)
+![Code on a computer](./computer.jpeg)
 
 Six months ago I was a professional EMT with a full contract with no term, vacations and health insurance, no worries, just add to do my job, that I enjoy. Then in October of 2016, I made the jump to the tech industry, got a contract for a year with a company that I didn’t know anything about and had no idea what to expect!
 
@@ -12,7 +13,7 @@ Six months later, here I am! In the tech world, what a change! But I am enjoying
 
 Rewind a little bit, during the time I was working as an EMT, and I was able to take my bachelor in computer science because I always had that curiosity about tech and the computer science engineering was my dream. It took me more time than the usual and sometimes all I want was to quit and enjoy the stable life that I had.
 
-![ambulance image](./inem.jpeg)
+![Ambulance](./inem.jpeg)
 
 Nevertheless, I had an amazing person at my side that keep me motivated, and I manage to finish the degree.
 In the last semester, I started to shot Curriculum's in every direction because all I want was to change this new adventure.
@@ -44,6 +45,6 @@ Another great motivation is to know people, and the more you know and understand
 
 I don’t know what the future holds me, but I know that I want to be part of this amazing new world that I landed six months ago. I want to improve each day and do my job better because I know that six months is nothing and there is still a lot to learn and to grow!
 
-![future ahead sign](./future-ahead.jpeg)
+![Future ahead sign](./future-ahead.jpeg)
 
 Thank you for your time reading my first article and any help/tips or comments are always welcome 😁

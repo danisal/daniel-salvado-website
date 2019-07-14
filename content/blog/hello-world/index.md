@@ -14,9 +14,10 @@ keywords:
         'progressive web app',
         'learning',
     ]
+image: './photo-by-deanna-alys-unsplash.jpeg'
 ---
 
-![photo-by-deanna-alys-on-unsplash](./photo-by-deanna-alys-unsplash.jpeg)
+[![Photo by deanna alys on unsplash](./photo-by-deanna-alys-unsplash.jpeg)](https://unsplash.com/photos/ocXWR-Tz8qY)
 
 Hello World from danielsalvado.com!
 

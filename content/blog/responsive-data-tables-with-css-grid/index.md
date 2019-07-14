@@ -2,6 +2,7 @@
 title: Responsive data tables with CSS Grid - Revisited
 date: '2018-06-04'
 keywords: ['css', 'css grid', 'web development', 'software development', 'responsive', 'data tables', 'tables']
+image: './css-grid-data-table.png'
 ---
 
 This article aims to give an insight over CSS Grid and provide some examples how I'm making use of it in my daily work.
@@ -15,8 +16,6 @@ I have become a fan of CSS Grid since I saw [this awesome course](https://cssgri
 In one of the projects that I worked at Evodeck, I saw a shot to implement data tables using Grid Layout and decided to give it a try. I made sure to choose something smaller so we could have the chance to rollback or change to something else in a way that wouldn't have a huge impact on the development process and the progress of the application.
 
 For visual purposes let me show a small example how easy it is to use CSS Grid. Bellow, we have a table built with some fictitious user data.
-
-CSS Grid data table
 
 ![Image of a data table build with css grid](./css-grid-data-table.png)
 
@@ -110,7 +109,7 @@ The result is:
 
 ![Table with different column widths](./table-with-different-column-widths.png)
 
-Table with different column widthsAnd we can do much more! If we want to work with fixed widths instead of fractions, we can also use the _minmax()_ function. For example, if we want to have a fixed width in the first column with a minimum of _50px_ and a maximum of _100px_, the code would look something like this:
+And we can do much more! If we want to work with fixed widths instead of fractions, we can also use the _minmax()_ function. For example, if we want to have a fixed width in the first column with a minimum of _50px_ and a maximum of _100px_, the code would look something like this:
 
 ```css{3}
 .grid {
@@ -123,11 +122,7 @@ Table with different column widthsAnd we can do much more! If we want to work w
 
 And then, the final result is the one below:
 
-Id column with a minimum width of 50px
-
 ![Id column with a minimum width of 50px](./id-column-with-a-minimum-width-of-50px.png)
-
-Id column with a maximum width of 100px
 
 ![Id column with a maximum width of 100px](./id-column-with-a-maximum-width-of-100px.png)
 
