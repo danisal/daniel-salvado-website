@@ -2,6 +2,7 @@
 title: Responsive data tables with CSS Grid - Revisited
 date: '2018-06-04'
 keywords: ['css', 'css grid', 'web development', 'software development', 'responsive', 'data tables', 'tables']
+image: './css-grid-data-table.png'
 ---
 
 This article aims to give an insight over CSS Grid and provide some examples how I'm making use of it in my daily work.
@@ -128,8 +129,6 @@ And then, the final result is the one below:
 While the most common use for CSS Grid is for building layouts with the [_grid-template-areas_](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas), I also find it very useful for tables!
 
 Finally, a CodePen for this example, can be found at [Responsive data tables with CSS Grid CodePen](https://codepen.io/danisal/pen/JQLOaG)
-
----
 
 In short, I found CSS Grid very useful and easy to work with and in my opinion, it does have a future and is something that will be very well adopted by the community!
 

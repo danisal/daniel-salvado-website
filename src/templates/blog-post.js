@@ -99,6 +99,7 @@ function BlogPostTemplate({ data, pageContext }) {
     } = markdownRemark;
 
     const link = `${siteUrl}${slug}`;
+    const image = `${siteUrl}${post.frontmatter.image.publicURL}`;
 
     return (
         <Layout>
@@ -107,6 +108,7 @@ function BlogPostTemplate({ data, pageContext }) {
                 keywords={post.frontmatter.keywords}
                 title={post.frontmatter.title}
                 url={link}
+                image={image}
             />
             <h1>{post.frontmatter.title}</h1>
             <InfoWrapper
@@ -170,6 +172,9 @@ BlogPostTemplate.propTypes = {
         markdownRemark: PropTypes.shape({
             frontmatter: PropTypes.shape({
                 date: PropTypes.string,
+                image: PropTypes.shape({
+                    publicURL: PropTypes.string,
+                }),
                 excerpt: PropTypes.string,
                 title: PropTypes.string,
             }),
@@ -215,6 +220,9 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 keywords
+                image {
+                    publicURL
+                }
             }
             timeToRead
             fields {
