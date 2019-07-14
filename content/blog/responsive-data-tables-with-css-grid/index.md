@@ -16,8 +16,6 @@ In one of the projects that I worked at Evodeck, I saw a shot to implement data 
 
 For visual purposes let me show a small example how easy it is to use CSS Grid. Bellow, we have a table built with some fictitious user data.
 
-CSS Grid data table
-
 ![Image of a data table build with css grid](./css-grid-data-table.png)
 
 Snippet of the table HTML code
@@ -110,7 +108,7 @@ The result is:
 
 ![Table with different column widths](./table-with-different-column-widths.png)
 
-Table with different column widthsAnd we can do much more! If we want to work with fixed widths instead of fractions, we can also use the _minmax()_ function. For example, if we want to have a fixed width in the first column with a minimum of _50px_ and a maximum of _100px_, the code would look something like this:
+And we can do much more! If we want to work with fixed widths instead of fractions, we can also use the _minmax()_ function. For example, if we want to have a fixed width in the first column with a minimum of _50px_ and a maximum of _100px_, the code would look something like this:
 
 ```css{3}
 .grid {
@@ -123,11 +121,7 @@ Table with different column widthsAnd we can do much more! If we want to work w
 
 And then, the final result is the one below:
 
-Id column with a minimum width of 50px
-
 ![Id column with a minimum width of 50px](./id-column-with-a-minimum-width-of-50px.png)
-
-Id column with a maximum width of 100px
 
 ![Id column with a maximum width of 100px](./id-column-with-a-maximum-width-of-100px.png)
 
