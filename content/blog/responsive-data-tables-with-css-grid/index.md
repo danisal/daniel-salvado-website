@@ -130,6 +130,8 @@ While the most common use for CSS Grid is for building layouts with the [_grid-t
 
 Finally, a CodePen for this example, can be found at [Responsive data tables with CSS Grid CodePen](https://codepen.io/danisal/pen/JQLOaG)
 
+---
+
 In short, I found CSS Grid very useful and easy to work with and in my opinion, it does have a future and is something that will be very well adopted by the community!
 
 I will not enter into details or discussions why you should choose Grid over Flexbox or Tables, I just chose to use the Grid simply because I found it very easy to work with, uses less code than the Tables, it's less complicated than the Flexbox and finally it has a lot of functionalities out of the box, we just need to know how to take the most out of it! Like I usually say:
