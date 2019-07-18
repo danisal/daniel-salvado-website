@@ -80,6 +80,7 @@ function SEO({ description, image, lang, meta, keywords, title, url }) {
                             href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap&text=DanielSalvado"
                             rel="stylesheet"
                         />
+                        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
                     </Helmet>
                 );
             }}
