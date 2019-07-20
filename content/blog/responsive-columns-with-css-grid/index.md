@@ -5,7 +5,7 @@ keywords: ['css grid', 'responsive', 'columns', 'rows', 'cards']
 image: './cards-in-a-css-grid-row.png'
 ---
 
-![cards-in-a-css-grid-row](./cards-in-a-css-grid-row.png)
+![Cards in a CSS Grid row](./cards-in-a-css-grid-row.png)
 
 Recently I’ve come across with a UI challenge, I wanted to have a group of elements that display in a row but that row should also be dynamic. What do I mean is the row should have as many elements as possible and to be responsive, create a new row, if the elements don’t fit on the first one.
 
@@ -49,9 +49,9 @@ The children elements will be placed according to this definition:
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 ```
 
-They will be placed in columns but taking into account space. The repeat function takes as first argument the number of times I want to repeat the elements, the columns, in this case. The sub-sequential arguments are the widths for each element, that is this case, is another function, minmax().
+They will be placed in columns but taking into account space. The repeat function takes as first argument the number of times I want to repeat the elements, the columns, in this case. The sub-sequential arguments are the widths for each element, that is this case, is another function, `minmax()`.
 
-Let’s focus for now in the first argument, I'll get to the minmax function in a second. The `auto-fill` expression tells the grid to fit the maximum number of elements in one row without causing an overflow of the grid container. There are other values that can be given, check the MDN for more information [about the `repeat()` function.](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
+Let’s focus for now in the first argument, I'll get to the `minmax` function in a second. The `auto-fill` expression tells the grid to fit the maximum number of elements in one row without causing an overflow of the grid container. There are other values that can be given, check the MDN for more information [about the repeat function.](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
 
 For the `minmax` function, I think is easier to understand, in here I’m telling the function that the minimum width for an element is `250px` and the maximum value is one fraction of the available space `1fr`, this way it will fit as many elements as possible in a single row.
 
