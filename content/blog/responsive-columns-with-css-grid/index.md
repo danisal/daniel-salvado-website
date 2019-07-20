@@ -9,11 +9,11 @@ image: './cards-in-a-css-grid-row.png'
 
 Recently I came across with a UI challenge, I wanted to have a group of elements that display in a row, that row should also be dynamic. I mean, the row should have as many elements possible and be responsive. It should create a row if the elements don’t fit on the first one.
 
-What're the first things that come to your mind? Flexbox right?
+What is the first thing that come to your mind? Flexbox right?
 
-One thing I would like is the same amount of space between the elements without worrying about defining the space for each element.
+One thing I would like is to have the same amount of space between the elements without worrying about defining the space for each element.
 
-So it’s here that CSS Grid comes into play! With grid-gap, one could just define the amount of space that wants between elements.
+So it’s here that CSS Grid comes into play! With `grid-gap` property, one could just define the amount of space that wants between elements.
 
 ```css{5}
 .list {
@@ -49,7 +49,7 @@ The children elements will be placed according to this definition:
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 ```
 
-They will be placed in columns but taking into account space. The repeat function takes as first argument the number of times I want to repeat the elements, the columns, in this case. The sub-sequential arguments are the widths for each element, that is this case, is another function, `minmax()`.
+They will be placed in columns but taking space into account. The `repeat` function takes as first argument the number of times I want to repeat the elements, the columns, in this case. The sub-sequential arguments are the widths for each element, that is this case, is another function, `minmax()`.
 
 Let’s focus for now in the first argument, I'll get to the `minmax` function in a second. The `auto-fill` expression tells the grid to fit the maximum number of elements in one row without causing an overflow of the grid container. There are other values that can be given, check the MDN for more information [about the repeat function.](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
 
