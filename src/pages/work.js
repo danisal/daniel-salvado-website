@@ -36,6 +36,10 @@ const Text = styled.p`
     margin-bottom: ${rhythm(0.5)};
 `;
 
+const CV = styled.p`
+    margin: 0;
+`;
+
 const work = [
     {
         company: `Snowball Digital`,
@@ -82,6 +86,8 @@ function MyWork() {
         <StaticQuery
             query={workQuery}
             render={data => {
+                const pdfUrl = data.allFile.edges[0].node.publicURL;
+
                 return (
                     <Layout>
                         <SEO title="My Work" keywords={[`technologies`, `experience`, `work`, `portfolio`]} />
@@ -132,6 +138,13 @@ function MyWork() {
                         })}
                         <br />
                         <Tech />
+                        <br />
+                        <CV>
+                            If you want a copy of my <abbr title="Curriculum Vitae">CV</abbr> click{` `}
+                            <a href={pdfUrl} download>
+                                here
+                            </a>
+                        </CV>
                         <Bio />
                     </Layout>
                 );
@@ -164,6 +177,13 @@ const workQuery = graphql`
                             }
                         }
                     }
+                }
+            }
+        }
+        allFile(filter: { extension: { eq: "pdf" } }) {
+            edges {
+                node {
+                    publicURL
                 }
             }
         }
