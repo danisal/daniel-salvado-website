@@ -1,10 +1,46 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import { graphql, Link } from 'gatsby';
+import styled from '@emotion/styled';
+
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
+import { rhythm } from '../utils/typography';
 
-function SiteIndex() {
+const Card = styled(Link)`
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    padding: ${rhythm(0.5)} ${rhythm(0.75)};
+    transition: 250ms ease;
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+
+    img {
+        margin: 0 auto ${rhythm(0.5)};
+        max-height: 200px;
+        width: auto;
+    }
+
+    p {
+        margin: 0;
+    }
+`;
+
+function SiteIndex({ data }) {
+    const { excerpt, fields, frontmatter } = data.allMarkdownRemark.nodes[0];
+
+    const alt = frontmatter.image.childImageSharp.fixed.originalName.replace(/-/g, ` `).replace(/\.[^/.]+$/, ``);
+
     return (
         <Layout>
             <SEO title="Home" keywords={[`Daniel`, `Salvado`, `website`]} />
@@ -25,20 +61,70 @@ function SiteIndex() {
                 Feel free to share the articles or even to contact me if you have any questions, suggestions or simply
                 say hi!
             </p>
+            <h3>Check out my latest article</h3>
+            <Card to={fields.slug}>
+                <h4>{frontmatter.title}</h4>
+                <img
+                    src={frontmatter.image.childImageSharp.fixed.src}
+                    srcSet={frontmatter.image.childImageSharp.fixed.srcSet}
+                    alt={alt}
+                />
+                <p>{excerpt}</p>
+            </Card>
             <Bio />
         </Layout>
     );
 }
 
-SiteIndex.propTypes = {};
+SiteIndex.propTypes = {
+    data: PropTypes.shape({
+        allMarkdownRemark: PropTypes.shape({
+            nodes: PropTypes.arrayOf(
+                PropTypes.shape({
+                    frontmatter: PropTypes.shape({
+                        title: PropTypes.string,
+                        image: PropTypes.shape({
+                            childImageSharp: PropTypes.shape({
+                                fixed: PropTypes.shape({
+                                    src: PropTypes.string,
+                                    srcSet: PropTypes.string,
+                                    originalName: PropTypes.string,
+                                }),
+                            }),
+                        }),
+                    }),
+                    excerpt: PropTypes.string,
+                    fields: PropTypes.shape({
+                        slug: PropTypes.string,
+                    }),
+                }),
+            ),
+        }),
+    }).isRequired,
+};
 
 export default SiteIndex;
 
 export const pageQuery = graphql`
     query {
-        site {
-            siteMetadata {
-                title
+        allMarkdownRemark(limit: 1) {
+            nodes {
+                frontmatter {
+                    title
+                    image {
+                        childImageSharp {
+                            fixed {
+                                srcSet
+                                src
+                                originalName
+                            }
+                        }
+                    }
+                }
+                excerpt(pruneLength: 100)
+                fields {
+                    slug
+                }
             }
         }
     }
