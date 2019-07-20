@@ -1,0 +1,1 @@
+{"type":"PR","pr":{"number":18,"head":"783c7f2441637cce80b9de1b6d11d47a044cda9c"},"user":"daniel.salvado","status":"draft","branch":"cms/index","collection":"blog","title":"test","description":"No Description!","objects":{"entry":{"path":"content/blog/{{slug}}/index.md","sha":"979574626e61fb63154afbedfafd5f6b2f3c5154"},"files":[]},"timeStamp":"2019-07-20T12:13:41.051Z"}
