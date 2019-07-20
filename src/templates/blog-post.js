@@ -124,7 +124,7 @@ function BlogPostTemplate({ data, pageContext }) {
                     {` ${post.timeToRead} minute${post.timeToRead > 1 ? `s` : ``} reading`}
                 </small>
             </InfoWrapper>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <article dangerouslySetInnerHTML={{ __html: post.html }} />
             <Separator />
             <Share>
                 <div className="line" />

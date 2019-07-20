@@ -67,6 +67,7 @@ const work = [
     },
     {
         company: `INEM`,
+        abbr: `Instituto Nacional de Emergência Médica`,
         website: `https://www.inem.pt`,
         startDate: `2008-02`,
         endDate: `2016-09`,
@@ -117,7 +118,7 @@ function MyWork() {
                                 <WorkExperience key={cuid()}>
                                     <WorkedAt>
                                         <a href={w.website} target="__blank" rel="noopener noreferrer">
-                                            {w.company}
+                                            {w.abbr ? <abbr title={w.abbr}>{w.company}</abbr> : w.company}
                                         </a>
                                         <span>
                                             {<time dateTime={w.startDate}>{startDate}</time>}
