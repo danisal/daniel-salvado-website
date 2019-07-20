@@ -7,11 +7,11 @@ image: './cards-in-a-css-grid-row.png'
 
 ![Cards in a CSS Grid row](./cards-in-a-css-grid-row.png)
 
-Recently I’ve come across with a UI challenge, I wanted to have a group of elements that display in a row but that row should also be dynamic. What do I mean is the row should have as many elements as possible and to be responsive, create a new row, if the elements don’t fit on the first one.
+Recently I came across with a UI challenge, I wanted to have a group of elements that display in a row, that row should also be dynamic. I mean, the row should have as many elements possible and be responsive. It should create a row if the elements don’t fit on the first one.
 
 What're the first things that come to your mind? Flexbox right?
 
-But one thing that I would like to have, is the same amount of space between the elements without worry about defining the space for each element.
+One thing I would like is the same amount of space between the elements without worrying about defining the space for each element.
 
 So it’s here that CSS Grid comes into play! With grid-gap, one could just define the amount of space that wants between elements.
 
