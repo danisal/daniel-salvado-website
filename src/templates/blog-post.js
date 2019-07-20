@@ -99,7 +99,7 @@ function BlogPostTemplate({ data, pageContext }) {
     } = markdownRemark;
 
     const link = `${siteUrl}${slug}`;
-    const image = `${siteUrl}${post.frontmatter.image.publicURL}`;
+    const image = `${siteUrl}${post.frontmatter.image ? post.frontmatter.image.publicURL : ``}`;
 
     return (
         <Layout>
