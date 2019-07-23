@@ -2,7 +2,7 @@
     "name": "daniel-salvado-blog",
     "private": true,
     "description": "Daniel Salvado personal blog powered by Gatsby and Markdown",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "author": "Daniel Salvado <daniel.salvado@gmail.com>",
     "bugs": {
         "url": "https://github.com/danisal/daniel-salvado-website/issues"
