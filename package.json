@@ -5,7 +5,7 @@
     "version": "0.2.1",
     "author": "Daniel Salvado <daniel.salvado@gmail.com>",
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
+        "url": "https://github.com/danisal/daniel-salvado-website/issues"
     },
     "dependencies": {
         "@emotion/core": "^10.0.14",
@@ -55,9 +55,10 @@
         "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-react": "^7.13.0",
         "eslint-plugin-react-hooks": "^1.6.0",
-        "prettier": "^1.17.1"
+        "prettier": "^1.17.1",
+        "release-it": "^12.3.3"
     },
-    "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+    "homepage": "https://danielsalvado.com",
     "keywords": [
         "gatsby"
     ],
@@ -65,16 +66,12 @@
     "main": "n/a",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+        "url": "git+https://github.com/danisal/daniel-salvado-website"
     },
     "scripts": {
-        "dev": "gatsby develop -H 0.0.0.0",
-        "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-        "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
         "develop": "gatsby develop",
         "start": "npm run dev",
         "build": "gatsby build",
-        "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+        "release": "release-it"
     }
 }
