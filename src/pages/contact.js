@@ -199,7 +199,6 @@ function SayHello() {
                     />
                     <TextFieldLabel htmlFor="message">Message</TextFieldLabel>
                     <TextArea
-                        cols="20"
                         id="message"
                         name="message"
                         onChange={handleChange}
