@@ -69,8 +69,7 @@
         "url": "git+https://github.com/danisal/daniel-salvado-website"
     },
     "scripts": {
-        "develop": "gatsby develop",
-        "start": "npm run dev",
+        "start": "gatsby develop -H 0.0.0.0",
         "build": "gatsby build",
         "release": "release-it"
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -23,23 +23,16 @@ const Wrapper = styled.nav`
         display: flex;
         background-color: #fff;
         border-top: 1px solid #ede7f3;
-        min-height: 3.75rem;
         z-index: 1;
     }
 `;
 
 const linkCSS = css`
-    width: ${rhythm(2.5)};
-    align-items: center;
     display: flex;
-    flex-direction: column;
     color: black;
-
-    > svg {
-        width: 24px;
-        height: auto;
-        pointer-events: none;
-    }
+    padding: ${rhythm(0.5)} 0 ${rhythm(0.75)};
+    flex-basis: 100%;
+    transform: scale(0.95);
 
     &:hover,
     &:active {
@@ -48,7 +41,7 @@ const linkCSS = css`
 
     &.active {
         color: ${BLUE};
-        transform: scale(1.1);
+        transform: scale(1);
 
         svg {
             fill: ${BLUE};
@@ -65,69 +58,67 @@ const UL = styled.ul`
     list-style: none;
     margin: 0;
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    font-size: 0.75rem;
-    line-height: 1;
-    text-align: center;
 
-    li {
+    > li {
+        flex: 1;
         margin: 0;
         display: flex;
-        align-items: center;
+    }
+`;
 
-        a {
-            padding: 0.25rem;
-        }
+const Span = styled.span`
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+
+    > svg {
+        width: 24px;
+        height: auto;
+        pointer-events: none;
     }
 `;
 
 function BottomNavigation() {
     return (
-        <StaticQuery
-            query={pageQuery}
-            render={() => {
-                return (
-                    <Wrapper>
-                        <UL>
-                            <li>
-                                <Link activeClassName="active" to="/" css={linkCSS}>
-                                    <Home />
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link activeClassName="active" to="/work" css={linkCSS}>
-                                    <Work />
-                                    Work
-                                </Link>
-                            </li>
-                            <li>
-                                <Link activeClassName="active" to="/blog" css={linkCSS} partiallyActive>
-                                    <Writing />
-                                    Writing
-                                </Link>
-                            </li>
-                            <li>
-                                <Link activeClassName="active" to="/contact" css={linkCSS}>
-                                    <SayHello />
-                                    Hello
-                                </Link>
-                            </li>
-                        </UL>
-                    </Wrapper>
-                );
-            }}
-        />
+        <Wrapper>
+            <UL>
+                <li>
+                    <Link activeClassName="active" to="/" css={linkCSS}>
+                        <Span>
+                            <Home />
+                            <span>Home</span>
+                        </Span>
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClassName="active" to="/work" css={linkCSS}>
+                        <Span>
+                            <Work />
+                            <span>Work</span>
+                        </Span>
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClassName="active" to="/blog" css={linkCSS} partiallyActive>
+                        <Span>
+                            <Writing />
+                            <span>Writing</span>
+                        </Span>
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClassName="active" to="/contact" css={linkCSS}>
+                        <Span>
+                            <SayHello />
+                            <span>Hello</span>
+                        </Span>
+                    </Link>
+                </li>
+            </UL>
+        </Wrapper>
     );
 }
 
 export default BottomNavigation;
-
-const pageQuery = graphql`
-    query PageQuery {
-        sitePage {
-            path
-        }
-    }
-`;
