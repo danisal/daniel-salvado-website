@@ -130,16 +130,19 @@ function BlogPostTemplate({ data, pageContext }) {
                 <div className="line" />
                 <span>Share this article</span>
                 <ShareButton
+                    aria-label="Share on linkedin"
                     onClick={windowOpen(socialLinks.linkedin({ title: post.frontmatter.title, link, excerpt }, {}))}
                 >
                     <Linkedin css={iconSize} />
                 </ShareButton>
                 <ShareButton
+                    aria-label="Share on facebook"
                     onClick={windowOpen(socialLinks.facebook({ title: post.frontmatter.title, link, excerpt }, {}))}
                 >
                     <Facebook css={iconSize} />
                 </ShareButton>
                 <ShareButton
+                    aria-label="Share on twitter"
                     onClick={windowOpen(socialLinks.twitter({ title: post.frontmatter.title, link, excerpt }, {}))}
                 >
                     <Twitter css={iconSize} />

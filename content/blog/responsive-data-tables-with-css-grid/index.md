@@ -141,7 +141,8 @@ I will not enter into details or discussions why you should choose Grid over Fle
 And as Phillip Sweet says, always be open to learn!
 
 > "Stay true to yourself, yet always be open to learn."
-> - Phillip Sweet
+>
+> -**Phillip Sweet**
 
 I would like to share a couple of resources that I find to be very useful:
 
