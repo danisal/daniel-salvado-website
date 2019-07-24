@@ -72,10 +72,6 @@ const ShareButton = styled.button`
         background-color: #134896;
     }
 
-    &:focus {
-        outline: none;
-    }
-
     &:active {
         border-style: solid;
     }
