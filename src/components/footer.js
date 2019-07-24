@@ -107,6 +107,7 @@ function FooterComponent() {
                                     href={`https://www.linkedin.com/in/${linkedIn}/`}
                                     rel="noopener noreferrer"
                                     target="_blank"
+                                    aria-label="Daniel on linkedin"
                                 >
                                     <LinkedIn css={iconSize} aria-label="linkedIn" />
                                 </SocialButton>
@@ -114,6 +115,7 @@ function FooterComponent() {
                                     href={`https://github.com/${github}`}
                                     rel="noopener noreferrer"
                                     target="_blank"
+                                    aria-label="Daniel on github"
                                 >
                                     <GitHub css={iconSize} aria-label="github" />
                                 </SocialButton>
@@ -121,6 +123,7 @@ function FooterComponent() {
                                     href={`https://twitter.com/${twitter}`}
                                     rel="noopener noreferrer"
                                     target="_blank"
+                                    aria-label="Daniel on twitter"
                                 >
                                     <Twitter css={iconSize} aria-label="twitter" />
                                 </SocialButton>
