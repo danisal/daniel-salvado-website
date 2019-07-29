@@ -1,10 +1,10 @@
 {
-    "extends": ["airbnb", "prettier", "prettier/react"],
+    "extends": ["airbnb", "prettier", "prettier/react", "plugin:jsx-a11y/recommended"],
     "env": {
         "browser": true,
         "es6": true
     },
-    "plugins": ["react", "prettier"],
+    "plugins": ["react", "prettier", "jsx-a11y"],
     "globals": {
         "graphql": false
     },
