@@ -14,5 +14,3 @@ fields:
 - type: file
   name: image
   label: image
-pages:
-- content/blog/testing-forestry/this-is-test-with-forestry.md
