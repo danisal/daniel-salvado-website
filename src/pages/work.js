@@ -38,8 +38,8 @@ const Text = styled.p`
 
 const work = [
     {
-        company: `Snowball Digital`,
-        website: `https://www.snowball.digital`,
+        company: `Crystallize`,
+        website: `https://www.crystallize.com`,
         startDate: `2019-05`,
         endDate: new Date(),
         position: `Software Engineer`,
@@ -151,19 +151,19 @@ const workQuery = graphql`
                 node {
                     url
                     name
-                    childScreenshot {
-                        screenshotFile {
-                            childImageSharp {
-                                fluid(maxWidth: 624) {
-                                    src
-                                    srcSet
-                                    srcWebp
-                                    aspectRatio
-                                    sizes
-                                }
-                            }
-                        }
-                    }
+                    # childScreenshot {
+                    #     screenshotFile {
+                    #         childImageSharp {
+                    #             fluid(maxWidth: 624) {
+                    #                 src
+                    #                 srcSet
+                    #                 srcWebp
+                    #                 aspectRatio
+                    #                 sizes
+                    #             }
+                    #         }
+                    #     }
+                    # }
                 }
             }
         }
