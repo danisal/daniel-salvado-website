@@ -13,7 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@remix-run/node": "^1.5.1",
+        "@remix-run/cloudflare-pages": "^1.5.1",
         "@remix-run/react": "^1.5.1",
         "@remix-run/serve": "^1.5.1",
         "react": "^17.0.2",
@@ -35,6 +35,6 @@
         "typescript": "^4.7.2"
     },
     "engines": {
-      "node": "16.14.2"
+        "node": "16.14.2"
     }
 }

@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@remix-run/cloudflare-pages': ^1.5.1
   '@remix-run/dev': ^1.5.1
   '@remix-run/eslint-config': ^1.5.1
-  '@remix-run/node': ^1.5.1
   '@remix-run/react': ^1.5.1
   '@remix-run/serve': ^1.5.1
   '@tailwindcss/typography': ^0.5.2
@@ -21,7 +21,7 @@ specifiers:
   typescript: ^4.7.2
 
 dependencies:
-  '@remix-run/node': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
+  '@remix-run/cloudflare-pages': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   '@remix-run/react': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   '@remix-run/serve': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   react: 17.0.2
@@ -657,6 +657,12 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@cloudflare/kv-asset-handler/0.1.3:
+    resolution: {integrity: sha512-FNcunDuTmEfQTLRLtA6zz+buIXUHj1soPvSWzzQFBC+n2lsy+CGf/NIrR3SEPCmsVNQj70/Jx2lViCpq+09YpQ==}
+    dependencies:
+      mime: 2.6.0
+    dev: false
+
   /@esbuild-plugins/node-modules-polyfill/0.1.4_esbuild@0.14.22:
     resolution: {integrity: sha512-uZbcXi0zbmKC/050p3gJnne5Qdzw8vkXIv+c2BW0Lsc1ji1SkrxbKPUy5Efr0blbTu1SL8w4eyfpnSdPg3G0Qg==}
     peerDependencies:
@@ -783,6 +789,29 @@ packages:
     dependencies:
       json-parse-even-better-errors: 2.3.1
     dev: true
+
+  /@remix-run/cloudflare-pages/1.5.1_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-wljp7zuXPBvwek3DAu8eSWz4gqBXtE5KmLctmr73SYsQiE+93lZX0d8epwDjM8FCHzB5Nmc9/Q7zZ/THRYJ8Tg==}
+    peerDependencies:
+      '@cloudflare/workers-types': ^3.0.0
+    dependencies:
+      '@remix-run/cloudflare': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
+
+  /@remix-run/cloudflare/1.5.1_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-uIVu4qCUpA7jsyyUcrf7Dh4jviBZ+rlqR4t35MLb40Y8EmSPTOnQVawIc8ZLOwymn7urfxXgUTMAHWjEeAFaVQ==}
+    peerDependencies:
+      '@cloudflare/workers-types': ^2.0.0 || ^3.0.0
+    dependencies:
+      '@cloudflare/kv-asset-handler': 0.1.3
+      '@remix-run/server-runtime': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /@remix-run/dev/1.5.1_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-ioOlBnsesOpXSMEf1g28zfcrD6ZVWi55tWDWkWMnTXi+N7HwisMi4Okh1RDxoH86Px0jvNgvUeMHQpnxUZOmRw==}
@@ -4805,6 +4834,12 @@ packages:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
     hasBin: true
+
+  /mime/2.6.0:
+    resolution: {integrity: sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==}
+    engines: {node: '>=4.0.0'}
+    hasBin: true
+    dev: false
 
   /mimic-fn/2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
