@@ -9,8 +9,8 @@
             class="rounded-full h-24 w-24 aspect-square object-cover"
             loading="lazy"
             src="assets/profile-pic.jpg"
-            width="24"
-            height="24"
+            width="96"
+            height="96"
         />
     </picture>
     <div>
