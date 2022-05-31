@@ -2231,10 +2231,7 @@ async function load_node({
 					}
 
 					response = await respond(
-						// we set `credentials` to `undefined` to workaround a bug in Cloudflare
-						// (https://github.com/sveltejs/kit/issues/3728) — which is fine, because
-						// we only need the headers
-						new Request(new URL(requested, event.url).href, { ...opts, credentials: undefined }),
+						new Request(new URL(requested, event.url).href, { ...opts }),
 						options,
 						{
 							...state,

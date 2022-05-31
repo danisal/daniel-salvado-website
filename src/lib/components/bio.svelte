@@ -1,5 +1,5 @@
 <br />
-<h3>About the Author</h3>
+<h2>About the Author</h2>
 <div class="flex gap-4">
     <picture class="shrink-0">
         <source type="image/avif" srcset="assets/profile-pic.avif" />
