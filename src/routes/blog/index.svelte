@@ -29,7 +29,7 @@
                 <article>
                     <h3>
                         <a
-                            class="text-blue-800 no-underline hover:underline-offset-8 hover:decoration-yellow-300 hover:underline hover:decoration-4"
+                            class="text-blue-800 no-underline hover:underline-offset-8 hover:decoration-amber-300 hover:underline hover:decoration-4"
                             href={post.path}>{post.meta.title}</a
                         >
                     </h3>

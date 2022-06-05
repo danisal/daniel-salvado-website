@@ -20,7 +20,7 @@
             improve on code and the people around me! Follow
             {` `}
             <a
-                class="text-blue-800 no-underline"
+                class="text-indigo-600 no-underline"
                 href="https://twitter.com/@danisalTweets"
             >
                 @danisalTweets
