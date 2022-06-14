@@ -1077,6 +1077,7 @@ const updated = {
 };
 
 /**
+ * Creates the HTML response.
  * @param {{
  *   branch: Array<import('./types').Loaded>;
  *   options: import('types').SSROptions;
@@ -2027,6 +2028,7 @@ function path_matches(path, constraint) {
 }
 
 /**
+ * Calls the user's `load` function.
  * @param {{
  *   event: import('types').RequestEvent;
  *   options: import('types').SSROptions;
@@ -2661,6 +2663,7 @@ async function respond_with_error({
  */
 
 /**
+ * Gets the nodes, calls `load` for each of them, and then calls render to build the HTML response.
  * @param {{
  *   event: import('types').RequestEvent;
  *   options: SSROptions;
@@ -3093,8 +3096,9 @@ async function respond(request, options, state) {
 	const is_data_request = decoded.endsWith(DATA_SUFFIX);
 
 	if (is_data_request) {
-		decoded = decoded.slice(0, -DATA_SUFFIX.length) || '/';
-		url = new URL(url.origin + url.pathname.slice(0, -DATA_SUFFIX.length) + url.search);
+		const data_suffix_length = DATA_SUFFIX.length - (options.trailing_slash === 'always' ? 1 : 0);
+		decoded = decoded.slice(0, -data_suffix_length) || '/';
+		url = new URL(url.origin + url.pathname.slice(0, -data_suffix_length) + url.search);
 	}
 
 	if (!state.prerendering?.fallback) {
@@ -3113,19 +3117,26 @@ async function respond(request, options, state) {
 		}
 	}
 
-	if (route?.type === 'page') {
-		const normalized = normalize_path(url.pathname, options.trailing_slash);
+	if (route) {
+		if (route.type === 'page') {
+			const normalized = normalize_path(url.pathname, options.trailing_slash);
 
-		if (normalized !== url.pathname && !state.prerendering?.fallback) {
+			if (normalized !== url.pathname && !state.prerendering?.fallback) {
+				return new Response(undefined, {
+					status: 301,
+					headers: {
+						'x-sveltekit-normalize': '1',
+						location:
+							// ensure paths starting with '//' are not treated as protocol-relative
+							(normalized.startsWith('//') ? url.origin + normalized : normalized) +
+							(url.search === '?' ? '' : url.search)
+					}
+				});
+			}
+		} else if (is_data_request) {
+			// requesting /__data.json should fail for a standalone endpoint
 			return new Response(undefined, {
-				status: 301,
-				headers: {
-					'x-sveltekit-normalize': '1',
-					location:
-						// ensure paths starting with '//' are not treated as protocol-relative
-						(normalized.startsWith('//') ? url.origin + normalized : normalized) +
-						(url.search === '?' ? '' : url.search)
-				}
+				status: 404
 			});
 		}
 	}

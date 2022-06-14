@@ -6,15 +6,15 @@
     <title>Home | Daniel Salvado</title>
 </svelte:head>
 
-<main class="container prose mx-auto px-7 py-16 relative">
+<main class="container prose mx-auto px-7 py-16 relative prose-zync">
     <!-- <div
-        class="absolute top-0 -left-4 w-72 h-72 bg-teal-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
+        class="absolute top-0 -left-1/4 w-[500px] h-[500px] bg-teal-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
     />
     <div
-        class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"
+        class="absolute top-1/4 -right-1/2 w-[500px] h-[500px] bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"
     />
     <div
-        class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
+        class="absolute -bottom-1/4 left-1/4 w-[500px] h-[500px] bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
     /> -->
 
     <h1>Welcome to my personal virtual space!</h1>
