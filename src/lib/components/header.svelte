@@ -7,7 +7,7 @@
 >
     <!-- mobile -->
     <button
-        class="cursor-pointer border-none focus:outline-none"
+        class="cursor-pointer border-none focus:outline-none sm:hidden"
         class:open
         on:click={() => (open = !open)}
     >
