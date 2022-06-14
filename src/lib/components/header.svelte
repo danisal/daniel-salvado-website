@@ -3,16 +3,16 @@
 </script>
 
 <header
-    class="sticky top-0 z-20 py-4 text-indigo-600 shadow shadow-indigo-600/10 bg-white/95 backdrop-blur-lg [@supports(backdrop-filter:blur(0px))]:bg-white/5"
+    class="sticky top-0 z-20 py-4 text-indigo-600 shadow shadow-indigo-600/10 bg-white/95 backdrop-blur-lg [@supports(backdrop-filter:blur(0px))]:bg-white/5 px-4"
 >
     <!-- mobile -->
     <button
-        class="cursor-pointer border-none text-cyan-900 focus:outline-none"
+        class="cursor-pointer border-none focus:outline-none"
         class:open
         on:click={() => (open = !open)}
     >
         <svg
-            class="w-8 h-6 transform ease-in-out duration-300 text-cyan-900"
+            class="w-8 h-6 transform ease-in-out duration-300"
             width="32"
             height="24"
         >
