@@ -3,7 +3,7 @@
 </script>
 
 <header
-    class="sticky top-0 z-20 py-4 text-indigo-600 shadow shadow-indigo-600/10 backdrop-blur supports-backdrop-blur:bg-white/95"
+    class="sticky top-0 z-20 py-4 text-indigo-600 shadow shadow-indigo-600/10 bg-white/95 backdrop-blur-lg [@supports(backdrop-filter:blur(0px))]:bg-white/5"
 >
     <!-- mobile -->
     <button
