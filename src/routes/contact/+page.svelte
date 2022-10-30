@@ -19,7 +19,7 @@
                 />
                 <label
                     for="name"
-                    class="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-gray-50 peer-focus:text-sm px-2 mx-4 peer-focus:bg-indigo-600 peer-focus:rounded"
+                    class="absolute left-0 -top-2.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:text-gray-50 peer-focus:text-sm px-2 mx-4 peer-focus:bg-indigo-600 peer-focus:rounded"
                     >Full Name</label
                 >
             </div>
@@ -86,7 +86,7 @@
             <button
                 type="submit"
                 disabled={false}
-                class="text-base text-center font-semibold text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1  bg-indigo-600 rounded py-2"
+                class="text-base text-center font-semibold text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1  bg-indigo-600 rounded py-4 px-8 self-center"
                 >Submit</button
             >
         </fieldset>
