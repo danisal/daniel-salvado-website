@@ -1,7 +1,7 @@
-import adapter from '@sveltejs/adapter-auto';
-import sveltePreprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { mdsvex } from 'mdsvex';
 import relativeImages from 'mdsvex-relative-images';
+import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
