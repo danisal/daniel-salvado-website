@@ -1,11 +1,8 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
-	import Bio from '$lib/components/bio.svelte';
 	export let data;
 
 	const { posts } = data;
-
-	console.log(posts);
 </script>
 
 <svelte:head>
@@ -30,12 +27,11 @@
 						</time>
 						<small>
 							<span role="img" aria-label="clock emoji"> ⏱ </span>
-							2 minutes reading
+							{post.meta.reading} minutes reading
 						</small>
 					</div>
 				</article>
 			</li>
 		{/each}
 	</ol>
-	<Bio />
 </main>
