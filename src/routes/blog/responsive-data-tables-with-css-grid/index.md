@@ -3,6 +3,7 @@ title: Responsive data tables with CSS Grid - Revisited
 date: '2018-06-04'
 keywords: ['css', 'css grid', 'web development', 'software development', 'responsive', 'data tables', 'tables']
 image: './css-grid-data-table.png'
+reading: 5
 ---
 
 This article aims to give an insight over CSS Grid and provide some examples how I'm making use of it in my daily work.
