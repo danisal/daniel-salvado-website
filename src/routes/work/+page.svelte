@@ -2,8 +2,8 @@
 	<title>Work | Daniel Salvado</title>
 </svelte:head>
 
-<main class="container prose mx-auto px-7 py-16">
-	<h1 class="text-gray-700">Work Experience</h1>
+<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
+	<h1>Work Experience</h1>
 	<section class="mt-12">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">

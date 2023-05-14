@@ -2,7 +2,7 @@
 	<title>Home | Daniel Salvado</title>
 </svelte:head>
 
-<main class="prose-zync container prose relative mx-auto px-7 py-16">
+<main class="prose-zync container prose relative mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Welcome to my personal virtual space!</h1>
 	<picture class="mx-auto">
 		<source type="image/avif" srcset="assets/profile-pic.avif" />
