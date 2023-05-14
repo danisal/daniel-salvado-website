@@ -1,4 +1,4 @@
-<main class="container prose mx-auto px-7 py-16">
+<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Privacy Policy</h1>
 
 	<p>Effective date: January 21, 2019</p>

@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-20 bg-white/95 px-4 py-4 text-indigo-600 shadow shadow-indigo-600/10 backdrop-blur-lg [@supports(backdrop-filter:blur(0px))]:bg-white/5"
+	class="sticky top-0 z-20 bg-white/95 px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur-lg dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/5"
 >
 	<!-- mobile -->
 	<button class="cursor-pointer border-none focus:outline-none sm:hidden" class:open on:click={() => (open = !open)}>
@@ -28,7 +28,7 @@
 		</svg>
 	</button>
 	<section class="row mx-auto hidden max-w-7xl items-center justify-between sm:flex">
-		<a class="font-beanie text-4xl font-normal" href="/">Daniel Salvado</a>
+		<a class="font-beanie text-4xl font-medium" href="/">Daniel Salvado</a>
 		<nav class="flex items-center justify-between gap-2">
 			<a href="/work">Work</a>
 			<a href="/blog">Writing</a>

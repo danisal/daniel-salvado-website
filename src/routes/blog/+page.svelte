@@ -9,15 +9,15 @@
 	<title>All posts | Daniel Salvado</title>
 </svelte:head>
 
-<main class="container prose mx-auto px-7 py-16">
-	<h1 class="text-gray-700">Reading material</h1>
+<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
+	<h1>Reading material</h1>
 	<ol class="list-none p-0">
 		{#each posts as post}
 			<li class="m-0 p-0">
 				<article>
 					<h3>
 						<a
-							class="text-blue-800 no-underline hover:underline hover:decoration-amber-300 hover:decoration-4 hover:underline-offset-8"
+							class="no-underline hover:underline hover:decoration-amber-300 hover:decoration-4 hover:underline-offset-8 dark:text-blue-200"
 							href={post.path}>{post.meta.title}</a
 						>
 					</h3>

@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply flex min-h-screen flex-col justify-between scroll-smooth antialiased bg-indigo-50;
-    }
+	body {
+		@apply flex min-h-screen flex-col justify-between scroll-smooth bg-blue-50 text-blue-800 antialiased dark:bg-stone-950 dark:text-blue-200;
+	}
 }
 
 @layer utilities {
-    .animation-delay-2000 {
-        animation-delay: 2s;
-    }
-    .animation-delay-4000 {
-        animation-delay: 4s;
-    }
+	.animation-delay-2000 {
+		animation-delay: 2s;
+	}
+	.animation-delay-4000 {
+		animation-delay: 4s;
+	}
 }
