@@ -202,14 +202,4 @@
 		You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are
 		effective when they are posted on this page.
 	</p>
-
-	<!-- <h2>Contact Us</h2>
-    <p>
-        If you have any questions about this Privacy Policy, please contact us:
-    </p>
-    <ul>
-        <li>
-            By visiting this page on our website: daniel.salvado.com/contact
-        </li>
-    </ul> -->
 </main>
