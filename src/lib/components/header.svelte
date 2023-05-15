@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ThemeToggle from './theme-toggle.svelte';
+
 	export let open: boolean = false;
 </script>
 
@@ -29,10 +31,14 @@
 	</button>
 	<section class="row mx-auto hidden max-w-7xl items-center justify-between sm:flex">
 		<a class="font-beanie text-4xl font-medium" href="/">Daniel Salvado</a>
-		<nav class="flex items-center justify-between gap-2">
-			<a href="/work">Work</a>
-			<a href="/blog">Writing</a>
-		</nav>
+		<div class="flex items-center justify-between gap-8">
+			<nav class="flex items-center justify-between gap-2">
+				<a href="/work">Work</a>
+				<a href="/blog">Writing</a>
+			</nav>
+
+			<ThemeToggle />
+		</div>
 	</section>
 </header>
 
