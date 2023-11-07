@@ -7,6 +7,31 @@
 	<section class="mt-12">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
+				<a class="no-underline" href="https://www.invertigro.com" target="__blank" rel="noopener noreferrer"
+					>InvertiGro</a
+				>
+			</h2>
+			<small><time datetime="2023-06">June 2023</time> - <time datetime="">Present</time></small>
+		</div>
+		<h4>Full Stack Developer & DevOps Engineer</h4>
+		<p>Implement best practices on the frontend project by:</p>
+		<ul>
+			<li>introducing vitejs for a better developer experience;</li>
+			<li>move unit tests to vitests for a faster run;</li>
+			<li>implement end-to-end tests with playwright;</li>
+			<li>create CI/CD pipelines for linting, type checking, and testing;</li>
+			<li>decrease the build time by 65%</li>
+			<li>reduce the build size by 20%;</li>
+			<li>add documentation and guidelines;</li>
+		</ul>
+		<p>Implemented widgets on an IoT dashboard using Angular.</p>
+		<em class="text-xs"
+			> DevOps · React.js · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit Testing · Node.js · Front-End Development</em
+		>
+	</section>
+	<section class="mt-12">
+		<div class="flex items-center justify-between">
+			<h2 class="m-0">
 				<a class="no-underline" href="https://www.crystallize.com" target="__blank" rel="noopener noreferrer"
 					>Crystallize</a
 				>
