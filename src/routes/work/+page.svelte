@@ -1,10 +1,14 @@
 <svelte:head>
 	<title>Work | Daniel Salvado</title>
+	<meta
+		name="description"
+		content="Explore Daniel's Work Experience | Dive into my professional journey, accomplishments, and expertise in Computer Science. Discover my career highlights and contributions."
+	/>
 </svelte:head>
 
 <main class="container prose mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Work Experience</h1>
-	<section class="mt-12">
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.invertigro.com" target="__blank" rel="noopener noreferrer"
@@ -20,16 +24,18 @@
 			<li>move unit tests to vitests for a faster run;</li>
 			<li>implement end-to-end tests with playwright;</li>
 			<li>create CI/CD pipelines for linting, type checking, and testing;</li>
-			<li>decrease the build time by 65%</li>
+			<li>decrease the build time by 65%;</li>
 			<li>reduce the build size by 20%;</li>
 			<li>add documentation and guidelines;</li>
 		</ul>
 		<p>Implemented widgets on an IoT dashboard using Angular.</p>
-		<em class="text-xs"
-			> DevOps · React.js · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit Testing · Node.js · Front-End Development</em
+		<em class="text-xs">
+			DevOps · React.js · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit Testing · Node.js ·
+			Front-End Development</em
 		>
 	</section>
-	<section class="mt-12">
+	<hr />
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.crystallize.com" target="__blank" rel="noopener noreferrer"
@@ -60,8 +66,8 @@
 			Methodologies · Testing · Web Applications · Node.js · Front-End Development</em
 		>
 	</section>
-
-	<section class="mt-12">
+	<hr />
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.evodeck.com" target="__blank" rel="noopener noreferrer">Evodeck</a>
@@ -83,8 +89,8 @@
 			MongoDB · Front-End Development</em
 		>
 	</section>
-
-	<section class="mt-12">
+	<hr />
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.truphone.com" target="__blank" rel="noopener noreferrer">Truphone</a>
@@ -100,8 +106,8 @@
 			Front-End Development</em
 		>
 	</section>
-
-	<section class="mt-12">
+	<hr />
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://tradingeconomics.com" target="__blank" rel="noopener noreferrer"
@@ -127,8 +133,8 @@
 			>GitHub · JavaScript · HTML · CSS · Git · AngularJS · Node.js · MongoDB · Front-End Development</em
 		>
 	</section>
-
-	<section class="mt-12">
+	<hr />
+	<section class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="cursor-help no-underline" href="https://www.inem.pt" target="__blank" rel="noopener noreferrer"
@@ -149,6 +155,7 @@
 			>EMT · Emergency Medical Services (EMS) · Automated External Defibrillator (AED) · Public Health</em
 		>
 	</section>
+	<hr />
 	<p>
 		Need to know more about my working experience? You can have a better overview of it on my
 		<a
