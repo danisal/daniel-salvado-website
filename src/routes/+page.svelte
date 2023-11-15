@@ -1,8 +1,3 @@
-<svelte:head>
-	<title>Home | Daniel Salvado</title>
-	<meta name="description" content="Daniel Salvado Virtual Space" />
-</svelte:head>
-
 <main class="prose-zync container prose relative mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Welcome to my personal virtual space!</h1>
 	<picture class="mx-auto">

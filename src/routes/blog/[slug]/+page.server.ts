@@ -1,3 +1,4 @@
+import type { MetaTagsProps } from 'svelte-meta-tags';
 import type { PageServerLoad } from '../$types';
 
 type Post = {
@@ -11,12 +12,17 @@ export const load = (async ({ params }) => {
 	const content = post.default.render();
 
 	const { title, date, keywords }: Post = post.metadata;
-	// const content = post.default;
+
+	const metaTags = {
+		title,
+		keywords
+	} satisfies MetaTagsProps;
 
 	return {
-		keywords,
-		title,
+		content,
 		date,
-		content
+		keywords,
+		metaTagsChild: metaTags,
+		title
 	};
 }) satisfies PageServerLoad;

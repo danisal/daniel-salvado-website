@@ -1,7 +1,7 @@
 ---
 title: Responsive Columns with CSS Grid
 date: '2019-07-20'
-keywords: ['css grid', 'responsive', 'columns', 'rows', 'cards']
+keywords: ['css grid', 'responsive columns and rows']
 image: './cards-in-a-css-grid-row.png'
 reading: 2
 ---

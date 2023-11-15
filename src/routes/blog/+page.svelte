@@ -5,10 +5,6 @@
 	const { posts } = data;
 </script>
 
-<svelte:head>
-	<title>All posts | Daniel Salvado</title>
-</svelte:head>
-
 <main class="container prose mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Reading material</h1>
 	<ol class="list-none p-0">

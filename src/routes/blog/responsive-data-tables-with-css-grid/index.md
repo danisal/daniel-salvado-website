@@ -1,7 +1,7 @@
 ---
 title: Responsive data tables with CSS Grid - Revisited
 date: '2018-06-04'
-keywords: ['css', 'css grid', 'web development', 'software development', 'responsive', 'data tables', 'tables']
+keywords: [css grid', 'responsive data tables']
 image: './css-grid-data-table.png'
 reading: 5
 ---

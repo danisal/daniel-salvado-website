@@ -1,11 +1,3 @@
-<svelte:head>
-	<title>Work | Daniel Salvado</title>
-	<meta
-		name="description"
-		content="Explore Daniel's Work Experience | Dive into my professional journey, accomplishments, and expertise in Computer Science. Discover my career highlights and contributions."
-	/>
-</svelte:head>
-
 <main class="container prose mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Work Experience</h1>
 	<section class="my-20">
