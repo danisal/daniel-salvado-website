@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MetaTags, JsonLd, MetaTagsProps } from 'svelte-meta-tags';
+	import { MetaTags, JsonLd, type MetaTagsProps } from 'svelte-meta-tags';
 	import Footer from '$lib/components/footer.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Sidebar from '$lib/components/sidebar.svelte';
