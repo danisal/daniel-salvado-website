@@ -5,7 +5,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-20 flex bg-white/95 px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur-lg dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/5"
+	class="sticky top-0 z-20 flex px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/5"
 >
 	<!-- mobile -->
 	<button class="cursor-pointer border-none focus:outline-none sm:hidden" class:open on:click={() => (open = !open)}>
