@@ -8,7 +8,12 @@
 	class="sticky top-0 z-20 flex px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/5"
 >
 	<!-- mobile -->
-	<button class="cursor-pointer border-none focus:outline-none sm:hidden" class:open on:click={() => (open = !open)}>
+	<button
+		aria-label="Navigation Menu"
+		class="cursor-pointer border-none focus:outline-none sm:hidden"
+		class:open
+		on:click={() => (open = !open)}
+	>
 		<svg class="h-5 w-7 transform duration-300 ease-in-out" width="28" height="20">
 			<line
 				class="transform stroke-current stroke-2 duration-300 ease-in-out"

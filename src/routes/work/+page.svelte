@@ -1,6 +1,6 @@
 <main class="container prose mx-auto px-7 py-16 dark:prose-invert">
 	<h1>Work Experience</h1>
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.invertigro.com" target="__blank" rel="noopener noreferrer"
@@ -25,9 +25,9 @@
 			DevOps · React.js · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit Testing · Node.js ·
 			Front-End Development</em
 		>
-	</section>
+	</article>
 	<hr />
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.crystallize.com" target="__blank" rel="noopener noreferrer"
@@ -57,9 +57,9 @@
 			>GitHub · React.js · GraphQL · TypeScript · Test Automation · HTML · CSS · Git · End-to-end Testing · Agile
 			Methodologies · Testing · Web Applications · Node.js · Front-End Development</em
 		>
-	</section>
+	</article>
 	<hr />
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.evodeck.com" target="__blank" rel="noopener noreferrer">Evodeck</a>
@@ -80,9 +80,9 @@
 			>GitHub · React.js · HTML · CSS · Git · Agile Methodologies · Testing · Web Applications · Redux.js · Node.js ·
 			MongoDB · Front-End Development</em
 		>
-	</section>
+	</article>
 	<hr />
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.truphone.com" target="__blank" rel="noopener noreferrer">Truphone</a>
@@ -97,9 +97,9 @@
 			>GitHub · HTML · CSS · Git · PugJS · Selenium WebDriver · Testing · Web Applications · React Native · Node.js ·
 			Front-End Development</em
 		>
-	</section>
+	</article>
 	<hr />
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://tradingeconomics.com" target="__blank" rel="noopener noreferrer"
@@ -124,9 +124,9 @@
 		<em class="text-xs"
 			>GitHub · JavaScript · HTML · CSS · Git · AngularJS · Node.js · MongoDB · Front-End Development</em
 		>
-	</section>
+	</article>
 	<hr />
-	<section class="my-20">
+	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="cursor-help no-underline" href="https://www.inem.pt" target="__blank" rel="noopener noreferrer"
@@ -146,7 +146,7 @@
 		<em class="text-xs"
 			>EMT · Emergency Medical Services (EMS) · Automated External Defibrillator (AED) · Public Health</em
 		>
-	</section>
+	</article>
 	<hr />
 	<p>
 		Need to know more about my working experience? You can have a better overview of it on my
