@@ -11,7 +11,7 @@
 	let open: boolean = false;
 
 	const meta = {
-		title: 'Daniel Salvado',
+		title: 'Home',
 		description: 'Daniel Salvado Virtual Space',
 		url: 'https://danielsalvado.com'
 	};
