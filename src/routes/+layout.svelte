@@ -10,11 +10,39 @@
 	// Control the sidebar on mobile
 	let open: boolean = false;
 
+	const meta = {
+		title: 'Daniel Salvado',
+		description: 'Daniel Salvado Virtual Space',
+		url: 'https://danielsalvado.com'
+	};
+
 	// SEO
 	$: metaTags = {
-		title: 'Home',
+		title: meta.title,
 		titleTemplate: '%s | Daniel Salvado',
-		description: 'Daniel Salvado Virtual Space',
+		description: meta.description,
+		openGraph: {
+			type: 'website',
+			url: meta.url,
+			description: meta.description,
+			images: [
+				{
+					url: 'https://danielsalvado.com/images/1200x630.png',
+					alt: 'Daniel Salvado Banner',
+					width: 1200,
+					height: 675
+				}
+			]
+		},
+		twitter: {
+			cardType: 'summary_large_image',
+			title: meta.title,
+			description: meta.description,
+			image: 'https://danielsalvado.com/images/1200x630.png',
+			imageAlt: 'Daniel Salvado Banner',
+			site: meta.url
+		},
+		robots: 'index,follow',
 		...$page.data.metaTagsChild
 	} satisfies MetaTagsProps;
 </script>
