@@ -1,6 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+	--font-beanie: 'Reenie Beanie';
+
+	/* Prose colors */
+	--color-prose-body: theme(--color-blue-800);
+	--color-prose-headings: theme(--color-blue-950);
+	--color-prose-lead: theme(--color-blue-700);
+	--color-prose-links: theme(--color-blue-950);
+	--color-prose-bold: theme(--color-blue-950);
+	--color-prose-counters: theme(--color-blue-600);
+	--color-prose-bullets: theme(--color-blue-400);
+	--color-prose-hr: theme(--color-blue-300);
+	--color-prose-quotes: theme(--color-blue-950);
+	--color-prose-quote-borders: theme(--color-blue-300);
+	--color-prose-captions: theme(--color-blue-700);
+	--color-prose-code: theme(--color-blue-950);
+	--color-prose-pre-code: theme(--color-blue-100);
+	--color-prose-pre-bg: theme(--color-blue-950);
+	--color-prose-th-borders: theme(--color-blue-300);
+	--color-prose-td-borders: theme(--color-blue-200);
+	--color-prose-invert-body: theme(--color-blue-200);
+	--color-prose-invert-headings: theme(--color-blue-50);
+	--color-prose-invert-lead: theme(--color-blue-300);
+	--color-prose-invert-links: theme(--color-blue-50);
+	--color-prose-invert-bold: theme(--color-blue-50);
+	--color-prose-invert-counters: theme(--color-blue-400);
+	--color-prose-invert-bullets: theme(--color-blue-600);
+	--color-prose-invert-hr: theme(--color-blue-700);
+	--color-prose-invert-quotes: theme(--color-blue-100);
+	--color-prose-invert-quote-borders: theme(--color-blue-700);
+	--color-prose-invert-captions: theme(--color-blue-400);
+	--color-prose-invert-code: theme(--color-blue-50);
+	--color-prose-invert-pre-code: theme(--color-blue-300);
+	--color-prose-invert-pre-bg: rgb(239 246 255 / 20%);
+	--color-prose-invert-th-borders: theme(--color-blue-600);
+	--color-prose-invert-td-borders: theme(--color-blue-700);
+}
 
 @layer base {
 	body {
@@ -8,11 +44,10 @@
 	}
 }
 
-@layer utilities {
-	.animation-delay-2000 {
-		animation-delay: 2s;
-	}
-	.animation-delay-4000 {
-		animation-delay: 4s;
-	}
+@utility animation-delay-2000 {
+	animation-delay: 2s;
+}
+
+@utility animation-delay-4000 {
+	animation-delay: 4s;
 }

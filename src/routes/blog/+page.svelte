@@ -5,12 +5,13 @@
 	const { posts } = data;
 </script>
 
-<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
+<main class="prose dark:prose-invert container mx-auto px-7 py-16">
 	<h1>Reading material</h1>
 	<ol class="list-none p-0">
-		{#each posts as post}
+		{#each posts as post (post.path)}
 			<li class="m-0 p-0">
 				<article>
+					<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 					<h3>
 						<a
 							class="no-underline hover:underline hover:decoration-amber-300 hover:decoration-4 hover:underline-offset-8 dark:text-blue-200"

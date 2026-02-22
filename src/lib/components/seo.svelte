@@ -1,8 +1,9 @@
 <script>
-	let options = {
-		title: '',
-		description: ''
-	};
+	// Placeholder for future SEO options
+	// let options = {
+	// 	title: '',
+	// 	description: ''
+	// };
 </script>
 
 <svelte:head>

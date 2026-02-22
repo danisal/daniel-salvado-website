@@ -2,18 +2,18 @@
 title: Hello World
 date: '2019-07-07'
 keywords:
-    [
-        'new website',
-        'new blog',
-        'technologies',
-        'gatsbyjs',
-        'emotionjs',
-        'react',
-        'seo',
-        'pwa',
-        'progressive web app',
-        'learning',
-    ]
+  [
+    'new website',
+    'new blog',
+    'technologies',
+    'gatsbyjs',
+    'emotionjs',
+    'react',
+    'seo',
+    'pwa',
+    'progressive web app',
+    'learning'
+  ]
 image: './photo-by-deanna-alys-unsplash.jpeg'
 reading: 3
 ---

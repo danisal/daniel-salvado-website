@@ -1,6 +1,6 @@
 <script>
 	import Twitter from '$lib/components/Twitter.svelte';
-	import Bluesky from '$lib/components/Bluesky.svelte';
+	// import Bluesky from '$lib/components/Bluesky.svelte';
 	import GitHub from '$lib/components/GitHub.svelte';
 	import LinkedIn from '$lib/components/LinkedIn.svelte';
 
@@ -19,7 +19,7 @@
 			<LinkedIn aria-hidden="true" aria-label="linkedin" class="h-6 w-6" />
 		</a>
 		<a aria-label="Daniel on github" href="https://github.com/danisal" rel="noopener noreferrer" target="_blank">
-			<GitHub aria-hidden="true" aria-label="github" class="h-6 w-6" color="currentcolor"/>
+			<GitHub aria-hidden="true" aria-label="github" class="h-6 w-6" color="currentcolor" />
 		</a>
 		<a
 			aria-label="Daniel on twitter"
@@ -27,12 +27,13 @@
 			rel="noopener noreferrer"
 			target="_blank"
 		>
-			<Twitter aria-hidden="true" aria-label="twitter" class="h-6 w-6" color="currentColor"/>
+			<Twitter aria-hidden="true" aria-label="twitter" class="h-6 w-6" color="currentColor" />
 		</a>
-<!--		<a aria-label="Daniel on Bluesky" href="https://bsky.app/profile/danisal.bsky.social" rel="noopener noreferrer"-->
-<!--			 target="_blank">-->
-<!--			<Bluesky aria-hidden="true" aria-label="bluesky" class="h-6 w-6" />-->
-<!--		</a>-->
+		<!--		<a aria-label="Daniel on Bluesky" href="https://bsky.app/profile/danisal.bsky.social" rel="noopener noreferrer"-->
+		<!--			 target="_blank">-->
+		<!--			<Bluesky aria-hidden="true" aria-label="bluesky" class="h-6 w-6" />-->
+		<!--		</a>-->
 	</div>
+	<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 	<a href="/legal-notice">Legal Notice</a>
 </footer>

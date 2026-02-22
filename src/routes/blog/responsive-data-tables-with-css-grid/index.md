@@ -24,37 +24,37 @@ Snippet of the table HTML code
 
 ```html
 <div class="grid">
-    <span>
-        <strong>Id</strong>
-    </span>
-    <span>
-        <strong>FullName</strong>
-    </span>
-    <span>
-        <strong>Country</strong>
-    </span>
-    <span>
-        <strong>Created at</strong>
-    </span>
-    <span>
-        <strong>Email</strong>
-    </span>
-    <span>0</span>
-    <span>AaronKris</span>
-    <span>Philippines</span>
-    <span>1991-05-23T14:19:51</span>
-    <span>Ophelia_Mitchell@karley.name</span>
-    <span>1</span>
-    <span>SimeonMcLaughlin</span>
-    <span>Singapore</span>
-    <span>2012-03-07T00:08:36</span>
-    <span>Sabrina_Barton@torey.net</span>
-    <span>2</span>
-    <span>Kelsie Shanahan</span>
-    <span>Brazil</span>
-    <span>1985-03-10T20:13:04</span>
-    <span>Karianne@salvatore.biz</span>
-    ...
+	<span>
+		<strong>Id</strong>
+	</span>
+	<span>
+		<strong>FullName</strong>
+	</span>
+	<span>
+		<strong>Country</strong>
+	</span>
+	<span>
+		<strong>Created at</strong>
+	</span>
+	<span>
+		<strong>Email</strong>
+	</span>
+	<span>0</span>
+	<span>AaronKris</span>
+	<span>Philippines</span>
+	<span>1991-05-23T14:19:51</span>
+	<span>Ophelia_Mitchell@karley.name</span>
+	<span>1</span>
+	<span>SimeonMcLaughlin</span>
+	<span>Singapore</span>
+	<span>2012-03-07T00:08:36</span>
+	<span>Sabrina_Barton@torey.net</span>
+	<span>2</span>
+	<span>Kelsie Shanahan</span>
+	<span>Brazil</span>
+	<span>1985-03-10T20:13:04</span>
+	<span>Karianne@salvatore.biz</span>
+	...
 </div>
 ```
 
@@ -64,16 +64,16 @@ CSS Styles to build the upper table
 
 ```css
 .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	border-top: 1px solid black;
+	border-right: 1px solid black;
 }
 
 .grid > span {
-    padding: 8px 4px;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+	padding: 8px 4px;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
 }
 ```
 
@@ -102,9 +102,9 @@ Now imagine that we need to have the columns with different widths, all we need 
 
 By this, I mean
 
--   let the _"Id"_ column should take up 1 fraction of the available space;
--   the _"Full Name"_ and _"Email"_ columns should take up 3 fractions of the available space;
--   _"Country"_ and _"Created at"_ columns should take up 2 fractions of the available space;
+- let the _"Id"_ column should take up 1 fraction of the available space;
+- the _"Full Name"_ and _"Email"_ columns should take up 3 fractions of the available space;
+- _"Country"_ and _"Created at"_ columns should take up 2 fractions of the available space;
 
 The result is:
 
@@ -147,6 +147,5 @@ And as Phillip Sweet says, always be open to learn!
 
 I would like to share a couple of resources that I find to be very useful:
 
--   [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) by CSS-TRICKS
--   Reference to [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) in MDN web docs
-
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) by CSS-TRICKS
+- Reference to [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) in MDN web docs

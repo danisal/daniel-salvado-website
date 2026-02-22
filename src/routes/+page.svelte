@@ -1,4 +1,4 @@
-<main class="prose-zync container prose relative mx-auto px-7 py-16 dark:prose-invert">
+<main class="prose-zync prose dark:prose-invert relative container mx-auto px-7 py-16">
 	<h1 class="text-balance">Welcome to my personal virtual space!</h1>
 	<picture class="mx-auto">
 		<source type="image/avif" srcset="assets/profile-pic.avif" />

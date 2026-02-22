@@ -1,10 +1,10 @@
-<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
+<main class="prose dark:prose-invert container mx-auto px-7 py-16">
 	<h1>Work Experience</h1>
 	<article class="my-20">
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.invertigro.com" rel="noopener noreferrer" target="__blank"
-				>InvertiGro</a
+					>InvertiGro</a
 				>
 			</h2>
 			<small>
@@ -25,16 +25,18 @@
 			<li>add documentation and guidelines;</li>
 		</ul>
 		<p>Create custom ThingsBoard widgets using Angular.</p>
-		<p>Start developing a new web application with NextJS, using React Server Components, next-safe-actions, and a
+		<p>
+			Start developing a new web application with NextJS, using React Server Components, next-safe-actions, and a
 			Material UI template to quickly develop new features — authentication and authorization handled with Zitadel.
 		</p>
-		<p>Create a BitBucket pipeline to deploy the application to Vercel to take advantage of preview branches with Neon
+		<p>
+			Create a BitBucket pipeline to deploy the application to Vercel to take advantage of preview branches with Neon
 			branches integration and cache with turborepo. Implemented an end-to-end testing package inside the monorepo with
-			Playwright.</p>
+			Playwright.
+		</p>
 		<em class="text-xs">
 			DevOps · React.js · NextJS · Playwright · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit
-			Testing · Node.js ·
-			Front-End Development</em
+			Testing · Node.js · Front-End Development</em
 		>
 	</article>
 	<hr />
@@ -42,7 +44,7 @@
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://www.crystallize.com" rel="noopener noreferrer" target="__blank"
-				>Crystallize</a
+					>Crystallize</a
 				>
 			</h2>
 			<small>
@@ -69,7 +71,7 @@
 		<p>Take part in feature and roadmap planning.</p>
 		<p>CI/CD company's main product and some other side projects, like conferences and company websites.</p>
 		<em class="text-xs"
-		>GitHub · React.js · GraphQL · TypeScript · Test Automation · HTML · CSS · Git · End-to-end Testing · Agile
+			>GitHub · React.js · GraphQL · TypeScript · Test Automation · HTML · CSS · Git · End-to-end Testing · Agile
 			Methodologies · Testing · Web Applications · Node.js · Front-End Development</em
 		>
 	</article>
@@ -96,7 +98,7 @@
 		</p>
 		<p>Help develop another application using GraphQL, ReactJS, MongoDB, ExpressJS, Kubernetes, and Docker.</p>
 		<em class="text-xs"
-		>GitHub · React.js · HTML · CSS · Git · Agile Methodologies · Testing · Web Applications · Redux.js · Node.js ·
+			>GitHub · React.js · HTML · CSS · Git · Agile Methodologies · Testing · Web Applications · Redux.js · Node.js ·
 			MongoDB · Front-End Development</em
 		>
 	</article>
@@ -113,7 +115,7 @@
 		<p>Optimize web styling by introducing the SASS pre-processor.</p>
 		<p>Jumpstart mobile app development with React Native framework</p>
 		<em class="text-xs"
-		>GitHub · HTML · CSS · Git · PugJS · Selenium WebDriver · Testing · Web Applications · React Native · Node.js ·
+			>GitHub · HTML · CSS · Git · PugJS · Selenium WebDriver · Testing · Web Applications · React Native · Node.js ·
 			Front-End Development</em
 		>
 	</article>
@@ -122,7 +124,7 @@
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="no-underline" href="https://tradingeconomics.com" rel="noopener noreferrer" target="__blank"
-				>Trading Economics</a
+					>Trading Economics</a
 				>
 			</h2>
 			<small>
@@ -145,7 +147,7 @@
 			financial indicators.
 		</p>
 		<em class="text-xs"
-		>GitHub · JavaScript · HTML · CSS · Git · AngularJS · Node.js · MongoDB · Front-End Development</em
+			>GitHub · JavaScript · HTML · CSS · Git · AngularJS · Node.js · MongoDB · Front-End Development</em
 		>
 	</article>
 	<hr />
@@ -153,7 +155,7 @@
 		<div class="flex items-center justify-between">
 			<h2 class="m-0">
 				<a class="cursor-help no-underline" href="https://www.inem.pt" rel="noopener noreferrer" target="__blank"
-				><abbr title="Instituto Nacional de Emergência Médica">INEM</abbr></a
+					><abbr title="Instituto Nacional de Emergência Médica">INEM</abbr></a
 				>
 			</h2>
 			<small>
@@ -171,7 +173,7 @@
 		<p>Know how to act in situations of exception/disaster.</p>
 		<p>Driving emergency vehicles</p>
 		<em class="text-xs"
-		>EMT · Emergency Medical Services (EMS) · Automated External Defibrillator (AED) · Public Health</em
+			>EMT · Emergency Medical Services (EMS) · Automated External Defibrillator (AED) · Public Health</em
 		>
 	</article>
 	<hr />

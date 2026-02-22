@@ -1,5 +1,17 @@
+type PostMetadata = {
+	title: string;
+	date: string;
+	keywords: string[];
+	image?: string;
+	reading?: number;
+};
+
+type PostModule = {
+	metadata: PostMetadata;
+};
+
 export const fetchMarkdownPosts = async () => {
-	const allPostFiles = import.meta.glob('/src/routes/blog/**/*.md');
+	const allPostFiles = import.meta.glob<PostModule>('/src/routes/blog/**/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
@@ -9,7 +21,7 @@ export const fetchMarkdownPosts = async () => {
 
 			return {
 				meta: metadata,
-				path: postPath,
+				path: postPath
 			};
 		})
 	);

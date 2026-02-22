@@ -7,17 +7,17 @@ import sveltePreprocess from 'svelte-preprocess';
 const config = {
 	preprocess: [
 		sveltePreprocess({
-			postcss: true,
+			postcss: true
 		}),
 		mdsvex({
 			extensions: ['.md'],
-			remarkPlugins: [relativeImages],
-		}),
+			remarkPlugins: [relativeImages]
+		})
 	],
 	extensions: ['.svelte', '.md'],
 	kit: {
-		adapter: adapter(),
-	},
+		adapter: adapter()
+	}
 };
 
 export default config;

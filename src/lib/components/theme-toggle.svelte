@@ -68,7 +68,7 @@
 <button
 	class={`{dark
 		? 'bg-blue-950 focus:ring-blue-800' :
-		'bg-yellow-300 focus:ring-yellow-200'} relative m-4 inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent ring-offset-blue-50 ring-offset-blue-900 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 ${$$props.class}`}
+		'bg-yellow-300 focus:ring-yellow-200'} relative m-4 inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent ring-offset-blue-50 ring-offset-blue-900 transition-colors duration-200 ease-in-out focus:ring-2 focus:ring-offset-2 focus:outline-none ${$$props.class}`}
 	class:invisible
 	type="button"
 	on:click={toggle}

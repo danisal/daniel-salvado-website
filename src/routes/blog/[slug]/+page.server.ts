@@ -1,5 +1,5 @@
 import type { MetaTagsProps } from 'svelte-meta-tags';
-import type { PageServerLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 
 type Post = {
 	title: string;

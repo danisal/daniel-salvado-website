@@ -23,15 +23,17 @@ This is a **SvelteKit 5 personal website** deployed to **Cloudflare** (`@sveltej
 Blog posts are Markdown files processed by **mdsvex** (`.md` files treated as Svelte components). Each post lives in its own directory under `src/routes/blog/<slug>/index.md` alongside its images (resolved as relative imports via `mdsvex-relative-images`).
 
 **Post frontmatter schema:**
+
 ```yaml
 title: string
 date: 'YYYY-MM-DD'
 keywords: string[]
 image: './relative-path.jpg'
-reading: number  # minutes
+reading: number # minutes
 ```
 
 **Data flow:**
+
 - `src/lib/utils/index.ts` — `fetchMarkdownPosts()` uses `import.meta.glob` to collect all post metadata
 - `src/routes/api/posts/+server.ts` — REST endpoint returning sorted posts JSON
 - `src/routes/blog/+page.server.ts` — loads posts list for the blog index

@@ -42,8 +42,10 @@
 		</svg>
 	</button>
 	<section class="row mx-auto hidden w-full max-w-7xl items-center justify-between sm:flex">
+		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 		<a class="font-beanie text-4xl font-medium" href="/">Daniel Salvado</a>
 		<div class="flex items-center justify-between gap-8">
+			<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 			<nav class="flex items-center justify-between gap-2">
 				<a href="/work">Work</a>
 				<a href="/blog">Writing</a>
