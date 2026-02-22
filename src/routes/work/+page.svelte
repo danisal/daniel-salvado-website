@@ -1,189 +1,237 @@
-<main class="prose dark:prose-invert container mx-auto px-7 py-16">
-	<h1>Work Experience</h1>
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="no-underline" href="https://www.invertigro.com" rel="noopener noreferrer" target="__blank"
-					>InvertiGro</a
+<script lang="ts">
+	import Card from '$lib/components/Card.svelte';
+	import Badge from '$lib/components/Badge.svelte';
+
+	const experiences = [
+		{
+			company: 'InvertiGro',
+			url: 'https://www.invertigro.com',
+			position: 'Full Stack Developer & DevOps Engineer',
+			start: '2023-06',
+			end: '2024-09',
+			highlights: [
+				'Introduced Vite.js for better developer experience',
+				'Moved unit tests to Vitest for faster execution',
+				'Implemented end-to-end tests with Playwright',
+				'Created CI/CD pipelines for linting, type checking, and testing',
+				'Decreased build time by 65%',
+				'Reduced build size by 20%',
+				'Added comprehensive documentation and guidelines'
+			],
+			description:
+				'Developed web applications with NextJS using React Server Components, next-safe-actions, and Material UI. Created custom ThingsBoard widgets using Angular. Implemented BitBucket pipeline to deploy to Vercel with Neon branches integration.',
+			skills: [
+				'DevOps',
+				'React.js',
+				'NextJS',
+				'Playwright',
+				'GraphQL',
+				'TypeScript',
+				'Git',
+				'Node.js'
+			]
+		},
+		{
+			company: 'Crystallize',
+			url: 'https://www.crystallize.com',
+			position: 'Release Manager & Frontend Engineer',
+			start: '2019-05',
+			end: '2023-04',
+			highlights: [
+				'Scheduled, managed, and coordinated releases across multiple applications',
+				'Constructed release calendar for centralized view',
+				'Managed risks and resolved issues regarding release quality',
+				'Ensured adherence to engineering best practices',
+				'Developed Crystallize PIM SaaS',
+				'Improved codebase with modern development practices',
+				'Took part in feature and roadmap planning'
+			],
+			description:
+				'Led release management for multiple projects while developing the main Product Information Management SaaS. Monitored application errors with Sentry and implemented CI/CD for company products.',
+			skills: [
+				'GitHub',
+				'React.js',
+				'GraphQL',
+				'TypeScript',
+				'DevOps',
+				'Testing',
+				'Node.js'
+			]
+		},
+		{
+			company: 'Evodeck',
+			url: 'https://www.evodeck.com',
+			position: 'Software Engineer',
+			start: '2018-01',
+			end: '2019-04',
+			highlights: [
+				'Developed garage management system with ReactJS',
+				'Introduced ES6/ES7 features and Higher-Order Components',
+				'Applied DRY principles to improve codebase',
+				'Participated in agile team analyses',
+				'Developed applications using GraphQL, React, MongoDB, Express, Kubernetes, and Docker'
+			],
+			description:
+				'Built modern web applications with focus on clean code and best practices within an agile environment.',
+			skills: ['React.js', 'GraphQL', 'MongoDB', 'Node.js', 'Redux.js', 'Docker', 'Kubernetes']
+		},
+		{
+			company: 'Truphone',
+			url: 'https://www.truphone.com',
+			position: 'Frontend Engineer',
+			start: '2017-06',
+			end: '2017-12',
+			highlights: [
+				'Integrated new payment options in web applications',
+				'Optimized web styling with SASS pre-processor',
+				'Started mobile app development with React Native'
+			],
+			description:
+				'Focused on frontend development and mobile app creation with modern frameworks.',
+			skills: ['React Native', 'SASS', 'HTML', 'CSS', 'Git', 'Selenium', 'Node.js']
+		},
+		{
+			company: 'Trading Economics',
+			url: 'https://tradingeconomics.com',
+			position: 'Software Developer',
+			start: '2016-10',
+			end: '2017-05',
+			highlights: [
+				'Integrated PayPal payments and Twilio SMS notifications',
+				'Created advanced notification system for financial indicators',
+				'Refreshed UI with Bootstrap 3',
+				'Developed management interface for admin monitoring'
+			],
+			description:
+				'Enhanced high-traffic AngularJS application with payment integration and notification systems.',
+			skills: ['AngularJS', 'JavaScript', 'MongoDB', 'Node.js', 'HTML', 'CSS']
+		},
+		{
+			company: 'INEM',
+			url: 'https://www.inem.pt',
+			position: 'Emergency Medical Technician',
+			start: '2008-02',
+			end: '2016-09',
+			highlights: [
+				'Pre-hospital emergency intervention',
+				'Patient triage, stabilisation and transport',
+				'Operated information and telecommunication systems',
+				'Emergency vehicle operation'
+			],
+			description:
+				'Provided critical emergency medical services and patient care in pre-hospital settings.',
+			skills: ['EMT', 'Emergency Medical Services', 'AED', 'Public Health']
+		}
+	];
+
+	function formatDate(dateStr: string) {
+		const date = new Date(dateStr);
+		return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+	}
+</script>
+
+<main class="container mx-auto px-7 py-16">
+	<div class="max-w-5xl mx-auto">
+		<h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-950 dark:text-blue-50">
+			Work Experience
+		</h1>
+		<p class="text-lg text-blue-700 dark:text-blue-300 mb-16">
+			My professional journey through technology and healthcare
+		</p>
+
+		<!-- Timeline -->
+		<div class="relative">
+			<!-- Timeline line -->
+			<div
+				class="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-purple-500 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400"
+			></div>
+
+			<div class="space-y-12">
+				{#each experiences as exp}
+					<div class="relative pl-8 md:pl-20">
+						<!-- Timeline dot -->
+						<div
+							class="absolute left-[-0.5rem] md:left-[1.5rem] top-2 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 ring-4 ring-blue-50 dark:ring-stone-950"
+						></div>
+
+						<Card variant="elevated" class="overflow-hidden">
+							<div class="p-6 md:p-8">
+								<!-- Header -->
+								<div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
+									<div>
+										<h2 class="text-2xl font-bold text-blue-950 dark:text-blue-50 mb-2">
+											<a
+												href={exp.url}
+												rel="noopener noreferrer"
+												target="_blank"
+												class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+											>
+												{exp.company}
+											</a>
+										</h2>
+										<h3 class="text-lg font-semibold text-blue-700 dark:text-blue-300">
+											{exp.position}
+										</h3>
+									</div>
+									<div class="text-sm text-blue-600 dark:text-blue-400 font-medium whitespace-nowrap">
+										<time datetime={exp.start}>{formatDate(exp.start)}</time>
+										-
+										<time datetime={exp.end}>{formatDate(exp.end)}</time>
+									</div>
+								</div>
+
+								<!-- Description -->
+								<p class="text-blue-800 dark:text-blue-200 mb-4">
+									{exp.description}
+								</p>
+
+								<!-- Highlights -->
+								{#if exp.highlights.length > 0}
+									<div class="mb-4">
+										<h4 class="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-2">
+											Key Achievements:
+										</h4>
+										<ul class="space-y-1 text-sm text-blue-700 dark:text-blue-300">
+											{#each exp.highlights as highlight}
+												<li class="flex items-start">
+													<span class="text-blue-500 mr-2">•</span>
+													<span>{highlight}</span>
+												</li>
+											{/each}
+										</ul>
+									</div>
+								{/if}
+
+								<!-- Skills -->
+								{#if exp.skills.length > 0}
+									<div class="flex flex-wrap gap-2">
+										{#each exp.skills as skill}
+											<Badge variant="default" size="sm">{skill}</Badge>
+										{/each}
+									</div>
+								{/if}
+							</div>
+						</Card>
+					</div>
+				{/each}
+			</div>
+		</div>
+
+		<!-- CTA -->
+		<div class="mt-16 text-center">
+			<p class="text-lg text-blue-800 dark:text-blue-200">
+				Need to know more about my working experience? You can have a better overview on my
+				<a
+					aria-label="Daniel on linkedin"
+					href="https://www.linkedin.com/in/daniel-salvado/"
+					rel="noopener noreferrer"
+					target="_blank"
+					class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
 				>
-			</h2>
-			<small>
-				<time datetime="2023-06">June 2023</time>
-				-
-				<time datetime="2024-09">September 2024</time>
-			</small>
+					LinkedIn
+				</a>
+				or reach out through my social media profiles.
+			</p>
 		</div>
-		<h4>Full Stack Developer & DevOps Engineer</h4>
-		<p>Implement best practices on the frontend project by:</p>
-		<ul>
-			<li>introducing vitejs for a better developer experience;</li>
-			<li>move unit tests to vitests for a faster run;</li>
-			<li>implement end-to-end tests with playwright;</li>
-			<li>create CI/CD pipelines for linting, type checking, and testing;</li>
-			<li>decrease the build time by 65%;</li>
-			<li>reduce the build size by 20%;</li>
-			<li>add documentation and guidelines;</li>
-		</ul>
-		<p>Create custom ThingsBoard widgets using Angular.</p>
-		<p>
-			Start developing a new web application with NextJS, using React Server Components, next-safe-actions, and a
-			Material UI template to quickly develop new features — authentication and authorization handled with Zitadel.
-		</p>
-		<p>
-			Create a BitBucket pipeline to deploy the application to Vercel to take advantage of preview branches with Neon
-			branches integration and cache with turborepo. Implemented an end-to-end testing package inside the monorepo with
-			Playwright.
-		</p>
-		<em class="text-xs">
-			DevOps · React.js · NextJS · Playwright · GraphQL · TypeScript · Test Automation · Git · End-to-end Testing · Unit
-			Testing · Node.js · Front-End Development</em
-		>
-	</article>
-	<hr />
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="no-underline" href="https://www.crystallize.com" rel="noopener noreferrer" target="__blank"
-					>Crystallize</a
-				>
-			</h2>
-			<small>
-				<time datetime="2019-05">May 2019</time>
-				-
-				<time datetime="2023-04">April 2023</time>
-			</small>
-		</div>
-		<h4>Release Manager</h4>
-		<p>Schedule, manage, and coordinate releases across multiple applications.</p>
-		<p>Construct a release calendar for the different projects to have a centralized view of all releases.</p>
-		<p>Manage and mitigate risks and resolve issues regarding release quality and schedule.</p>
-		<p>Continuously monitor projects and provide reports about their progress.</p>
-		<p>Ensure all team members adhere to engineering best practices and enforce DevOps policies.</p>
-		<p>Monitor the release process and collect feedback from the different teams and customers for review.</p>
-		<p>Make improvements regularly to the release process.</p>
-		<em class="text-xs">GitHub · DevOps · Test Automation · Release Management</em>
-		<h4>Frontend Engineer</h4>
-		<p>Development of Crystallize Product Information Management SaaS.</p>
-		<p>
-			Improve the codebase, implement new features according to the current state of the art in software development and
-			good practices, and monitor application errors and exceptions with Sentry.
-		</p>
-		<p>Take part in feature and roadmap planning.</p>
-		<p>CI/CD company's main product and some other side projects, like conferences and company websites.</p>
-		<em class="text-xs"
-			>GitHub · React.js · GraphQL · TypeScript · Test Automation · HTML · CSS · Git · End-to-end Testing · Agile
-			Methodologies · Testing · Web Applications · Node.js · Front-End Development</em
-		>
-	</article>
-	<hr />
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="no-underline" href="https://www.evodeck.com" rel="noopener noreferrer" target="__blank">Evodeck</a>
-			</h2>
-			<small>
-				<time datetime="2018-01">Jan 2018</time>
-				-
-				<time datetime="2019-04">Apr 2019</time>
-			</small>
-		</div>
-		<h4>Software Engineer</h4>
-		<p>Development of a garage management system application using ReactJS.</p>
-		<p>
-			Improve the codebase by introducing new ES6/ES7 features, Higher-Order Components (HOC), and applying DRY
-			principles.
-		</p>
-		<p>
-			As a member of an agile team, participate in the analyses and discussion of the project's technical constraints.
-		</p>
-		<p>Help develop another application using GraphQL, ReactJS, MongoDB, ExpressJS, Kubernetes, and Docker.</p>
-		<em class="text-xs"
-			>GitHub · React.js · HTML · CSS · Git · Agile Methodologies · Testing · Web Applications · Redux.js · Node.js ·
-			MongoDB · Front-End Development</em
-		>
-	</article>
-	<hr />
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="no-underline" href="https://www.truphone.com" rel="noopener noreferrer" target="__blank">Truphone</a>
-			</h2>
-			<span><time datetime="2017-06">Jun 2017</time> - <time datetime="2017-12">Dec 2017</time></span>
-		</div>
-		<h4>Frontend Engineer</h4>
-		<p>Facilitate new payment options in web applications through seamless integration.</p>
-		<p>Optimize web styling by introducing the SASS pre-processor.</p>
-		<p>Jumpstart mobile app development with React Native framework</p>
-		<em class="text-xs"
-			>GitHub · HTML · CSS · Git · PugJS · Selenium WebDriver · Testing · Web Applications · React Native · Node.js ·
-			Front-End Development</em
-		>
-	</article>
-	<hr />
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="no-underline" href="https://tradingeconomics.com" rel="noopener noreferrer" target="__blank"
-					>Trading Economics</a
-				>
-			</h2>
-			<small>
-				<time datetime="2016-10">Oct 2016</time>
-				-
-				<time datetime="2017-05">May 2017</time>
-			</small>
-		</div>
-		<h4>Software Developer</h4>
-		<p>
-			Successfully integrate PayPal payments and Twilio SMS notifications to create an advanced notification system for
-			financial indicators.
-		</p>
-		<p>
-			Refreshed the UI with Bootstrap 3 integration, enhancing the user experience of a high-traffic AngularJS
-			application.
-		</p>
-		<p>
-			Developed a management interface allowing admins to monitor users' notifications and subscription status for key
-			financial indicators.
-		</p>
-		<em class="text-xs"
-			>GitHub · JavaScript · HTML · CSS · Git · AngularJS · Node.js · MongoDB · Front-End Development</em
-		>
-	</article>
-	<hr />
-	<article class="my-20">
-		<div class="flex items-center justify-between">
-			<h2 class="m-0">
-				<a class="cursor-help no-underline" href="https://www.inem.pt" rel="noopener noreferrer" target="__blank"
-					><abbr title="Instituto Nacional de Emergência Médica">INEM</abbr></a
-				>
-			</h2>
-			<small>
-				<time datetime="2008-02">Feb 2008</time>
-				-
-				<time datetime="2016-09">Sep 2016</time>
-			</small>
-		</div>
-		<h4>Emergency Medical technician</h4>
-		<p>
-			Intervention in pre-hospital emergencies, aimed at triage, stabilisation and transport of the patient to health
-			facilities.
-		</p>
-		<p>Operate information and telecommunication systems.</p>
-		<p>Know how to act in situations of exception/disaster.</p>
-		<p>Driving emergency vehicles</p>
-		<em class="text-xs"
-			>EMT · Emergency Medical Services (EMS) · Automated External Defibrillator (AED) · Public Health</em
-		>
-	</article>
-	<hr />
-	<p>
-		Need to know more about my working experience? You can have a better overview of it on my
-		<a
-			aria-label="Daniel on linkedin"
-			href="https://www.linkedin.com/in/daniel-salvado/"
-			rel="noopener noreferrer"
-			target="_blank">linkedIn</a
-		> or ping me through my social media profiles.
-	</p>
+	</div>
 </main>

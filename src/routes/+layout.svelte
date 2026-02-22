@@ -3,6 +3,7 @@
 	import Footer from '$lib/components/footer.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Sidebar from '$lib/components/sidebar.svelte';
+	import BackToTop from '$lib/components/BackToTop.svelte';
 
 	import '../app.css';
 	import { page } from '$app/stores';
@@ -54,6 +55,7 @@
 <Header bind:open />
 <slot />
 <Footer />
+<BackToTop />
 
 <!-- Structured Data -->
 <JsonLd

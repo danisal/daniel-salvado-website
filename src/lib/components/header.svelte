@@ -1,11 +1,21 @@
 <script lang="ts">
 	import ThemeToggle from './theme-toggle.svelte';
+	import { page } from '$app/stores';
 
 	export let open: boolean = false;
+
+	$: currentPath = $page.url.pathname;
+
+	function isActive(path: string): boolean {
+		if (path === '/') {
+			return currentPath === '/';
+		}
+		return currentPath.startsWith(path);
+	}
 </script>
 
 <header
-	class="sticky top-0 z-20 flex px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/5"
+	class="sticky top-0 z-20 flex px-4 py-4 font-semibold text-blue-800 shadow shadow-blue-800/10 backdrop-blur dark:text-blue-200 [@supports(backdrop-filter:blur(0px))]:bg-white/95 dark:[@supports(backdrop-filter:blur(0px))]:bg-stone-950/95 transition-all duration-300"
 >
 	<!-- mobile -->
 	<button
@@ -43,12 +53,45 @@
 	</button>
 	<section class="row mx-auto hidden w-full max-w-7xl items-center justify-between sm:flex">
 		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-		<a class="font-beanie text-4xl font-medium" href="/">Daniel Salvado</a>
+		<a
+			class="font-beanie text-4xl font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+			href="/"
+		>
+			Daniel Salvado
+		</a>
 		<div class="flex items-center justify-between gap-8">
 			<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-			<nav class="flex items-center justify-between gap-2">
-				<a href="/work">Work</a>
-				<a href="/blog">Writing</a>
+			<nav class="flex items-center justify-between gap-6">
+				<a
+					href="/work"
+					class="relative py-2 transition-colors hover:text-blue-600 dark:hover:text-blue-400 {isActive(
+						'/work'
+					)
+						? 'text-blue-600 dark:text-blue-400'
+						: ''}"
+				>
+					Work
+					{#if isActive('/work')}
+						<span
+							class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+						></span>
+					{/if}
+				</a>
+				<a
+					href="/blog"
+					class="relative py-2 transition-colors hover:text-blue-600 dark:hover:text-blue-400 {isActive(
+						'/blog'
+					)
+						? 'text-blue-600 dark:text-blue-400'
+						: ''}"
+				>
+					Writing
+					{#if isActive('/blog')}
+						<span
+							class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+						></span>
+					{/if}
+				</a>
 			</nav>
 
 			<ThemeToggle />
@@ -62,7 +105,7 @@
 	}
 
 	.open #top {
-		@apply translate-x-1.5 rotate-45 transform-gpu;
+		@apply translate-x-[6px] rotate-45 transform-gpu;
 	}
 
 	.open #middle {
