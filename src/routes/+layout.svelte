@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MetaTags, JsonLd, type MetaTagsProps } from 'svelte-meta-tags';
+	import SEO from '$lib/components/SEO.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Sidebar from '$lib/components/sidebar.svelte';
@@ -18,10 +18,11 @@
 	};
 
 	// SEO
-	$: metaTags = {
-		title: meta.title,
+	$: seoProps = {
+		title: $page.data.seoTitle || meta.title,
 		titleTemplate: '%s | Daniel Salvado',
-		description: meta.description,
+		description: $page.data.seoDescription || meta.description,
+		keywords: $page.data.seoKeywords || [],
 		openGraph: {
 			type: 'website',
 			url: meta.url,
@@ -37,39 +38,33 @@
 		},
 		twitter: {
 			cardType: 'summary_large_image',
-			title: meta.title,
+			title: $page.data.seoTitle || meta.title,
 			description: meta.description,
 			image: 'https://danielsalvado.com/images/1200x630.png',
 			imageAlt: 'Daniel Salvado Banner',
 			site: meta.url
 		},
 		robots: 'index,follow',
-		...$page.data.metaTagsChild
-	} satisfies MetaTagsProps;
+		jsonLd: {
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Daniel Salvado',
+			url: 'https://danielsalvado.com',
+			description: 'Daniel Salvado personal website',
+			sameAs: [
+				'https://www.linkedin.com/in/daniel-salvado/',
+				'https://twitter.com/danisalTweets',
+				'https://github.com/danisal'
+			]
+		}
+	};
 </script>
 
 <!-- SEO -->
-<MetaTags {...metaTags} />
+<SEO {...seoProps} />
 
 <Sidebar bind:open />
 <Header bind:open />
 <slot />
 <Footer />
 <BackToTop />
-
-<!-- Structured Data -->
-<JsonLd
-	output="body"
-	schema={{
-		'@context': 'https://schema.org',
-		'@type': 'WebSite',
-		name: 'Daniel Salvado',
-		url: 'https://danielsalvado.com',
-		description: 'Daniel Salvado personal website',
-		sameAs: [
-			'https://www.linkedin.com/in/daniel-salvado/',
-			'https://twitter.com/danisalTweets',
-			'https://github.com/danisal'
-		]
-	}}
-/>
