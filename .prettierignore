@@ -10,7 +10,3 @@ node_modules
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
 package-lock.json
-yarn.lock
-
-# prettier-plugin-svelte cannot parse <script type="application/ld+json"> with Svelte expressions
-src/lib/components/seo.svelte

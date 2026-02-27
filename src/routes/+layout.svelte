@@ -19,7 +19,7 @@
 	};
 
 	// SEO
-	$: seoProps = {
+	const seoProps = $derived({
 		title: page.data.seoTitle || meta.title,
 		titleTemplate: '%s | Daniel Salvado',
 		description: page.data.seoDescription || meta.description,
@@ -52,14 +52,9 @@
 			name: 'Daniel Salvado',
 			url: BASE_URL,
 			description: 'Daniel Salvado personal website',
-			sameAs: [
-				LINKEDIN_PROFILE_LINK,
-				X_PROFILE_LINK,
-				BLUESKY_PROFILE_URL,
-				GITHUB_PROFILE_URL
-			]
+			sameAs: [LINKEDIN_PROFILE_LINK, X_PROFILE_LINK, BLUESKY_PROFILE_URL, GITHUB_PROFILE_URL]
 		}
-	};
+	});
 </script>
 
 <!-- SEO -->

@@ -88,8 +88,8 @@
 		<meta name="twitter:image:alt" content={twitter.imageAlt} />
 		<meta name="twitter:site" content={twitter.site} />
 	{/if}
-</svelte:head>
 
-{#if jsonLd}
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
-{/if}
+	{#if jsonLd}
+		{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}<\/script>`}
+	{/if}
+</svelte:head>

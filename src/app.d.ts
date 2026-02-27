@@ -3,7 +3,11 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Locals {}
-	// interface PageData {}
+	interface PageData {
+		seoTitle?: string;
+		seoDescription?: string;
+		seoKeywords?: string[];
+	}
 	// interface Error {}
 	// interface Platform {}
 }

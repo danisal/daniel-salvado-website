@@ -1,7 +1,7 @@
 <main>
 	<h1>Privacy Policy</h1>
 
-	<p>Effective date: January 21, 2019</p>
+	<p>Effective date: February 27, 2026</p>
 
 	<p>
 		Daniel Salvado (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the danielsalvado.com website (the

@@ -7,8 +7,6 @@
 		<p>
 			&copy; {year} Daniel Salvado. All rights reserved.
 		</p>
-		<a href="/legal-notice">
-			Legal Notice
-		</a>
+		<a href="/legal-notice"> Legal Notice </a>
 	</div>
 </footer>

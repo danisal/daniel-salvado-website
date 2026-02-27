@@ -16,7 +16,7 @@
 	<div class="mt-10">
 		<a
 			href="/"
-			class="inline-block px-6 py-3 bg-amber-500 dark:bg-amber-300 text-amber-950 rounded-lg font-medium no-underline hover:bg-amber-600 dark:hover:bg-amber-400 hover:no-underline transition-colors"
+			class="inline-block rounded-lg bg-amber-500 px-6 py-3 font-medium text-amber-950 no-underline transition-colors hover:bg-amber-600 hover:no-underline dark:bg-amber-300 dark:hover:bg-amber-400"
 		>
 			&larr; Go back home
 		</a>

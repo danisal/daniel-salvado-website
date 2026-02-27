@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap&text=DanielSalvado');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap&text=DanielSalvado0123456789');
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
 
 @theme inline {
-    --font-beanie: 'Reenie Beanie';
+	--font-beanie: 'Reenie Beanie';
 }
 
 @layer base {
-    html {
-        font-size: 18px;
-    }
+	html {
+		font-size: 18px;
+	}
 
-    body {
-        @apply bg-neutral-50 text-neutral-950 dark:bg-neutral-950 dark:text-neutral-50 container prose dark:prose-invert mx-auto px-6 grid grid-rows-[auto,1fr,auto] h-svh scroll-smooth antialiased transition-colors;
-    }
+	body {
+		@apply container mx-auto prose grid h-svh grid-rows-[auto,1fr,auto] scroll-smooth bg-neutral-50 px-6 text-neutral-950 antialiased transition-colors dark:bg-neutral-950 dark:text-neutral-50 dark:prose-invert;
+	}
 
-    a {
-        @apply text-amber-500 dark:text-amber-300 no-underline hover:underline hover:decoration-wavy hover:underline-offset-4 transition-colors;
-    }
+	a {
+		@apply text-amber-500 no-underline transition-colors hover:underline hover:decoration-wavy hover:underline-offset-4 dark:text-amber-300;
+	}
 
-    header,
-    main,
-    footer{
-        @apply py-10;
-    }
+	header,
+	main,
+	footer {
+		@apply py-10;
+	}
 }
