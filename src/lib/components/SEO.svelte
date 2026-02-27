@@ -44,8 +44,8 @@
 		jsonLd
 	}: Props = $props();
 
-	const formattedTitle = titleTemplate.replace('%s', title);
-	const keywordsString = keywords.join(', ');
+	const formattedTitle = $derived(titleTemplate.replace('%s', title));
+	const keywordsString = $derived(keywords.join(', '));
 </script>
 
 <svelte:head>
