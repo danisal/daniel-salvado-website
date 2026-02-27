@@ -1,7 +1,7 @@
-<main class="container prose mx-auto px-7 py-16 dark:prose-invert">
+<main>
 	<h1>Privacy Policy</h1>
 
-	<p>Effective date: January 21, 2019</p>
+	<p>Effective date: February 27, 2026</p>
 
 	<p>
 		Daniel Salvado (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the danielsalvado.com website (the
@@ -11,7 +11,7 @@
 	<p>
 		This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use
 		our Service and the choices you have associated with that data. Our Privacy Policy for Daniel Salvado is created
-		with the help of the{` `}
+		with the help of the
 		<a href="https://www.freeprivacypolicy.com/"> Free Privacy Policy website </a>
 		.
 	</p>
@@ -161,9 +161,8 @@
 				Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js,
 				analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
 			</p>
-			{` `}
 			<p>
-				For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page:{` `}
+				For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page:
 				<a href="https://policies.google.com/privacy?hl=en"> https://policies.google.com/privacy?hl=en </a>
 			</p>
 		</li>

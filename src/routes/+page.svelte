@@ -1,24 +1,38 @@
-<main class="prose-zync container prose relative mx-auto px-7 py-16 dark:prose-invert">
-	<h1 class="text-balance">Welcome to my personal virtual space!</h1>
-	<picture class="mx-auto">
-		<source type="image/avif" srcset="assets/profile-pic.avif" />
-		<source type="image/webp" srcset="assets/profile-pic.webp" />
-		<img
-			alt="Daniel Salvado"
-			class="aspect-square h-24 w-24 rounded-full object-cover"
-			loading="lazy"
-			src="assets/profile-pic.jpg"
-			width="96"
-			height="96"
-		/>
-	</picture>
+<script lang="ts">
+	import { socialLinks } from '$lib/constants';
+</script>
+
+<main>
 	<p>
-		Hi, my name is Daniel, I'm an enthusiastic developer who loves to work within the JavaScript ecosystem and I'm
-		always strive to improve on code and build beautiful things.
+		I am a senior frontend engineer at <a href="https://mindera.com" rel="noopener noreferrer" target="_blank"
+			>Mindera</a
+		> focused on building scalable web systems and improving developer experience. I work primarily with React and TypeScript,
+		designing architectures that balance performance, maintainability, and long-term product evolution.
 	</p>
 	<p>
-		I love to share my know-how and things that I find interesting and because of that I do some writing on things that
-		I've tested and in some way, helped me on the products that I was building!
+		I am currently working on complex frontend platforms where migration strategy, system design, and tooling quality
+		matter as much as feature delivery. A big part of my work involves improving build pipelines, strengthening type
+		safety, and creating environments where teams can move faster with fewer regressions.
 	</p>
-	<p>Feel free to share the articles or even to contact me if you have any questions, suggestions or simply say hi!</p>
+	<p>
+		Alongside engineering, I am completing an MBA, where I focus on strategy, innovation, and operations. My research
+		explores the determinants of innovation in technology SMEs, with a particular interest in how organisational
+		structure, learning capacity, and digitalisation influence long-term competitiveness.
+	</p>
+	<p>
+		Outside of client work, I build and explore new ideas. I'm interested in how systems thinking applies across
+		software, business, and capital allocation.
+	</p>
+	<p>
+		Most of my technical work lives on <a href={socialLinks.github.href} rel="noopener noreferrer" target="_blank"
+			>GitHub</a
+		>. Outside of work, I spend time with my family, study, and train myself to think better — about code, business, and
+		the long game.
+	</p>
+	<p>
+		If you wish to connect, find me on
+		<a href={socialLinks.x.href} rel="noopener noreferrer" target="_blank">X</a>,
+		<a href={socialLinks.linkedin.href} rel="noopener noreferrer" target="_blank">LinkedIn</a>, or
+		<a href={socialLinks.bluesky.href} rel="noopener noreferrer" target="_blank">Bluesky</a>.
+	</p>
 </main>
