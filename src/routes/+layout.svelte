@@ -1,6 +1,4 @@
 <script lang="ts">
-	import SEO from '$lib/components/SEO.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import '../styles.css';
 	import { page } from '$app/state';
 	import {
@@ -11,6 +9,8 @@
 		X_PROFILE_LINK
 	} from '$lib/constants';
 	import Header from '$lib/components/Header.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	const meta = {
 		title: 'Home',
@@ -56,7 +56,7 @@
 				LINKEDIN_PROFILE_LINK,
 				X_PROFILE_LINK,
 				BLUESKY_PROFILE_URL,
-				GITHUB_PROFILE_URL,
+				GITHUB_PROFILE_URL
 			]
 		}
 	};
