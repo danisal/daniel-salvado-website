@@ -90,6 +90,7 @@
 	{/if}
 
 	{#if jsonLd}
+		<!--		eslint-disable-next-line		-->
 		{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}<\/script>`}
 	{/if}
 </svelte:head>

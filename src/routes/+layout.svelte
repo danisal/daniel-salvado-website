@@ -55,11 +55,12 @@
 			sameAs: [LINKEDIN_PROFILE_LINK, X_PROFILE_LINK, BLUESKY_PROFILE_URL, GITHUB_PROFILE_URL]
 		}
 	});
+	const { children } = $props();
 </script>
 
 <!-- SEO -->
 <SEO {...seoProps} />
 
 <Header />
-<slot />
+{@render children()}
 <Footer />
