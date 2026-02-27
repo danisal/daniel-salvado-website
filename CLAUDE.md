@@ -13,6 +13,27 @@ pnpm lint         # Prettier + ESLint check
 pnpm format       # Auto-format with Prettier
 ```
 
+## Git Conventions
+
+All commits must follow **Conventional Commits** format:
+
+```
+<type>(<optional scope>): <subject>
+```
+
+Types: `feat` | `fix` | `docs` | `style` | `refactor` | `perf` | `test` | `build` | `ci` | `chore` | `revert`
+
+Subject rules: imperative mood, max 70 chars, no trailing period.
+
+Examples:
+- `feat(seo): add structured data to blog posts`
+- `fix(header): correct mobile nav z-index`
+- `chore: update dependencies`
+
+Use the `/conventional-commit` skill to generate commit messages.
+
+A `commit-msg` hook enforces this format locally — non-conforming commits are rejected.
+
 ## Architecture
 
 This is a **SvelteKit 5 personal website** deployed to **Cloudflare** (`@sveltejs/adapter-cloudflare`), styled with **Tailwind CSS** (including `@tailwindcss/typography`), and dark mode toggled via a `class` strategy.
