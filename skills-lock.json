@@ -1,25 +1,25 @@
 {
-  "version": 1,
-  "skills": {
-    "conventional-commit": {
-      "source": "marcelorodrigo/agent-skills",
-      "sourceType": "github",
-      "computedHash": "c09073f3bb5141fcefa8347051035c23ac2a87774ac3b1dec2a2afa583820dcf"
-    },
-    "frontend-design": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
-    },
-    "seo-audit": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "computedHash": "6bd4cde58bb701b5dc90a0fae2f0ea3efc7c3e6fd2ae754083fa659930e7d39f"
-    },
-    "svelte-code-writer": {
-      "source": "sveltejs/mcp",
-      "sourceType": "github",
-      "computedHash": "c0e2cce9855f8e312cbb0a05aef164b4659c672d7723e4e598ffa6bc94890542"
-    }
-  }
+	"version": 1,
+	"skills": {
+		"conventional-commit": {
+			"source": "marcelorodrigo/agent-skills",
+			"sourceType": "github",
+			"computedHash": "c09073f3bb5141fcefa8347051035c23ac2a87774ac3b1dec2a2afa583820dcf"
+		},
+		"frontend-design": {
+			"source": "anthropics/skills",
+			"sourceType": "github",
+			"computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+		},
+		"seo-audit": {
+			"source": "coreyhaines31/marketingskills",
+			"sourceType": "github",
+			"computedHash": "6bd4cde58bb701b5dc90a0fae2f0ea3efc7c3e6fd2ae754083fa659930e7d39f"
+		},
+		"svelte-code-writer": {
+			"source": "sveltejs/mcp",
+			"sourceType": "github",
+			"computedHash": "c0e2cce9855f8e312cbb0a05aef164b4659c672d7723e4e598ffa6bc94890542"
+		}
+	}
 }
