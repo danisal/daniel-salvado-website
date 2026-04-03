@@ -26,6 +26,7 @@ Types: `feat` | `fix` | `docs` | `style` | `refactor` | `perf` | `test` | `build
 Subject rules: imperative mood, max 70 chars, no trailing period.
 
 Examples:
+
 - `feat(seo): add structured data to blog posts`
 - `fix(header): correct mobile nav z-index`
 - `chore: update dependencies`
