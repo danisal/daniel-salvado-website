@@ -1,5 +1,6 @@
 onlyBuiltDependencies:
   - '@sveltejs/kit'
   - esbuild
+  - simple-git-hooks
   - svelte-preprocess
   - workerd
