@@ -26,8 +26,8 @@
 		keywords: page.data.seoKeywords || [],
 		openGraph: {
 			type: 'website',
-			url: meta.url,
-			description: meta.description,
+			url: page.url.href,
+			description: page.data.seoDescription || meta.description,
 			images: [
 				{
 					url: `${BASE_URL}/images/1200x630.png`,
@@ -40,7 +40,7 @@
 		twitter: {
 			cardType: 'summary_large_image',
 			title: page.data.seoTitle || meta.title,
-			description: meta.description,
+			description: page.data.seoDescription || meta.description,
 			image: `${BASE_URL}/images/1200x630.png`,
 			imageAlt: 'Daniel Salvado Banner',
 			site: meta.url

@@ -12,7 +12,7 @@
 		This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use
 		our Service and the choices you have associated with that data. Our Privacy Policy for Daniel Salvado is created
 		with the help of the
-		<a href="https://www.freeprivacypolicy.com/"> Free Privacy Policy website </a>
+		<a href="https://www.freeprivacypolicy.com/" rel="noopener noreferrer" target="_blank"> Free Privacy Policy website </a>
 		.
 	</p>
 
