@@ -3,6 +3,6 @@
 </script>
 
 <header class="flex items-center justify-between">
-	<a class="font-beanie text-4xl font-medium no-underline" href="/"> Daniel Salvado </a>
+	<a class="font-beanie text-3xl sm:text-4xl font-medium no-underline" href="/"> Daniel Salvado </a>
 	<ThemeToggle />
 </header>

@@ -27,6 +27,7 @@
 		titleTemplate?: string;
 		description?: string;
 		keywords?: string[];
+		canonical?: string;
 		openGraph?: OpenGraph;
 		twitter?: Twitter;
 		robots?: string;
@@ -38,6 +39,7 @@
 		titleTemplate = '%s',
 		description = '',
 		keywords = [],
+		canonical,
 		openGraph,
 		twitter,
 		robots = 'index,follow',
@@ -51,6 +53,10 @@
 <svelte:head>
 	{#if formattedTitle}
 		<title>{formattedTitle}</title>
+	{/if}
+
+	{#if canonical}
+		<link rel="canonical" href={canonical} />
 	{/if}
 
 	{#if description}

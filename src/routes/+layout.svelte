@@ -24,6 +24,7 @@
 		titleTemplate: '%s | Daniel Salvado',
 		description: page.data.seoDescription || meta.description,
 		keywords: page.data.seoKeywords || [],
+		canonical: `${BASE_URL}${page.url.pathname}`,
 		openGraph: {
 			type: 'website',
 			url: page.url.href,
