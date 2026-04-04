@@ -32,7 +32,7 @@
 
 <button
 	type="button"
-	class="group relative flex h-8 w-8 items-center justify-center rounded hover:bg-neutral-100 dark:hover:bg-neutral-800"
+	class="group relative flex h-11 w-11 items-center justify-center rounded hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:outline-none dark:hover:bg-neutral-800 dark:focus-visible:ring-amber-300"
 	onclick={toggle}
 	aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
 	aria-pressed={isDark}
