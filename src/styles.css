@@ -20,6 +20,18 @@
 		@apply text-amber-500 no-underline transition-colors hover:underline hover:decoration-wavy hover:underline-offset-4 dark:text-amber-300;
 	}
 
+	main a[target='_blank']::after {
+		content: ' ↗' / '';
+		font-size: 0.7em;
+		vertical-align: 0.15em;
+		opacity: 0;
+		transition: opacity 150ms ease;
+	}
+
+	main a[target='_blank']:hover::after {
+		opacity: 1;
+	}
+
 	header,
 	main,
 	footer {
