@@ -2,7 +2,7 @@
 	import { socialLinks } from '$lib/constants';
 </script>
 
-<main>
+<main id="main">
 	<p>
 		I am a senior frontend engineer at <a href="https://mindera.com" rel="noopener noreferrer" target="_blank"
 			>Mindera</a
@@ -31,7 +31,7 @@
 	</p>
 	<p>
 		If you wish to connect, find me on
-		<a href={socialLinks.x.href} rel="noopener noreferrer" target="_blank">X</a>,
+		<a href={socialLinks.x.href} rel="noopener noreferrer" target="_blank" aria-label="Daniel on X (Twitter)">X</a>,
 		<a href={socialLinks.linkedin.href} rel="noopener noreferrer" target="_blank">LinkedIn</a>, or
 		<a href={socialLinks.bluesky.href} rel="noopener noreferrer" target="_blank">Bluesky</a>.
 	</p>

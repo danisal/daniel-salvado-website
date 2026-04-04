@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap&text=DanielSalvado0123456789');
 @import 'tailwindcss';
+@custom-variant dark (&:is(.dark *));
 
 @plugin '@tailwindcss/typography';
 
@@ -13,7 +13,7 @@
 	}
 
 	body {
-		@apply container mx-auto prose grid h-svh grid-rows-[auto,1fr,auto] scroll-smooth bg-neutral-50 px-6 text-neutral-950 antialiased transition-colors dark:bg-neutral-950 dark:text-neutral-50 dark:prose-invert;
+		@apply container mx-auto prose grid min-h-svh grid-rows-[auto,1fr,auto] scroll-smooth bg-neutral-50 px-6 text-neutral-950 antialiased transition-colors dark:bg-neutral-950 dark:text-neutral-50 dark:prose-invert;
 	}
 
 	a {
@@ -24,5 +24,13 @@
 	main,
 	footer {
 		@apply py-10;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
 	}
 }

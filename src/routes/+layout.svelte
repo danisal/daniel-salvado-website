@@ -61,6 +61,12 @@
 <!-- SEO -->
 <SEO {...seoProps} />
 
+<a
+	href="#main"
+	class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-amber-500 focus:px-4 focus:py-2 focus:font-medium focus:text-amber-950 focus:no-underline dark:focus:bg-amber-300 dark:focus:text-amber-950"
+>
+	Skip to content
+</a>
 <Header />
 {@render children()}
 <Footer />

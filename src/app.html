@@ -7,6 +7,10 @@
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap&text=DanielSalvado0123456789"
+		/>
+		<link
 			rel="apple-touch-icon-precomposed"
 			sizes="57x57"
 			href="%sveltekit.assets%/favicon/apple-touch-icon-57x57.png"
@@ -58,6 +62,19 @@
 		<meta name="msapplication-square150x150logo" content="%sveltekit.assets%/favicon/mstile-150x150.png" />
 		<meta name="msapplication-wide310x150logo" content="%sveltekit.assets%/favicon/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="%sveltekit.assets%/favicon/mstile-310x310.png" />
+		<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+		<script>
+			(function () {
+				try {
+					var stored = localStorage.getItem('theme');
+					var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+					if (stored === 'dark' || (!stored && prefersDark)) {
+						document.documentElement.classList.add('dark');
+					}
+				} catch (e) {}
+			})();
+		</script>
 		%sveltekit.head%
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGNDB7CSBW"></script>
@@ -72,5 +89,7 @@
 		</script>
 	</head>
 
-	<div class="contents">%sveltekit.body%</div>
+	<body>
+		<div class="contents">%sveltekit.body%</div>
+	</body>
 </html>

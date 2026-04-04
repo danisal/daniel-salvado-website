@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 </script>
 
-<main class="flex flex-col items-center justify-center text-center">
+<main id="main" class="flex flex-col items-center justify-center text-center">
 	<h1 class="font-beanie text-8xl font-medium">
 		{page.status}
 	</h1>

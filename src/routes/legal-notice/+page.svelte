@@ -1,5 +1,5 @@
-<main>
-	<h1>Privacy Policy</h1>
+<main id="main">
+	<h1>Legal Notice</h1>
 
 	<p>Effective date: February 27, 2026</p>
 
