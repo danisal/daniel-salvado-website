@@ -11,7 +11,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"typecheck": "tsc --noEmit --incremental",
+		"typecheck": "svelte-kit sync && tsc --noEmit --incremental",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"prepare": "lefthook install"
