@@ -14,10 +14,7 @@
 		"typecheck": "tsc --noEmit --incremental",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"prepare": "simple-git-hooks"
-	},
-	"simple-git-hooks": {
-		"commit-msg": "pnpm commitlint --edit $1"
+		"prepare": "lefthook install"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.5.0",
@@ -40,11 +37,11 @@
 		"eslint-plugin-svelte": "^3.17.0",
 		"globals": "^17.4.0",
 		"jsdom": "^29.1.1",
+		"lefthook": "^2.1.10",
 		"postcss": "8.5.12",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
-		"simple-git-hooks": "^2.13.1",
 		"svelte": "^5.55.1",
 		"svelte-check": "^4.4.6",
 		"tailwindcss": "^4.2.2",

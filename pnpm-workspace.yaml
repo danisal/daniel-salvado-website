@@ -2,8 +2,8 @@ engineStrict: true
 allowBuilds:
   '@sveltejs/kit': true
   esbuild: true
+  lefthook: true
   sharp: true
-  simple-git-hooks: true
   svelte-preprocess: true
   workerd: true
 minimumReleaseAgeExclude:
