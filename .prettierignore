@@ -10,7 +10,3 @@ node_modules
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
 package-lock.json
-
-# Ignore local configuration and build artifacts
-.claude/
-.impeccable/
