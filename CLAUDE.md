@@ -8,9 +8,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev          # Start dev server. Assume already running and accessible at http://localhost:5173
 pnpm build        # Production build (only for CI/CD)
 pnpm preview      # Preview production build (port 3000)
-pnpm check        # Type-check with svelte-check
+pnpm check        # Type-check .svelte files with svelte-check
+pnpm typecheck    # Type-check with tsc --noEmit
 pnpm lint         # Prettier + ESLint check
 pnpm format       # Auto-format with Prettier
+pnpm format:check # Check formatting without writing
+pnpm test         # Run unit tests (Vitest)
 ```
 
 ## Git Conventions
@@ -33,7 +36,7 @@ Examples:
 
 Use the `/conventional-commit` skill to generate commit messages.
 
-A `commit-msg` hook enforces this format locally — non-conforming commits are rejected.
+Git hooks are managed by [lefthook](https://lefthook.dev/) (`lefthook.yml`): a `pre-commit` hook runs ESLint/Prettier on staged files, and a `commit-msg` hook runs commitlint to enforce this format. Run `pnpm run prepare` once after cloning to install them.
 
 ## Architecture
 

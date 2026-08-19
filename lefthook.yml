@@ -1,0 +1,15 @@
+pre-commit:
+  commands:
+    lint:
+      glob: '*.{js,ts,svelte}'
+      run: pnpm eslint --fix {staged_files}
+      stage_fixed: true
+    format:
+      glob: '*.{js,ts,svelte,json,css,md,yml,yaml}'
+      run: pnpm prettier --write {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm commitlint --edit {1}
